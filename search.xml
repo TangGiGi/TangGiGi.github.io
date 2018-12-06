@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>test 3</title>
+      <link href="/2018/12/04/test-3/"/>
+      <url>/2018/12/04/test-3/</url>
+      
+        <content type="html"><![CDATA[<p>aslkdjlaksjdlasjdalksjd</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> /cattest1/subtest1 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>testtitle</title>
+      <link href="/2018/12/04/testtitle/"/>
+      <url>/2018/12/04/testtitle/</url>
+      
+        <content type="html"><![CDATA[<p>test  测试</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> cattest1 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tagstest1 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Android案例-弹出菜单</title>
+      <link href="/2018/12/04/second-tittle/"/>
+      <url>/2018/12/04/second-tittle/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">OnMenu</span><span class="params">(View view)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 获取自定义的菜单布局文件</span></span><br><span class="line">        View popupWindow_view = getLayoutInflater().inflate(R.layout.menu, <span class="keyword">null</span>,<span class="keyword">false</span>);</span><br><span class="line">        <span class="comment">// 创建PopupWindow实例,设置菜单宽度和高度为包裹其自身内容</span></span><br><span class="line">        popupWindow = <span class="keyword">new</span> PopupWindow(popupWindow_view, ActionBar.LayoutParams.WRAP_CONTENT,</span><br><span class="line">                ActionBar.LayoutParams.WRAP_CONTENT, <span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">//设置菜单显示在按钮的下面</span></span><br><span class="line">        popupWindow.showAsDropDown(findViewById(R.id.btn_menu),<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">        <span class="comment">// 点击其他地方消失</span></span><br></pre></td></tr></table></figure><p> menu.xml为弹出菜单</p><p>文档：<a href="https://developer.android.com/reference/android/widget/PopupWindow" target="_blank" rel="noopener">PopupWindow</a><br>PopupWindow</p><p>public class PopupWindow<br>extends Object </p><p>java.lang.Object<br>   ↳    android.widget.PopupWindow</p><p>该类表示可用于显示任意视图的弹出窗口。弹出窗口是出现在当前活动顶部的浮动容器。<br>This class represents a popup window that can be used to display an arbitrary view. The popup window is a floating container that appears on top of the current activity.</p><p><strong>Public constructors</strong><br><code>public PopupWindow (View contentView,                 int width,                 int height,                 boolean focusable)</code><br>Create a new popup window which can display the contentView. The dimension of the window must be passed to this constructor.The popup does not provide any background. This should be handled by the content view.<br>|Parameters||<br>|–|–|<br>| contentView     |View:  the popup’s content  |<br>|width  | int:      the popup’s width |<br>|height|int:      the popup’s height|<br>|focusable    |boolean: true if the popup can be focused, false otherwise|</p><p><strong>Public methods</strong><br><code>public void showAsDropDown (View anchor,                 int xoff,                 int yoff,                 int gravity)</code><br>|Parameters||<br>|–|–|<br>|anchor    |View: the view on which to pin the popup window|<br>|xoff    |int: A horizontal offset from the anchor in pixels|<br>|yoff    |int: A vertical offset from the anchor in pixels|<br>|gravity    |int: Alignment of the popup relative to the anchor|</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">View<span class="title">inflate</span><span class="params">(<span class="keyword">int</span> resource, ViewGroup root)</span></span></span><br><span class="line"><span class="function"><span class="comment">//Inflate a new view hierarchy from the specified xml resource.</span></span></span><br><span class="line"><span class="function">View<span class="title">inflate</span><span class="params">(XmlPullParser parser, ViewGroup root)</span></span></span><br><span class="line"><span class="function"><span class="comment">//Inflate a new view hierarchy from the specified xml node.</span></span></span><br><span class="line"><span class="function">View<span class="title">inflate</span><span class="params">(XmlPullParser parser, ViewGroup root, <span class="keyword">boolean</span> attachToRoot)</span></span></span><br><span class="line"><span class="function"><span class="comment">//Inflate a new view hierarchy from the specified XML node.</span></span></span><br><span class="line"><span class="function">View<span class="title">inflate</span><span class="params">(<span class="keyword">int</span> resource, ViewGroup root, <span class="keyword">boolean</span> attachToRoot)</span></span></span><br><span class="line"><span class="function"><span class="comment">//Inflate a new view hierarchy from the specified xml resource.</span></span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2018/12/04/hello-world/"/>
+      <url>/2018/12/04/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title>new page tittle</title>
+      <link href="/new-page-tittle/index.html"/>
+      <url>/new-page-tittle/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+  
+</search>
