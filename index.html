@@ -138,7 +138,7 @@
                 <time class="level-item has-text-grey" datetime="2018-12-04T13:16:55.000Z">2018-12-04</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/cattest1-subtest1/">/cattest1/subtest1</a>
+                <a class="has-link-grey -link" href="/categories/cattest1/">cattest1</a>
                 </div>
                 
                 
@@ -235,7 +235,7 @@
             
         </h1>
         <div class="content">
-            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">OnMenu</span><span class="params">(View view)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 获取自定义的菜单布局文件</span></span><br><span class="line">        View popupWindow_view = getLayoutInflater().inflate(R.layout.menu, <span class="keyword">null</span>,<span class="keyword">false</span>);</span><br><span class="line">        <span class="comment">// 创建PopupWindow实例,设置菜单宽度和高度为包裹其自身内容</span></span><br><span class="line">        popupWindow = <span class="keyword">new</span> PopupWindow(popupWindow_view, ActionBar.LayoutParams.WRAP_CONTENT,</span><br><span class="line">                ActionBar.LayoutParams.WRAP_CONTENT, <span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">//设置菜单显示在按钮的下面</span></span><br><span class="line">        popupWindow.showAsDropDown(findViewById(R.id.btn_menu),<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">        <span class="comment">// 点击其他地方消失</span></span><br></pre></td></tr></table></figure>
+            <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnMenu</span><span class="hljs-params">(View view)</span></span>&#123;</span><br><span class="line">        <span class="hljs-comment">// 获取自定义的菜单布局文件</span></span><br><span class="line">        View popupWindow_view = getLayoutInflater().inflate(R.layout.menu, <span class="hljs-keyword">null</span>,<span class="hljs-keyword">false</span>);</span><br><span class="line">        <span class="hljs-comment">// 创建PopupWindow实例,设置菜单宽度和高度为包裹其自身内容</span></span><br><span class="line">        popupWindow = <span class="hljs-keyword">new</span> PopupWindow(popupWindow_view, ActionBar.LayoutParams.WRAP_CONTENT,</span><br><span class="line">                ActionBar.LayoutParams.WRAP_CONTENT, <span class="hljs-keyword">true</span>);</span><br><span class="line">        <span class="hljs-comment">//设置菜单显示在按钮的下面</span></span><br><span class="line">        popupWindow.showAsDropDown(findViewById(R.id.btn_menu),<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);</span><br><span class="line">        <span class="hljs-comment">// 点击其他地方消失</span></span><br></pre></td></tr></table></figure>
 <p> menu.xml为弹出菜单</p>
 <p>文档：<a href="https://developer.android.com/reference/android/widget/PopupWindow" target="_blank" rel="noopener">PopupWindow</a><br>PopupWindow</p>
 <p>public class PopupWindow<br>extends Object </p>
@@ -249,7 +249,7 @@
                 int xoff, 
                 int yoff, 
                 int gravity)</code><br>|Parameters||<br>|–|–|<br>|anchor    |View: the view on which to pin the popup window|<br>|xoff    |int: A horizontal offset from the anchor in pixels|<br>|yoff    |int: A vertical offset from the anchor in pixels|<br>|gravity    |int: Alignment of the popup relative to the anchor|</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">View	<span class="title">inflate</span><span class="params">(<span class="keyword">int</span> resource, ViewGroup root)</span></span></span><br><span class="line"><span class="function"><span class="comment">//Inflate a new view hierarchy from the specified xml resource.</span></span></span><br><span class="line"><span class="function">View	<span class="title">inflate</span><span class="params">(XmlPullParser parser, ViewGroup root)</span></span></span><br><span class="line"><span class="function"><span class="comment">//Inflate a new view hierarchy from the specified xml node.</span></span></span><br><span class="line"><span class="function">View	<span class="title">inflate</span><span class="params">(XmlPullParser parser, ViewGroup root, <span class="keyword">boolean</span> attachToRoot)</span></span></span><br><span class="line"><span class="function"><span class="comment">//Inflate a new view hierarchy from the specified XML node.</span></span></span><br><span class="line"><span class="function">View	<span class="title">inflate</span><span class="params">(<span class="keyword">int</span> resource, ViewGroup root, <span class="keyword">boolean</span> attachToRoot)</span></span></span><br><span class="line"><span class="function"><span class="comment">//Inflate a new view hierarchy from the specified xml resource.</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function">View	<span class="hljs-title">inflate</span><span class="hljs-params">(<span class="hljs-keyword">int</span> resource, ViewGroup root)</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-comment">//Inflate a new view hierarchy from the specified xml resource.</span></span></span><br><span class="line"><span class="hljs-function">View	<span class="hljs-title">inflate</span><span class="hljs-params">(XmlPullParser parser, ViewGroup root)</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-comment">//Inflate a new view hierarchy from the specified xml node.</span></span></span><br><span class="line"><span class="hljs-function">View	<span class="hljs-title">inflate</span><span class="hljs-params">(XmlPullParser parser, ViewGroup root, <span class="hljs-keyword">boolean</span> attachToRoot)</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-comment">//Inflate a new view hierarchy from the specified XML node.</span></span></span><br><span class="line"><span class="hljs-function">View	<span class="hljs-title">inflate</span><span class="hljs-params">(<span class="hljs-keyword">int</span> resource, ViewGroup root, <span class="hljs-keyword">boolean</span> attachToRoot)</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-comment">//Inflate a new view hierarchy from the specified xml resource.</span></span></span><br></pre></td></tr></table></figure>
 
         </div>
         
@@ -287,13 +287,13 @@
         </h1>
         <div class="content">
             <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="hljs-string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
         </div>
@@ -321,21 +321,17 @@
         <nav class="level">
             <div class="level-item has-text-centered">
                 <div>
-                    <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Your name">
+                    <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="PickleXin">
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        PickleXin
                     </p>
                     
-                    
-                    <p class="is-size-6 is-block">
-                        Your title
-                    </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>陕西 西安</span>
                     </p>
                     
                 </div>
@@ -345,7 +341,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        Entradas
                     </p>
                     <p class="title has-text-weight-normal">
                         4
@@ -355,17 +351,17 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        Categoria
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        1
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tag
+                        Etiqueta
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -375,7 +371,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="http://github.com/ppoffice">
-                Follow</a>
+                SEGUIR</a>
         </div>
         
         
@@ -429,23 +425,12 @@
         <ul class="menu-list">
         
             <li>
-                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                <a class="level is-mobile" href="https://www.google.com/" target="_blank">
                     <span class="level-left">
-                        <span class="level-item">Hexo</span>
+                        <span class="level-item">Google</span>
                     </span>
                     <span class="level-right">
-                        <span class="level-item tag">https://hexo.io</span>
-                    </span>
-                </a>
-            </li>
-        
-            <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
-                    <span class="level-left">
-                        <span class="level-item">PPOffice</span>
-                    </span>
-                    <span class="level-right">
-                        <span class="level-item tag">https://github.com/ppoffice</span>
+                        <span class="level-item tag">https://www.google.com/</span>
                     </span>
                 </a>
             </li>
@@ -462,24 +447,16 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Categorias
             </h3>
             <ul class="menu-list">
             <li>
-        <a class="level is-marginless" href="/categories/cattest1-subtest1/">
-            <span class="level-start">
-                <span class="level-item">/cattest1/subtest1</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
         <a class="level is-marginless" href="/categories/cattest1/">
             <span class="level-start">
                 <span class="level-item">cattest1</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li>
             </ul>
@@ -491,7 +468,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Tag Cloud
+            Nube de etiquetas
         </h3>
         <a href="/tags/tagstest1/" style="font-size: 10px;">tagstest1</a>
     </div>
@@ -505,7 +482,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
@@ -521,7 +498,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-04T13:16:55.000Z">2018-12-04</time></div>
                     <a href="/2018/12/04/test-3/" class="has-link-black-ter is-size-6">test 3</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/cattest1-subtest1/">/cattest1/subtest1</a>
+                        <a class="has-link-grey -link" href="/categories/cattest1/">cattest1</a>
                     </p>
                 </div>
             </div>
@@ -592,7 +569,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -616,7 +593,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
                 
@@ -651,7 +628,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
@@ -667,7 +644,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-04T13:16:55.000Z">2018-12-04</time></div>
                     <a href="/2018/12/04/test-3/" class="has-link-black-ter is-size-6">test 3</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/cattest1-subtest1/">/cattest1/subtest1</a>
+                        <a class="has-link-grey -link" href="/categories/cattest1/">cattest1</a>
                     </p>
                 </div>
             </div>
@@ -738,7 +715,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -762,7 +739,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
                 
@@ -930,10 +907,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Entradas',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
