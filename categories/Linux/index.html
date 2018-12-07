@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Category: Linux - My Personal Website</title>
+<title>Categoria: Linux - My Personal Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -132,13 +132,146 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/categories">Categories</a></li>
+            <li><a href="/categories">Categorias</a></li>
             
             <li class="is-active"><a href="#" aria-current="page">Linux</a></li>
         </ul>
         </nav>
     </div>
 </div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 read (About 8 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/12/07/Linux/Vi常见命令/">Vi常见命令</a>
+            
+        </h1>
+        <div class="content">
+            <p><img src="/images/vi/vi.png" alt="常用命令"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 read (About 0 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/12/07/Linux/Linux用户用户组和文件权限/">Linux用户用户组和文件权限</a>
+            
+        </h1>
+        <div class="content">
+            
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 read (About 967 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/12/07/Linux/学用linux/">学用linux</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find path criterion action</span><br></pre></td></tr></table></figure></p>
+<p><strong>path</strong>：要搜索的文件系统部分（指定的目录及其所有子目录）。如果什么也没指定，则将使用当前目录下的文件系统。<br><strong>criterion</strong>：文件应该具有的属性：<br>-name pattern 搜索名称中包含给定模式的文件。如果模式中包含元字符或通配符，则必须用引号将它括起。否则，它将由 shell 解释，而不是由 find 解释。<br>-type file_type 搜索文件类型。适用的文件类型如下：“d”（用于目录）、“f”（用于文件）或者“l”（用于符号链接）。<br>-ctime [+/-]days 搜索恰好在指定的几天前进行上一次修改的那些文件。<br><strong>action</strong>:影响以下条件或将搜索作为一个整体进行控制的选项，例如：<br> -print<br> -exec command  可使用选项 -exec 调用其他命令<br> <em>例子</em><br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find ~ -name kk* -type f –exec grep first &#123;&#125; \; -print</span><br></pre></td></tr></table></figure></p>
+<p> {} 这两个括号代表找到的并传递到命令 grep 的文件名的占位符。分号用于结束 -exec指令。由于它是特殊字符，所以在它前面放一个反斜杠，以此来标记它。</p>
+<h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p> locate 是 find -name 的替代命令（必须装有软件包 findutils-locate）。首次使用要用updatedb生成/更新数据库。</p>
+<h1 id="查找命令所在目录whereis"><a href="#查找命令所在目录whereis" class="headerlink" title="查找命令所在目录whereis"></a>查找命令所在目录whereis</h1><p> 命令 whereis 将返回二进制（选项 -b）、手册页（选项 -m）和指定命令的源代码（选项 -s）。该命令的速度比 find 快，但不如 find 全面。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;whereis -b ls</span><br><span class="line">&gt;whereis -m ls</span><br><span class="line">&gt;whereis -s ls</span><br></pre></td></tr></table></figure></p>
+<h1 id="which"><a href="#which" class="headerlink" title="which"></a>which</h1><p> which 将搜索在变量 PATH 中为指定命令列出的所有路径，并返回该命令的完整路径。命令 which 特别适用于以下情况：不同目录中存在某个命令的几个版本，并且您想知道在未指定路径的情况下输入时将执行哪个版本。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;which find</span><br></pre></td></tr></table></figure></p>
+<h1 id="type"><a href="#type" class="headerlink" title="type"></a>type</h1><p>命令 type command 可用来查找在输入 command 时执行哪类命令，是 shell 内置命令还是外部命令。选项 -a 在文件系统中传递采用该名称的命令的所有实例。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;type type</span><br><span class="line">&gt;type grep</span><br></pre></td></tr></table></figure></p>
+<h1 id="搜索文件内容-grep"><a href="#搜索文件内容-grep" class="headerlink" title="搜索文件内容 grep"></a>搜索文件内容 grep</h1><p>当需要查找包含特殊词、短语或项的所有文件，并且是扫描所有文件而不在编辑器中打开它们时<br><strong>&gt;grep search_pattern filename</strong><br>该命令将在文件名中进行搜索以寻找与 search_pattern 匹配的所有文本，并打印包含该模式的行。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">命令 grep 的可用选项如下：</span><br><span class="line">    -i 忽略大小写。</span><br><span class="line">    -l 仅显示包含搜索字符串的文件的名称。</span><br><span class="line">    -r 递归地搜索整个目录树。</span><br><span class="line">    -v 给定不包含搜索字符串的所有行。</span><br><span class="line">    -n 显示行号。</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;grep test  d* </span><br><span class="line">//显示所有以d开头的文件中包含test的行</span><br><span class="line">&gt;grep -n test aa bb cc</span><br><span class="line">//显示在aa，bb，cc文件中匹配test的行。</span><br></pre></td></tr></table></figure>
+<h1 id="安装RPM包"><a href="#安装RPM包" class="headerlink" title="安装RPM包"></a>安装RPM包</h1><p>用rpm安装软件的命令格式如下：<br><strong> rpm  -i  [安装选项]  rpm 软件包名 </strong><br>安装选项有很多，常用的如下：<br>   -vh ：显示安装过程中的详细信息；<br>   –percent：显示安装进度的百分比；<br>   –test：不进行安装软件包，只进行安装测试并显示简单的报告；<br>   –force：忽略任何错误，强制安装软件包。</p>
+<h1 id="更新、卸载RPM包"><a href="#更新、卸载RPM包" class="headerlink" title="更新、卸载RPM包"></a>更新、卸载RPM包</h1><p><strong> rpm  -u  rpm软件包名 </strong><br><strong> rpm  -e  rpm软件包名 </strong></p>
+<p>查询已安装的包版本<br>rpm –qa |grep  软件包名</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
 
     <div class="card">
     
@@ -194,92 +327,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 read (About 7 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/07/Linux/Vi常见命令/">Vi常见命令</a>
-            
-        </h1>
-        <div class="content">
-            <p><img src="/images/vi.png" alt="常用命令"></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 read (About 452 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/07/Linux/学用linux/">学用linux</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find path criterion action</span><br></pre></td></tr></table></figure></p>
-<p><strong>path</strong>：要搜索的文件系统部分（指定的目录及其所有子目录）。如果什么也没指定，则将使用当前目录下的文件系统。<br><strong>criterion</strong>：文件应该具有的属性：<br>-name pattern 搜索名称中包含给定模式的文件。如果模式中包含元字符或通配符，则必须用引号将它括起。否则，它将由 shell 解释，而不是由 find 解释。<br>-type file_type 搜索文件类型。适用的文件类型如下：“d”（用于目录）、“f”（用于文件）或者“l”（用于符号链接）。<br>-ctime [+/-]days 搜索恰好在指定的几天前进行上一次修改的那些文件。<br><strong>action</strong>:影响以下条件或将搜索作为一个整体进行控制的选项，例如：<br> -print<br> -exec command  可使用选项 -exec 调用其他命令<br> <em>例子</em><br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find ~ -name kk* -type f –exec grep first &#123;&#125; \; -print</span><br></pre></td></tr></table></figure></p>
-<p> {} 这两个括号代表找到的并传递到命令 grep 的文件名的占位符。分号用于结束 -exec指令。由于它是特殊字符，所以在它前面放一个反斜杠，以此来标记它。</p>
-<h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p> locate 是 find -name 的替代命令（必须装有软件包 findutils-locate）。首次使用要用updatedb生成/更新数据库。</p>
-<h1 id="查找命令所在目录whereis"><a href="#查找命令所在目录whereis" class="headerlink" title="查找命令所在目录whereis"></a>查找命令所在目录whereis</h1><p> 命令 whereis 将返回二进制（选项 -b）、手册页（选项 -m）和指定命令的源代码（选项 -s）。该命令的速度比 find 快，但不如 find 全面。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;whereis -b ls</span><br><span class="line">&gt;whereis -m ls</span><br><span class="line">&gt;whereis -s ls</span><br></pre></td></tr></table></figure></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
 </div>
                 
 
@@ -314,27 +361,27 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        Entradas
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        6
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        Categorias
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        3
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tag
+                        Etiqueta
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -344,7 +391,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
-                Follow</a>
+                SEGUIR</a>
         </div>
         
         
@@ -420,7 +467,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Categorias
             </h3>
             <ul class="menu-list">
             <li>
@@ -437,7 +484,15 @@
                 <span class="level-item">Linux</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Software-Quality-Assurance/">
+            <span class="level-start">
+                <span class="level-item">Software Quality Assurance</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
             </span>
         </a></li>
             </ul>
@@ -449,7 +504,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Tag Cloud
+            Nube de etiquetas
         </h3>
         <a href="/tags/Android/" style="font-size: 10px;">Android</a>
     </div>
@@ -463,23 +518,23 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
-            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
+            <a href="/2018/12/08/软件质量保证/Software Engineering Practices/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Engineering Practices">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:19.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/软件质量保证/Software Engineering Practices/" class="has-link-black-ter is-size-6">Software Engineering Practices</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>
                     </p>
                 </div>
             </div>
@@ -497,6 +552,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
                     <a href="/2018/12/07/Linux/Vi常见命令/" class="has-link-black-ter is-size-6">Vi常见命令</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/07/Linux/Linux用户用户组和文件权限/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux用户用户组和文件权限">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
+                    <a href="/2018/12/07/Linux/Linux用户用户组和文件权限/" class="has-link-black-ter is-size-6">Linux用户用户组和文件权限</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
@@ -525,18 +599,18 @@
         
         <article class="media">
             
-            <a href="/2018/11/04/Android案例-弹出菜单/" class="media-left">
+            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Android案例-弹出菜单">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-11-04T12:52:47.000Z">2018-11-04</time></div>
-                    <a href="/2018/11/04/Android案例-弹出菜单/" class="has-link-black-ter is-size-6">Android案例-弹出菜单</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
+                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Android案例/">Android案例</a>
+                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
                 </div>
             </div>
@@ -550,7 +624,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -560,7 +634,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -585,7 +659,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
                 
@@ -620,23 +694,23 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
-            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
+            <a href="/2018/12/08/软件质量保证/Software Engineering Practices/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Engineering Practices">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:19.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/软件质量保证/Software Engineering Practices/" class="has-link-black-ter is-size-6">Software Engineering Practices</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>
                     </p>
                 </div>
             </div>
@@ -654,6 +728,25 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
                     <a href="/2018/12/07/Linux/Vi常见命令/" class="has-link-black-ter is-size-6">Vi常见命令</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/07/Linux/Linux用户用户组和文件权限/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux用户用户组和文件权限">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
+                    <a href="/2018/12/07/Linux/Linux用户用户组和文件权限/" class="has-link-black-ter is-size-6">Linux用户用户组和文件权限</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
@@ -682,18 +775,18 @@
         
         <article class="media">
             
-            <a href="/2018/11/04/Android案例-弹出菜单/" class="media-left">
+            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Android案例-弹出菜单">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-11-04T12:52:47.000Z">2018-11-04</time></div>
-                    <a href="/2018/11/04/Android案例-弹出菜单/" class="has-link-black-ter is-size-6">Android案例-弹出菜单</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
+                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Android案例/">Android案例</a>
+                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
                 </div>
             </div>
@@ -707,7 +800,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -717,7 +810,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -742,7 +835,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
                 
@@ -910,10 +1003,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Entradas',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',

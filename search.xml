@@ -3,6 +3,74 @@
   
     
     <entry>
+      <title>Software Engineering Practices</title>
+      <link href="/2018/12/08/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/Software%20Engineering%20Practices/"/>
+      <url>/2018/12/08/%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81/Software%20Engineering%20Practices/</url>
+      
+        <content type="html"><![CDATA[<p>Some things Testers should know about them<br>-f<br> -f<br> -d<br> -f</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Vi常见命令</title>
+      <link href="/2018/12/07/Linux/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/"/>
+      <url>/2018/12/07/Linux/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/vi/vi.png" alt="常用命令"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Linux用户用户组和文件权限</title>
+      <link href="/2018/12/07/Linux/Linux%E7%94%A8%E6%88%B7%E7%94%A8%E6%88%B7%E7%BB%84%E5%92%8C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/"/>
+      <url>/2018/12/07/Linux/Linux%E7%94%A8%E6%88%B7%E7%94%A8%E6%88%B7%E7%BB%84%E5%92%8C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>学用linux</title>
+      <link href="/2018/12/07/Linux/%E5%AD%A6%E7%94%A8linux/"/>
+      <url>/2018/12/07/Linux/%E5%AD%A6%E7%94%A8linux/</url>
+      
+        <content type="html"><![CDATA[<h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find path criterion action</span><br></pre></td></tr></table></figure></p><p><strong>path</strong>：要搜索的文件系统部分（指定的目录及其所有子目录）。如果什么也没指定，则将使用当前目录下的文件系统。<br><strong>criterion</strong>：文件应该具有的属性：<br>-name pattern 搜索名称中包含给定模式的文件。如果模式中包含元字符或通配符，则必须用引号将它括起。否则，它将由 shell 解释，而不是由 find 解释。<br>-type file_type 搜索文件类型。适用的文件类型如下：“d”（用于目录）、“f”（用于文件）或者“l”（用于符号链接）。<br>-ctime [+/-]days 搜索恰好在指定的几天前进行上一次修改的那些文件。<br><strong>action</strong>:影响以下条件或将搜索作为一个整体进行控制的选项，例如：<br> -print<br> -exec command  可使用选项 -exec 调用其他命令<br> <em>例子</em><br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find ~ -name kk* -type f –exec grep first &#123;&#125; \; -print</span><br></pre></td></tr></table></figure></p><p> {} 这两个括号代表找到的并传递到命令 grep 的文件名的占位符。分号用于结束 -exec指令。由于它是特殊字符，所以在它前面放一个反斜杠，以此来标记它。</p><h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p> locate 是 find -name 的替代命令（必须装有软件包 findutils-locate）。首次使用要用updatedb生成/更新数据库。</p><h1 id="查找命令所在目录whereis"><a href="#查找命令所在目录whereis" class="headerlink" title="查找命令所在目录whereis"></a>查找命令所在目录whereis</h1><p> 命令 whereis 将返回二进制（选项 -b）、手册页（选项 -m）和指定命令的源代码（选项 -s）。该命令的速度比 find 快，但不如 find 全面。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;whereis -b ls</span><br><span class="line">&gt;whereis -m ls</span><br><span class="line">&gt;whereis -s ls</span><br></pre></td></tr></table></figure></p><h1 id="which"><a href="#which" class="headerlink" title="which"></a>which</h1><p> which 将搜索在变量 PATH 中为指定命令列出的所有路径，并返回该命令的完整路径。命令 which 特别适用于以下情况：不同目录中存在某个命令的几个版本，并且您想知道在未指定路径的情况下输入时将执行哪个版本。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;which find</span><br></pre></td></tr></table></figure></p><h1 id="type"><a href="#type" class="headerlink" title="type"></a>type</h1><p>命令 type command 可用来查找在输入 command 时执行哪类命令，是 shell 内置命令还是外部命令。选项 -a 在文件系统中传递采用该名称的命令的所有实例。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;type type</span><br><span class="line">&gt;type grep</span><br></pre></td></tr></table></figure></p><h1 id="搜索文件内容-grep"><a href="#搜索文件内容-grep" class="headerlink" title="搜索文件内容 grep"></a>搜索文件内容 grep</h1><p>当需要查找包含特殊词、短语或项的所有文件，并且是扫描所有文件而不在编辑器中打开它们时<br><strong>&gt;grep search_pattern filename</strong><br>该命令将在文件名中进行搜索以寻找与 search_pattern 匹配的所有文本，并打印包含该模式的行。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">命令 grep 的可用选项如下：</span><br><span class="line">    -i 忽略大小写。</span><br><span class="line">    -l 仅显示包含搜索字符串的文件的名称。</span><br><span class="line">    -r 递归地搜索整个目录树。</span><br><span class="line">    -v 给定不包含搜索字符串的所有行。</span><br><span class="line">    -n 显示行号。</span><br></pre></td></tr></table></figure></p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;grep test  d* </span><br><span class="line">//显示所有以d开头的文件中包含test的行</span><br><span class="line">&gt;grep -n test aa bb cc</span><br><span class="line">//显示在aa，bb，cc文件中匹配test的行。</span><br></pre></td></tr></table></figure><h1 id="安装RPM包"><a href="#安装RPM包" class="headerlink" title="安装RPM包"></a>安装RPM包</h1><p>用rpm安装软件的命令格式如下：<br><strong> rpm  -i  [安装选项]  rpm 软件包名 </strong><br>安装选项有很多，常用的如下：<br>   -vh ：显示安装过程中的详细信息；<br>   –percent：显示安装进度的百分比；<br>   –test：不进行安装软件包，只进行安装测试并显示简单的报告；<br>   –force：忽略任何错误，强制安装软件包。</p><h1 id="更新、卸载RPM包"><a href="#更新、卸载RPM包" class="headerlink" title="更新、卸载RPM包"></a>更新、卸载RPM包</h1><p><strong> rpm  -u  rpm软件包名 </strong><br><strong> rpm  -e  rpm软件包名 </strong></p><p>查询已安装的包版本<br>rpm –qa |grep  软件包名</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>Linux简介</title>
       <link href="/2018/12/07/Linux/linux%E7%AE%80%E4%BB%8B/"/>
       <url>/2018/12/07/Linux/linux%E7%AE%80%E4%BB%8B/</url>
@@ -20,43 +88,9 @@
     </entry>
     
     <entry>
-      <title>Vi常见命令</title>
-      <link href="/2018/12/07/Linux/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/"/>
-      <url>/2018/12/07/Linux/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/images/vi.png" alt="常用命令"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    <entry>
-      <title>学用linux</title>
-      <link href="/2018/12/07/Linux/%E5%AD%A6%E7%94%A8linux/"/>
-      <url>/2018/12/07/Linux/%E5%AD%A6%E7%94%A8linux/</url>
-      
-        <content type="html"><![CDATA[<h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find path criterion action</span><br></pre></td></tr></table></figure></p><p><strong>path</strong>：要搜索的文件系统部分（指定的目录及其所有子目录）。如果什么也没指定，则将使用当前目录下的文件系统。<br><strong>criterion</strong>：文件应该具有的属性：<br>-name pattern 搜索名称中包含给定模式的文件。如果模式中包含元字符或通配符，则必须用引号将它括起。否则，它将由 shell 解释，而不是由 find 解释。<br>-type file_type 搜索文件类型。适用的文件类型如下：“d”（用于目录）、“f”（用于文件）或者“l”（用于符号链接）。<br>-ctime [+/-]days 搜索恰好在指定的几天前进行上一次修改的那些文件。<br><strong>action</strong>:影响以下条件或将搜索作为一个整体进行控制的选项，例如：<br> -print<br> -exec command  可使用选项 -exec 调用其他命令<br> <em>例子</em><br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find ~ -name kk* -type f –exec grep first &#123;&#125; \; -print</span><br></pre></td></tr></table></figure></p><p> {} 这两个括号代表找到的并传递到命令 grep 的文件名的占位符。分号用于结束 -exec指令。由于它是特殊字符，所以在它前面放一个反斜杠，以此来标记它。</p><h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p> locate 是 find -name 的替代命令（必须装有软件包 findutils-locate）。首次使用要用updatedb生成/更新数据库。</p><h1 id="查找命令所在目录whereis"><a href="#查找命令所在目录whereis" class="headerlink" title="查找命令所在目录whereis"></a>查找命令所在目录whereis</h1><p> 命令 whereis 将返回二进制（选项 -b）、手册页（选项 -m）和指定命令的源代码（选项 -s）。该命令的速度比 find 快，但不如 find 全面。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;whereis -b ls</span><br><span class="line">&gt;whereis -m ls</span><br><span class="line">&gt;whereis -s ls</span><br></pre></td></tr></table></figure></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    <entry>
       <title>Android案例-弹出菜单</title>
-      <link href="/2018/11/04/Android%E6%A1%88%E4%BE%8B-%E5%BC%B9%E5%87%BA%E8%8F%9C%E5%8D%95/"/>
-      <url>/2018/11/04/Android%E6%A1%88%E4%BE%8B-%E5%BC%B9%E5%87%BA%E8%8F%9C%E5%8D%95/</url>
+      <link href="/2018/11/04/Android/Android%E6%A1%88%E4%BE%8B-%E5%BC%B9%E5%87%BA%E8%8F%9C%E5%8D%95/"/>
+      <url>/2018/11/04/Android/Android%E6%A1%88%E4%BE%8B-%E5%BC%B9%E5%87%BA%E8%8F%9C%E5%8D%95/</url>
       
         <content type="html"><![CDATA[<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnMenu</span><span class="hljs-params">(View view)</span></span>&#123;</span><br><span class="line">        <span class="hljs-comment">// 获取自定义的菜单布局文件</span></span><br><span class="line">        View popupWindow_view = getLayoutInflater().inflate(R.layout.menu, <span class="hljs-keyword">null</span>,<span class="hljs-keyword">false</span>);</span><br><span class="line">        <span class="hljs-comment">// 创建PopupWindow实例,设置菜单宽度和高度为包裹其自身内容</span></span><br><span class="line">        popupWindow = <span class="hljs-keyword">new</span> PopupWindow(popupWindow_view, ActionBar.LayoutParams.WRAP_CONTENT,</span><br><span class="line">                ActionBar.LayoutParams.WRAP_CONTENT, <span class="hljs-keyword">true</span>);</span><br><span class="line">        <span class="hljs-comment">//设置菜单显示在按钮的下面</span></span><br><span class="line">        popupWindow.showAsDropDown(findViewById(R.id.btn_menu),<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);</span><br><span class="line">        <span class="hljs-comment">// 点击其他地方消失</span></span><br></pre></td></tr></table></figure><p> menu.xml为弹出菜单</p><p>文档:<a href="https://developer.android.com/reference/android/widget/PopupWindow" target="_blank" rel="noopener">PopupWindow</a><br>public class PopupWindow extends Object<br>java.lang.Object<br>   ↳    android.widget.PopupWindow</p><p>该类表示可用于显示任意视图的弹出窗口。弹出窗口是出现在当前活动顶部的浮动容器。<br>This class represents a popup window that can be used to display an arbitrary view. The popup window is a floating container that appears on top of the current activity.</p><h2 id="Public-constructors"><a href="#Public-constructors" class="headerlink" title="Public constructors"></a>Public constructors</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public PopupWindow (View   contentView, </span><br><span class="line">                    int     width, </span><br><span class="line">                    int     height, </span><br><span class="line">                    boolean focusable)</span><br></pre></td></tr></table></figure><p> Create a new popup window which can display the contentView. The dimension of the window must be passed to this constructor.The popup does not provide any background. This should be handled by the content view. </p><p><strong>contentView</strong>:the popup’s content<br><strong>width</strong>      :the popup’s width<br><strong>height</strong>     :the popup’s height<br><strong>focusable</strong>  :true if the popup can be focused, false otherwise</p><h2 id="Public-methods"><a href="#Public-methods" class="headerlink" title="Public methods"></a>Public methods</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public void showAsDropDown (View  anchor,</span><br><span class="line">                            int   xoff,</span><br><span class="line">                            int   yoff,</span><br><span class="line">                            int   gravity)</span><br></pre></td></tr></table></figure><h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h3><p><strong>anchor</strong>:the view on which to pin the popup window<br><strong>xoff</strong>:A horizontal offset from the anchor in pixels<br><strong>yoff</strong>:A vertical offset from the anchor in pixels<br><strong>gravity</strong>: Alignment of the popup relative to the anchor</p><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function">View<span class="hljs-title">inflate</span><span class="hljs-params">(<span class="hljs-keyword">int</span> resource, ViewGroup root)</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-comment">//Inflate a new view hierarchy from the specified xml resource.</span></span></span><br><span class="line"><span class="hljs-function">View<span class="hljs-title">inflate</span><span class="hljs-params">(XmlPullParser parser, ViewGroup root)</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-comment">//Inflate a new view hierarchy from the specified xml node.</span></span></span><br><span class="line"><span class="hljs-function">View<span class="hljs-title">inflate</span><span class="hljs-params">(XmlPullParser parser, ViewGroup root, <span class="hljs-keyword">boolean</span> attachToRoot)</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-comment">//Inflate a new view hierarchy from the specified XML node.</span></span></span><br><span class="line"><span class="hljs-function">View<span class="hljs-title">inflate</span><span class="hljs-params">(<span class="hljs-keyword">int</span> resource, ViewGroup root, <span class="hljs-keyword">boolean</span> attachToRoot)</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-comment">//Inflate a new view hierarchy from the specified xml resource.</span></span></span><br></pre></td></tr></table></figure>]]></content>
       
