@@ -7,18 +7,22 @@
 
 
 
-    <meta name="description" content="Some things Testers should know about them-f -f -d -f">
+    <meta name="description" content="Some things Testers should know about them 目标 Identify some common software development problems.  Identify six software engineering practices for addressing common software development problems  常见的软">
 <meta name="keywords" content="xjtusexx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Software Engineering Practices">
 <meta property="og:url" content="http://yoursite.com/2018/12/08/软件质量保证/Software Engineering Practices/index.html">
 <meta property="og:site_name" content="My Personal Website">
-<meta property="og:description" content="Some things Testers should know about them-f -f -d -f">
+<meta property="og:description" content="Some things Testers should know about them 目标 Identify some common software development problems.  Identify six software engineering practices for addressing common software development problems  常见的软">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2018-12-07T18:32:08.880Z">
+<meta property="og:image" content="http://yoursite.com/img/soa/iterative.png">
+<meta property="og:image" content="http://yoursite.com/img/soa/riskprofiles.png">
+<meta property="og:image" content="http://yoursite.com/img/soa/map.png">
+<meta property="og:updated_time" content="2018-12-07T19:39:37.505Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Software Engineering Practices">
-<meta name="twitter:description" content="Some things Testers should know about them-f -f -d -f">
+<meta name="twitter:description" content="Some things Testers should know about them 目标 Identify some common software development problems.  Identify six software engineering practices for addressing common software development problems  常见的软">
+<meta name="twitter:image" content="http://yoursite.com/img/soa/iterative.png">
 
 
 
@@ -145,7 +149,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 read (About 11 words)
+                    4 分钟 read (About 532 words)
                 </span>
                 
             </div>
@@ -157,7 +161,94 @@
             
         </h1>
         <div class="content">
-            <p>Some things Testers should know about them<br>-f<br> -f<br> -d<br> -f</p>
+            <p><code>Some things Testers should know about them</code></p>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ol>
+<li>Identify some common software development problems. </li>
+<li>Identify six software engineering practices for addressing common software development problems</li>
+</ol>
+<h2 id="常见的软件开发问题症状"><a href="#常见的软件开发问题症状" class="headerlink" title="常见的软件开发问题症状"></a>常见的软件开发问题症状</h2><ul>
+<li>User or business needs not met</li>
+<li>Requirements churn</li>
+<li>Modules don’t integrate</li>
+<li>Hard to maintain</li>
+<li>Late discovery of flaws</li>
+<li>Poor quality or poor user experience</li>
+<li>Poor performance under load</li>
+<li>No coordinated team effort</li>
+<li>Build-and-release issues</li>
+</ul>
+<h2 id="六种软件工程实践"><a href="#六种软件工程实践" class="headerlink" title="六种软件工程实践"></a>六种软件工程实践</h2><p><strong>Develop Iteratively</strong><br><strong>Manage Requirements</strong><br><strong>Use Component Architectures</strong><br><strong>Model Visually (UML)</strong><br><strong>Continuously Verify Quality</strong><br><strong>Manage Change</strong></p>
+<ol>
+<li><p>Develop Iteratively </p>
+<ul>
+<li>瀑布模型特点</li>
+<li>Delays confirmation of critical risk resolution</li>
+<li>Measures progress by assessing work-products that are poor predictors of time-to-completion</li>
+<li>Delays and aggregates integration and testing</li>
+<li>Precludes early deployment</li>
+<li>Frequently results in major unplanned project extensions</li>
+</ul>
+<ul>
+<li>迭代模型特点<br><img src="/img/soa/iterative.png" alt=""></li>
+<li>最早的迭代可以解决最大的风险.每次迭代都会生成可执行版本.</li>
+<li>每次迭代都包括集成和测试。<br><strong>迭代有助于:</strong></li>
+</ul>
+<ul>
+<li>在进行大量投资之前解决重大风险</li>
+<li>实现早期客观反馈</li>
+<li>使测试和集成持续进行</li>
+<li>将项目重点放在可实现的短期目标里程碑上</li>
+<li>可以部署完成的最终系统的部分实现<br><img src="/img/soa/riskprofiles.png" alt="Rick Profiles"></li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li>Manage Requirements<br> <img src="/img/soa/map.png" alt=""><ul>
+<li>为了帮助管理需求与从这些需求派生的测试之间的关系，您可以在这些元素之间建立可跟踪性关系.<br><strong>可追溯性有助于我们做很多事情，包括：</strong></li>
+<li>评估项目对需求变更的影响</li>
+<li>评估测试失败对需求的影响（如果测试失败，可能不满足要求）</li>
+<li>验证应用程序是否仅执行预期的操作</li>
+<li>验证实施是否满足系统的所有要求</li>
+<li>管理项目范围</li>
+<li>管理变更</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li>Component-Based Architecture<ul>
+<li>弹性<ul>
+<li>满足当前和未来的要求</li>
+<li>提高可扩展性</li>
+<li>允许重用</li>
+<li>封装系统依赖性</li>
+</ul>
+</li>
+<li>基于组件<ul>
+<li>重用或自定义组件</li>
+<li>从市售组件中选择</li>
+<li>逐步发展现有软件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="4">
+<li>Model Visually (UML)<br>详情见软件分析与设计课程总结</li>
+</ol>
+<ol start="5">
+<li>Continuously Verify Quality<br>详情见软件分析与设计课程总结</li>
+</ol>
+<ol start="6">
+<li>Manage Change<ul>
+<li>Changes to enable iterative development<ul>
+<li>Secure workspaces for each worker</li>
+<li>Parallel development possible</li>
+</ul>
+</li>
+<li>Automated integration/build management</li>
+</ul>
+</li>
+</ol>
 
         </div>
         
@@ -172,8 +263,8 @@
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/07/Linux/Vi常见命令/">
-                <span class="level-item">Vi常见命令</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/08/软件质量保证/Software Quality/">
+                <span class="level-item">Software Quality</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -216,17 +307,17 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Entradas
+                        Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        7
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categorias
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
                         3
@@ -236,7 +327,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Etiqueta
+                        Tag
                     </p>
                     <p class="title has-text-weight-normal">
                         1
@@ -246,7 +337,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
-                SEGUIR</a>
+                Follow</a>
         </div>
         
         
@@ -322,7 +413,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categorias
+                Categories
             </h3>
             <ul class="menu-list">
             <li>
@@ -347,7 +438,7 @@
                 <span class="level-item">Software Quality Assurance</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li>
             </ul>
@@ -359,7 +450,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Nube de etiquetas
+            Tag Cloud
         </h3>
         <a href="/tags/Android/" style="font-size: 10px;">Android</a>
     </div>
@@ -373,7 +464,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
@@ -397,16 +488,35 @@
         
         <article class="media">
             
-            <a href="/2018/12/07/Linux/Vi常见命令/" class="media-left">
+            <a href="/2018/12/08/软件质量保证/Software Quality/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Vi常见命令">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Quality">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:19.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/软件质量保证/Software Quality/" class="has-link-black-ter is-size-6">Software Quality</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/Vi常见命令/" class="has-link-black-ter is-size-6">Vi常见命令</a>
+                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
@@ -435,35 +545,16 @@
         
         <article class="media">
             
-            <a href="/2018/12/07/Linux/学用linux/" class="media-left">
+            <a href="/2018/12/07/Linux/Vi常见命令/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="学用linux">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Vi常见命令">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/学用linux/" class="has-link-black-ter is-size-6">学用linux</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
+                    <a href="/2018/12/07/Linux/Vi常见命令/" class="has-link-black-ter is-size-6">Vi常见命令</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
@@ -479,7 +570,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -489,7 +580,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -514,7 +605,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -549,7 +640,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
@@ -573,16 +664,35 @@
         
         <article class="media">
             
-            <a href="/2018/12/07/Linux/Vi常见命令/" class="media-left">
+            <a href="/2018/12/08/软件质量保证/Software Quality/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Vi常见命令">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Quality">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:19.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/软件质量保证/Software Quality/" class="has-link-black-ter is-size-6">Software Quality</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/Vi常见命令/" class="has-link-black-ter is-size-6">Vi常见命令</a>
+                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
@@ -611,35 +721,16 @@
         
         <article class="media">
             
-            <a href="/2018/12/07/Linux/学用linux/" class="media-left">
+            <a href="/2018/12/07/Linux/Vi常见命令/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="学用linux">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Vi常见命令">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/学用linux/" class="has-link-black-ter is-size-6">学用linux</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
+                    <a href="/2018/12/07/Linux/Vi常见命令/" class="has-link-black-ter is-size-6">Vi常见命令</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
@@ -655,7 +746,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -665,7 +756,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -690,7 +781,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -858,10 +949,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Entradas',
+                POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categorias',
-                TAGS: 'Etiquetas',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
