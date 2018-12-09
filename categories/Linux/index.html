@@ -11,7 +11,7 @@
 <meta name="keywords" content="xjtusexx">
 <meta property="og:type" content="website">
 <meta property="og:title" content="My Personal Website">
-<meta property="og:url" content="http://yoursite.com/categories/Linux/index.html">
+<meta property="og:url" content="http://www.studentxiaoxin.top/categories/Linux/index.html">
 <meta property="og:site_name" content="My Personal Website">
 <meta property="og:description" content="个人博客">
 <meta property="og:locale" content="zh_CN">
@@ -156,61 +156,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 read (About 583 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/07/Linux/linux简介/">Linux简介</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="man"><a href="#man" class="headerlink" title="man"></a>man</h1><p>man （/usr/share/man）</p>
-<p>如果输入命令 man 后英语手册页没有自动显示，则您可以使用参数LANG=en_EN来显示英语版本的手册页。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; LANG=en_EN man man</span><br></pre></td></tr></table></figure></p>
-<p>给出关于man的具体描述，包括以下几个部分其中每个手册页标题的左右侧是命令名和手册页所属的章节号。标题的中间是章节的名称。</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">NAME          命令的名称和简短描述</span><br><span class="line">SYNOPSIS      语法的描述</span><br><span class="line">DESCRIPTION   命令的详细描述</span><br><span class="line">OPTIONS       提供的所有可用选项的描述</span><br><span class="line">COMMANDS      在程序运行时可以分配给该程序的说明</span><br><span class="line">FILES         使用某种方法连接到命令的文件</span><br><span class="line">SEE ALSO      相关命令的提示</span><br><span class="line">DIAGNOSTICS   程序可能出现的错误消息</span><br><span class="line">EXAMPLE       调用命令的示例</span><br><span class="line">BUGS          命令的已知错误和问题</span><br></pre></td></tr></table></figure>
-<p>手册页可以分为以下不同的小节</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1 可执行程序和 shell 命令（用户命令）</span><br><span class="line">2 系统调用</span><br><span class="line">3 功能和库例程</span><br><span class="line">4 设备文件</span><br><span class="line">5 配置文件和文件格式</span><br><span class="line">6 游戏</span><br><span class="line">7 宏软件包和文件格式</span><br><span class="line">8 系统管理命令</span><br></pre></td></tr></table></figure>
-<p>例如<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;man 1 crontab</span><br><span class="line">&gt;man 5 crontab</span><br></pre></td></tr></table></figure></p>
-<p>使用命令 whatis 显示某个命令或实用程序的所有可用手册页的简短描述<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;whatis crontab</span><br></pre></td></tr></table></figure></p>
-<h1 id="Info"><a href="#Info" class="headerlink" title="Info"></a>Info</h1><p>/usr/share/info/<br>Info工具是一个基于菜单的超文本系统，由GNU项目开发并由Linux发布。info工具包括一些关于Linux shell、工具、GNU项目开发程序的说明文档。与man相比，info工具可显示更完整的最新的GNU工具信息<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;info ls</span><br></pre></td></tr></table></figure></p>
-<h1 id="–help"><a href="#–help" class="headerlink" title="–help"></a>–help</h1><p>“–help”是一个工具选项<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;ls --help</span><br></pre></td></tr></table></figure></p>
-<h1 id="Howto文档"><a href="#Howto文档" class="headerlink" title="Howto文档"></a>Howto文档</h1><p>/usr/share/doc/howto<br>or <a href="http://www.tldp.org/index.html" target="_blank" rel="noopener">http://www.tldp.org/index.html</a></p>
-<h1 id="在线文档"><a href="#在线文档" class="headerlink" title="在线文档"></a>在线文档</h1><p>一些在线信息<br><a href="http://www.tldp.org" target="_blank" rel="noopener">http://www.tldp.org</a><br><a href="http://www.linux.org" target="_blank" rel="noopener">http://www.linux.org</a><br><a href="http://www.redhat.com" target="_blank" rel="noopener">http://www.redhat.com</a><br><a href="http://www.suse.com" target="_blank" rel="noopener">http://www.suse.com</a><br><a href="http://www.xfree86.org" target="_blank" rel="noopener">http://www.xfree86.org</a><br><a href="http://www.linuxplanet.com" target="_blank" rel="noopener">http://www.linuxplanet.com</a><br><a href="http://www.cert.org" target="_blank" rel="noopener">http://www.cert.org</a><br><a href="http://www.securityfocus.com" target="_blank" rel="noopener">http://www.securityfocus.com</a><br><a href="http://www.kernel.org" target="_blank" rel="noopener">http://www.kernel.org</a><br><a href="http://man.linuxde.net/" target="_blank" rel="noopener">http://man.linuxde.net/</a></p>
-<p>在以下目录中提供了大多数已安装软件包包的帮助文件：<br>/usr/share/doc/packages/package-name</p>
-<h2 id="ls-l-查看文件的属性"><a href="#ls-l-查看文件的属性" class="headerlink" title="ls -l 查看文件的属性"></a>ls -l 查看文件的属性</h2><p>普通文件          -rw-r–r–<br>目录文件          drwxr-xr-x<br>字符设备文件      crw-rw-rw-<br>块设备文件        brw-r—–<br>套接字文件        srwxrwxrwx<br>链接文件          lrwxrwxr—<br>FIFO文件          prwxr—r– </p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 read (About 0 words)
+                    几秒 read (About 1 words)
                 </span>
                 
             </div>
@@ -222,7 +168,7 @@
             
         </h1>
         <div class="content">
-            
+            <a id="more"></a>
         </div>
         
         
@@ -250,7 +196,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 read (About 8 words)
+                    几秒 read (About 9 words)
                 </span>
                 
             </div>
@@ -262,10 +208,17 @@
             
         </h1>
         <div class="content">
-            <p><img src="/img/vi/vi.png" alt="常用命令"></p>
-
+            <p><img src="/img/vi/vi.png" alt="常用命令"><br></p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2018/12/07/Linux/Vi常见命令/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -291,7 +244,55 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 read (About 967 words)
+                    4 分钟 read (About 584 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/12/07/Linux/linux简介/">Linux简介</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="man"><a href="#man" class="headerlink" title="man"></a>man</h1><p>man （/usr/share/man）<br></p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2018/12/07/Linux/linux简介/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 read (About 968 words)
                 </span>
                 
             </div>
@@ -303,21 +304,17 @@
             
         </h1>
         <div class="content">
-            <h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find path criterion action</span><br></pre></td></tr></table></figure></p>
-<p><strong>path</strong>：要搜索的文件系统部分（指定的目录及其所有子目录）。如果什么也没指定，则将使用当前目录下的文件系统。<br><strong>criterion</strong>：文件应该具有的属性：<br>-name pattern 搜索名称中包含给定模式的文件。如果模式中包含元字符或通配符，则必须用引号将它括起。否则，它将由 shell 解释，而不是由 find 解释。<br>-type file_type 搜索文件类型。适用的文件类型如下：“d”（用于目录）、“f”（用于文件）或者“l”（用于符号链接）。<br>-ctime [+/-]days 搜索恰好在指定的几天前进行上一次修改的那些文件。<br><strong>action</strong>:影响以下条件或将搜索作为一个整体进行控制的选项，例如：<br> -print<br> -exec command  可使用选项 -exec 调用其他命令<br> <em>例子</em><br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find ~ -name kk* -type f –exec grep first &#123;&#125; \; -print</span><br></pre></td></tr></table></figure></p>
-<p> {} 这两个括号代表找到的并传递到命令 grep 的文件名的占位符。分号用于结束 -exec指令。由于它是特殊字符，所以在它前面放一个反斜杠，以此来标记它。</p>
-<h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p> locate 是 find -name 的替代命令（必须装有软件包 findutils-locate）。首次使用要用updatedb生成/更新数据库。</p>
-<h1 id="查找命令所在目录whereis"><a href="#查找命令所在目录whereis" class="headerlink" title="查找命令所在目录whereis"></a>查找命令所在目录whereis</h1><p> 命令 whereis 将返回二进制（选项 -b）、手册页（选项 -m）和指定命令的源代码（选项 -s）。该命令的速度比 find 快，但不如 find 全面。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;whereis -b ls</span><br><span class="line">&gt;whereis -m ls</span><br><span class="line">&gt;whereis -s ls</span><br></pre></td></tr></table></figure></p>
-<h1 id="which"><a href="#which" class="headerlink" title="which"></a>which</h1><p> which 将搜索在变量 PATH 中为指定命令列出的所有路径，并返回该命令的完整路径。命令 which 特别适用于以下情况：不同目录中存在某个命令的几个版本，并且您想知道在未指定路径的情况下输入时将执行哪个版本。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;which find</span><br></pre></td></tr></table></figure></p>
-<h1 id="type"><a href="#type" class="headerlink" title="type"></a>type</h1><p>命令 type command 可用来查找在输入 command 时执行哪类命令，是 shell 内置命令还是外部命令。选项 -a 在文件系统中传递采用该名称的命令的所有实例。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;type type</span><br><span class="line">&gt;type grep</span><br></pre></td></tr></table></figure></p>
-<h1 id="搜索文件内容-grep"><a href="#搜索文件内容-grep" class="headerlink" title="搜索文件内容 grep"></a>搜索文件内容 grep</h1><p>当需要查找包含特殊词、短语或项的所有文件，并且是扫描所有文件而不在编辑器中打开它们时<br><strong>&gt;grep search_pattern filename</strong><br>该命令将在文件名中进行搜索以寻找与 search_pattern 匹配的所有文本，并打印包含该模式的行。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">命令 grep 的可用选项如下：</span><br><span class="line">    -i 忽略大小写。</span><br><span class="line">    -l 仅显示包含搜索字符串的文件的名称。</span><br><span class="line">    -r 递归地搜索整个目录树。</span><br><span class="line">    -v 给定不包含搜索字符串的所有行。</span><br><span class="line">    -n 显示行号。</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;grep test  d* </span><br><span class="line">//显示所有以d开头的文件中包含test的行</span><br><span class="line">&gt;grep -n test aa bb cc</span><br><span class="line">//显示在aa，bb，cc文件中匹配test的行。</span><br></pre></td></tr></table></figure>
-<h1 id="安装RPM包"><a href="#安装RPM包" class="headerlink" title="安装RPM包"></a>安装RPM包</h1><p>用rpm安装软件的命令格式如下：<br><strong> rpm  -i  [安装选项]  rpm 软件包名 </strong><br>安装选项有很多，常用的如下：<br>   -vh ：显示安装过程中的详细信息；<br>   –percent：显示安装进度的百分比；<br>   –test：不进行安装软件包，只进行安装测试并显示简单的报告；<br>   –force：忽略任何错误，强制安装软件包。</p>
-<h1 id="更新、卸载RPM包"><a href="#更新、卸载RPM包" class="headerlink" title="更新、卸载RPM包"></a>更新、卸载RPM包</h1><p><strong> rpm  -u  rpm软件包名 </strong><br><strong> rpm  -e  rpm软件包名 </strong></p>
-<p>查询已安装的包版本<br>rpm –qa |grep  软件包名</p>
-
+            <h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br></p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2018/12/07/Linux/学用linux/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -364,7 +361,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        8
                     </p>
                 </div>
             </div>
@@ -374,17 +371,17 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        4
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tag
+                        Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        1
+                        0
                     </p>
                 </div>
             </div>
@@ -471,9 +468,9 @@
             </h3>
             <ul class="menu-list">
             <li>
-        <a class="level is-marginless" href="/categories/Android案例/">
+        <a class="level is-marginless" href="/categories/Android/">
             <span class="level-start">
-                <span class="level-item">Android案例</span>
+                <span class="level-item">Android</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -492,24 +489,23 @@
                 <span class="level-item">Software Quality Assurance</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
-        </a></li>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Software-Quality-Assurance/Class-Notes/">
+            <span class="level-start">
+                <span class="level-item">Class Notes</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li></ul></li>
             </ul>
         </div>
     </div>
 </div>
     
         
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            Tag Cloud
-        </h3>
-        <a href="/tags/Android/" style="font-size: 10px;">Android</a>
-    </div>
-</div>
-
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
@@ -523,18 +519,18 @@
         
         <article class="media">
             
-            <a href="/2018/12/08/软件质量保证/Software Engineering Practices/" class="media-left">
+            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Introduction to Software Testing/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Engineering Practices">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Introduction to Software Testing">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:19.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/软件质量保证/Software Engineering Practices/" class="has-link-black-ter is-size-6">Software Engineering Practices</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:03.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Introduction to Software Testing/" class="has-link-black-ter is-size-6">Introduction to Software Testing</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
                     </p>
                 </div>
             </div>
@@ -542,7 +538,7 @@
         
         <article class="media">
             
-            <a href="/2018/12/08/软件质量保证/Software Quality/" class="media-left">
+            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Quality/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Quality">
                 </p>
@@ -550,10 +546,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:19.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/软件质量保证/Software Quality/" class="has-link-black-ter is-size-6">Software Quality</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:02.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Quality/" class="has-link-black-ter is-size-6">Software Quality</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
                     </p>
                 </div>
             </div>
@@ -561,18 +557,18 @@
         
         <article class="media">
             
-            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
+            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Engineering Practices/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Engineering Practices">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:01.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Engineering Practices/" class="has-link-black-ter is-size-6">Software Engineering Practices</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
                     </p>
                 </div>
             </div>
@@ -634,7 +630,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -662,17 +658,6 @@
                 Tags
             </h3>
             <ul class="menu-list">
-                
-                <li>
-                    <a class="level is-marginless" href="/tags/Android/">
-                        <span class="level-start">
-                            <span class="level-item">Android</span>
-                        </span>
-                        <span class="level-end">
-                            <span class="level-item tag">1</span>
-                        </span>
-                    </a>
-                </li>
                 
             </ul>
         </div>
@@ -699,18 +684,18 @@
         
         <article class="media">
             
-            <a href="/2018/12/08/软件质量保证/Software Engineering Practices/" class="media-left">
+            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Introduction to Software Testing/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Engineering Practices">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Introduction to Software Testing">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:19.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/软件质量保证/Software Engineering Practices/" class="has-link-black-ter is-size-6">Software Engineering Practices</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:03.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Introduction to Software Testing/" class="has-link-black-ter is-size-6">Introduction to Software Testing</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
                     </p>
                 </div>
             </div>
@@ -718,7 +703,7 @@
         
         <article class="media">
             
-            <a href="/2018/12/08/软件质量保证/Software Quality/" class="media-left">
+            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Quality/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Quality">
                 </p>
@@ -726,10 +711,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:19.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/软件质量保证/Software Quality/" class="has-link-black-ter is-size-6">Software Quality</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:02.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Quality/" class="has-link-black-ter is-size-6">Software Quality</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
                     </p>
                 </div>
             </div>
@@ -737,18 +722,18 @@
         
         <article class="media">
             
-            <a href="/2018/12/07/Linux/linux简介/" class="media-left">
+            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Engineering Practices/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux简介">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Engineering Practices">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/linux简介/" class="has-link-black-ter is-size-6">Linux简介</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:01.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Engineering Practices/" class="has-link-black-ter is-size-6">Software Engineering Practices</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
                     </p>
                 </div>
             </div>
@@ -810,7 +795,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -838,17 +823,6 @@
                 Tags
             </h3>
             <ul class="menu-list">
-                
-                <li>
-                    <a class="level is-marginless" href="/tags/Android/">
-                        <span class="level-start">
-                            <span class="level-item">Android</span>
-                        </span>
-                        <span class="level-end">
-                            <span class="level-item tag">1</span>
-                        </span>
-                    </a>
-                </li>
                 
             </ul>
         </div>
