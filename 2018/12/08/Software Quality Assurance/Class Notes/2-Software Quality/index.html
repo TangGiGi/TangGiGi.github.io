@@ -2,23 +2,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>学用linux - My Personal Website</title>
+<title>2-Software Quality - My Personal Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="文件查找 findfind 在命令行上搜索文件">
+    <meta name="description" content="Objectives Introduce software quality Provide stakeholder-centric visions of quality and defect Identify software quality assurance">
 <meta name="keywords" content="xjtusexx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学用linux">
-<meta property="og:url" content="http://www.studentxiaoxin.top/2018/12/07/Linux/学用linux/index.html">
+<meta property="og:title" content="2-Software Quality">
+<meta property="og:url" content="http://www.studentxiaoxin.top/2018/12/08/Software Quality Assurance/Class Notes/2-Software Quality/index.html">
 <meta property="og:site_name" content="My Personal Website">
-<meta property="og:description" content="文件查找 findfind 在命令行上搜索文件">
+<meta property="og:description" content="Objectives Introduce software quality Provide stakeholder-centric visions of quality and defect Identify software quality assurance">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2018-12-09T02:24:15.446Z">
+<meta property="og:updated_time" content="2018-12-09T16:40:49.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学用linux">
-<meta name="twitter:description" content="文件查找 findfind 在命令行上搜索文件">
+<meta name="twitter:title" content="2-Software Quality">
+<meta name="twitter:description" content="Objectives Introduce software quality Provide stakeholder-centric visions of quality and defect Identify software quality assurance">
 
 
 
@@ -84,7 +84,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="学用linux" height="28">
+                <img src="/images/logo.svg" alt="2-Software Quality" height="28">
             
             </a>
         </div>
@@ -135,17 +135,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
+                <time class="level-item has-text-grey" datetime="2018-12-07T18:22:02.000Z">2018-12-08</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 read (About 968 words)
+                    2 分钟 read (About 337 words)
                 </span>
                 
             </div>
@@ -153,22 +153,83 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                学用linux
+                2-Software Quality
             
         </h1>
         <div class="content">
-            <h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br><a id="more"></a><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find path criterion action</span><br></pre></td></tr></table></figure></p>
-<p><strong>path</strong>：要搜索的文件系统部分（指定的目录及其所有子目录）。如果什么也没指定，则将使用当前目录下的文件系统。<br><strong>criterion</strong>：文件应该具有的属性：<br>-name pattern 搜索名称中包含给定模式的文件。如果模式中包含元字符或通配符，则必须用引号将它括起。否则，它将由 shell 解释，而不是由 find 解释。<br>-type file_type 搜索文件类型。适用的文件类型如下：“d”（用于目录）、“f”（用于文件）或者“l”（用于符号链接）。<br>-ctime [+/-]days 搜索恰好在指定的几天前进行上一次修改的那些文件。<br><strong>action</strong>:影响以下条件或将搜索作为一个整体进行控制的选项，例如：<br> -print<br> -exec command  可使用选项 -exec 调用其他命令<br> <em>例子</em><br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find ~ -name kk* -type f –exec grep first &#123;&#125; \; -print</span><br></pre></td></tr></table></figure></p>
-<p> {} 这两个括号代表找到的并传递到命令 grep 的文件名的占位符。分号用于结束 -exec指令。由于它是特殊字符，所以在它前面放一个反斜杠，以此来标记它。</p>
-<h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p> locate 是 find -name 的替代命令（必须装有软件包 findutils-locate）。首次使用要用updatedb生成/更新数据库。</p>
-<h1 id="查找命令所在目录whereis"><a href="#查找命令所在目录whereis" class="headerlink" title="查找命令所在目录whereis"></a>查找命令所在目录whereis</h1><p> 命令 whereis 将返回二进制（选项 -b）、手册页（选项 -m）和指定命令的源代码（选项 -s）。该命令的速度比 find 快，但不如 find 全面。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;whereis -b ls</span><br><span class="line">&gt;whereis -m ls</span><br><span class="line">&gt;whereis -s ls</span><br></pre></td></tr></table></figure></p>
-<h1 id="which"><a href="#which" class="headerlink" title="which"></a>which</h1><p> which 将搜索在变量 PATH 中为指定命令列出的所有路径，并返回该命令的完整路径。命令 which 特别适用于以下情况：不同目录中存在某个命令的几个版本，并且您想知道在未指定路径的情况下输入时将执行哪个版本。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;which find</span><br></pre></td></tr></table></figure></p>
-<h1 id="type"><a href="#type" class="headerlink" title="type"></a>type</h1><p>命令 type command 可用来查找在输入 command 时执行哪类命令，是 shell 内置命令还是外部命令。选项 -a 在文件系统中传递采用该名称的命令的所有实例。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;type type</span><br><span class="line">&gt;type grep</span><br></pre></td></tr></table></figure></p>
-<h1 id="搜索文件内容-grep"><a href="#搜索文件内容-grep" class="headerlink" title="搜索文件内容 grep"></a>搜索文件内容 grep</h1><p>当需要查找包含特殊词、短语或项的所有文件，并且是扫描所有文件而不在编辑器中打开它们时<br><strong>&gt;grep search_pattern filename</strong><br>该命令将在文件名中进行搜索以寻找与 search_pattern 匹配的所有文本，并打印包含该模式的行。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">命令 grep 的可用选项如下：</span><br><span class="line">    -i 忽略大小写。</span><br><span class="line">    -l 仅显示包含搜索字符串的文件的名称。</span><br><span class="line">    -r 递归地搜索整个目录树。</span><br><span class="line">    -v 给定不包含搜索字符串的所有行。</span><br><span class="line">    -n 显示行号。</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;grep test  d* </span><br><span class="line">//显示所有以d开头的文件中包含test的行</span><br><span class="line">&gt;grep -n test aa bb cc</span><br><span class="line">//显示在aa，bb，cc文件中匹配test的行。</span><br></pre></td></tr></table></figure>
-<h1 id="安装RPM包"><a href="#安装RPM包" class="headerlink" title="安装RPM包"></a>安装RPM包</h1><p>用rpm安装软件的命令格式如下：<br><strong> rpm  -i  [安装选项]  rpm 软件包名 </strong><br>安装选项有很多，常用的如下：<br>   -vh ：显示安装过程中的详细信息；<br>   –percent：显示安装进度的百分比；<br>   –test：不进行安装软件包，只进行安装测试并显示简单的报告；<br>   –force：忽略任何错误，强制安装软件包。</p>
-<h1 id="更新、卸载RPM包"><a href="#更新、卸载RPM包" class="headerlink" title="更新、卸载RPM包"></a>更新、卸载RPM包</h1><p><strong> rpm  -u  rpm软件包名 </strong><br><strong> rpm  -e  rpm软件包名 </strong></p>
-<p>查询已安装的包版本<br>rpm –qa |grep  软件包名</p>
+            <ul>
+<li><h1 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a><strong>Objectives</strong></h1><ul>
+<li>Introduce software quality</li>
+<li>Provide stakeholder-centric visions of quality and defect</li>
+<li>Identify software quality assurance<a id="more"></a>
+<br></li>
+</ul>
+</li>
+<li><h1 id="Define-quality"><a href="#Define-quality" class="headerlink" title="Define quality"></a><strong>Define quality</strong></h1><ul>
+<li><strong>Fitness for use –Dr. Joseph M. Juran</strong></li>
+<li>The totality of features and characteristics of a product that bear on its ability to satisfy a given need –American Society for Quality</li>
+<li>Conformance with requirements –Philip Crosby</li>
+<li>conforms to specifications</li>
+<li><strong>Quality is value to some person.</strong>– Gerald M. Weinberg<br><br></li>
+</ul>
+</li>
+<li><h1 id="key-dimensions-of-quality"><a href="#key-dimensions-of-quality" class="headerlink" title="key dimensions of quality"></a><strong>key dimensions of quality</strong></h1><ul>
+<li>Customer Satisfiers<ul>
+<li>the right features</li>
+<li>adequate instruction</li>
+</ul>
+</li>
+<li>Customer Dissatisfiers<ul>
+<li>unreliable</li>
+<li>hard to use</li>
+<li>too slow</li>
+<li>incompatible with the customer’s equipment<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="Dimensions-of-Quality-FURPS"><a href="#Dimensions-of-Quality-FURPS" class="headerlink" title="Dimensions of Quality: FURPS"></a><strong>Dimensions of Quality: FURPS</strong></h1><ul>
+<li>Functionality<ul>
+<li>Test the accurate workings of each usage scenario</li>
+</ul>
+</li>
+<li>Usability<ul>
+<li>Test application from the perspective of convenience to end-user.</li>
+</ul>
+</li>
+<li>Reliability<ul>
+<li>Test the application behaves consistently and predictably.</li>
+</ul>
+</li>
+<li>Performance<ul>
+<li>Test online response under average and peak loading</li>
+</ul>
+</li>
+<li>Supportability<ul>
+<li>Test the ability to maintain and support application under production use<br><br></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="A-Broader-Definition-of-Dimensions-of-Quality"><a href="#A-Broader-Definition-of-Dimensions-of-Quality" class="headerlink" title="A Broader Definition of Dimensions of Quality"></a><strong>A Broader Definition of Dimensions of Quality</strong></h1><ul>
+<li>Accessibility Capability Compatibility Concurrency Conformance to standards Efficiency Installability and uninstallability Localizability Maintainability Performance Portability Reliability Scalability Security Supportability Testability Usability……<br><br></li>
+</ul>
+</li>
+<li><h1 id="Definition-of-SQA"><a href="#Definition-of-SQA" class="headerlink" title="Definition of SQA"></a><strong>Definition of SQA</strong></h1><ul>
+<li>Software quality assurance (SQA) is:A systematic, planned set of actions necessary to provide adequate confidence that the software development process or the maintenance process of a software system product conforms to established functional and technical requirements as well as with the managerial requirements of keeping the schedule and operating within the budgetary confines.</li>
+<li>系统的，有计划的一系列行动，以充分确信软件开发过程或软件系统产品的维护过程符合既定的功能和技术要求，以及在预算范围内保持计划和操作的管理要求。<br><br>     </li>
+</ul>
+</li>
+<li><h1 id="SQA-system-component-classes"><a href="#SQA-system-component-classes" class="headerlink" title="SQA system component classes"></a><strong>SQA system component classes</strong></h1><ol>
+<li>Pre-project quality components</li>
+<li>Project life cycle quality components</li>
+<li>Infrastructure error preventive and improvement components</li>
+<li>Software quality management components</li>
+<li>Standardization, certification and SQA assessment components</li>
+<li>Organizing for SQA – the human components</li>
+</ol>
+</li>
+</ul>
 
         </div>
         
@@ -182,16 +243,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/12/07/Linux/Linux用户用户组和文件权限/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/12/08/Software Quality Assurance/Class Notes/3-Introduction to Software Testing/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Linux用户用户组和文件权限</span>
+                <span class="level-item">3-Introduction to Software Testing</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/07/Linux/linux简介/">
-                <span class="level-item">Linux简介</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/08/Software Quality Assurance/Class Notes/1-Software Engineering Practices/">
+                <span class="level-item">1-Software Engineering Practices</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -657,7 +718,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="学用linux" height="28">
+                    <img src="/images/logo.svg" alt="2-Software Quality" height="28">
                 
                 </a>
                 <p class="is-size-7">

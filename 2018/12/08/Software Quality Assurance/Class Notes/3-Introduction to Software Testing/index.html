@@ -2,22 +2,28 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>My Personal Website</title>
+<title>3-Introduction to Software Testing - My Personal Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="个人博客">
+    <meta name="description" content="Objectives Introduce foundation topics of software testing Explain test ideas Introduce test matrices">
 <meta name="keywords" content="xjtusexx">
-<meta property="og:type" content="website">
-<meta property="og:title" content="My Personal Website">
-<meta property="og:url" content="http://www.studentxiaoxin.top/page/2/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3-Introduction to Software Testing">
+<meta property="og:url" content="http://www.studentxiaoxin.top/2018/12/08/Software Quality Assurance/Class Notes/3-Introduction to Software Testing/index.html">
 <meta property="og:site_name" content="My Personal Website">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="Objectives Introduce foundation topics of software testing Explain test ideas Introduce test matrices">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/soa/vmodel.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/soa/wmodel.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/soa/softtest.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/soa/testguidelines.png">
+<meta property="og:updated_time" content="2018-12-09T16:40:56.960Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My Personal Website">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="3-Introduction to Software Testing">
+<meta name="twitter:description" content="Objectives Introduce foundation topics of software testing Explain test ideas Introduce test matrices">
+<meta name="twitter:image" content="http://www.studentxiaoxin.top/img/soa/vmodel.png">
 
 
 
@@ -83,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="My Personal Website" height="28">
+                <img src="/images/logo.svg" alt="3-Introduction to Software Testing" height="28">
             
             </a>
         </div>
@@ -128,24 +134,23 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    <div class="card">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
+                <time class="level-item has-text-grey" datetime="2018-12-07T18:22:03.000Z">2018-12-08</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 read (About 9 words)
+                    2 分钟 read (About 331 words)
                 </span>
                 
             </div>
@@ -153,194 +158,87 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/12/07/Linux/Vi常见命令/">Vi常见命令</a>
+                3-Introduction to Software Testing
             
         </h1>
         <div class="content">
-            <p><img src="/img/vi/vi.png" alt="常用命令"><br></p>
+            <ul>
+<li><h1 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a><strong>Objectives</strong></h1><ul>
+<li>Introduce foundation topics of software testing</li>
+<li>Explain test ideas</li>
+<li>Introduce test matrices<a id="more"></a>
+<br></li>
+</ul>
+</li>
+<li><h1 id="Definition-of-Software-Testing"><a href="#Definition-of-Software-Testing" class="headerlink" title="Definition of Software Testing"></a><strong>Definition of Software Testing</strong></h1><ul>
+<li>Software testing is a process, or a series of processes, designed to make sure computer code does what it was designed to do and that it does not do anything unintended.</li>
+<li>Software should be predictable and consistent, presenting no surprises to users.</li>
+<li><strong>Testing is the process of executing a program with the intent of finding errors.</strong><br><br></li>
+</ul>
+</li>
+<li><h1 id="Software-testing-objectives"><a href="#Software-testing-objectives" class="headerlink" title="Software testing objectives"></a><strong>Software testing objectives</strong></h1><ul>
+<li>在测试软件中识别和揭示尽可能多的错误</li>
+<li>在将已识别的错误和重新测试校正后，将测试的软件带到可接受的质量水平。</li>
+<li>在预算和调度限制内有效地执行所需的测试。</li>
+<li>编译软件错误记录以用于错误预防（通过纠正和预防措施）。<br><br></li>
+</ul>
+</li>
+<li><h1 id="Test-model"><a href="#Test-model" class="headerlink" title="Test model"></a><strong>Test model</strong></h1><img src="/img/soa/vmodel.png" alt=""><br><img src="/img/soa/wmodel.png" alt=""><br><br></li>
+<li><h1 id="Classification-of-software-testing"><a href="#Classification-of-software-testing" class="headerlink" title="Classification of software testing"></a><strong>Classification of software testing</strong></h1><img src="/img/soa/softtest.png" alt=""><br><br></li>
+<li><h1 id="Vital-Program-Testing-Guidelines"><a href="#Vital-Program-Testing-Guidelines" class="headerlink" title="Vital Program Testing Guidelines"></a><strong>Vital Program Testing Guidelines</strong></h1><img src="/img/soa/testguidelines.png" alt=""><br><br></li>
+<li><h1 id="Functional-Testing"><a href="#Functional-Testing" class="headerlink" title="Functional Testing"></a><strong>Functional Testing</strong></h1><ul>
+<li>是黑盒测试</li>
+<li>对性能以外的任何外部可见或可测量的软件属性感兴趣。<br><br></li>
+</ul>
+</li>
+<li><h1 id="Test-Ideas"><a href="#Test-Ideas" class="headerlink" title="Test Ideas"></a><strong>Test Ideas</strong></h1><ul>
+<li>A test idea is a brief statement that identifies a test that might be useful. </li>
+<li>A test idea differs from a test case, in that the test idea contains no specification of thetest workings, only the essence of the idea behind the test.</li>
+<li>Test ideas are generators for test cases: potential test cases are derived from a test ideas list.</li>
+<li>A key question for the tester or test analyst is which ones are the ones worth trying.</li>
+</ul>
+</li>
+<li><h1 id="Where-Do-Test-Ideas-Come-From"><a href="#Where-Do-Test-Ideas-Come-From" class="headerlink" title="Where Do Test Ideas Come From?"></a><strong>Where Do Test Ideas Come From?</strong></h1><ul>
+<li>Models</li>
+<li>Specifications</li>
+<li>Customer complaints</li>
+<li>Brainstorm sessions among colleagues</li>
+<li>Bug lists</li>
+<li>Representative exemplars</li>
+</ul>
+</li>
+</ul>
+
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/07/Linux/Vi常见命令/#more">Read More</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>
 </div>
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 read (About 584 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/07/Linux/linux简介/">Linux简介</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="man"><a href="#man" class="headerlink" title="man"></a>man</h1><p>man （/usr/share/man）<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/07/Linux/linux简介/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6 分钟 read (About 968 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/07/Linux/学用linux/">学用linux</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/07/Linux/学用linux/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-04T12:52:47.000Z">2018-11-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Android/">Android</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 read (About 389 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/11/04/Android/Android案例-弹出菜单/">Android案例-弹出菜单</a>
-            
-        </h1>
-        <div class="content">
-            <figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnMenu</span><span class="hljs-params">(View view)</span></span>&#123;</span><br><span class="line">        <span class="hljs-comment">// 获取自定义的菜单布局文件</span></span><br><span class="line">        View popupWindow_view = getLayoutInflater().inflate(R.layout.menu, <span class="hljs-keyword">null</span>,<span class="hljs-keyword">false</span>);</span><br><span class="line">        <span class="hljs-comment">// 创建PopupWindow实例,设置菜单宽度和高度为包裹其自身内容</span></span><br><span class="line">        popupWindow = <span class="hljs-keyword">new</span> PopupWindow(popupWindow_view, ActionBar.LayoutParams.WRAP_CONTENT,</span><br><span class="line">                ActionBar.LayoutParams.WRAP_CONTENT, <span class="hljs-keyword">true</span>);</span><br><span class="line">        <span class="hljs-comment">//设置菜单显示在按钮的下面</span></span><br><span class="line">        popupWindow.showAsDropDown(findViewById(R.id.btn_menu),<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);</span><br><span class="line">        <span class="hljs-comment">// 点击其他地方消失</span></span><br></pre></td></tr></table></figure>
-<p> menu.xml为弹出菜单</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/11/04/Android/Android案例-弹出菜单/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-    
 <div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous">
-            <a class="is-flex-grow has-text-black-ter" href="/">Previous</a>
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/12/08/Software Quality Assurance/Class Notes/4-The RUP Test Discipline/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">4-The RUP Test Discipline</span>
+            </a>
         </div>
-        <div class="pagination-next is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/page/3/">Next</a>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/08/Software Quality Assurance/Class Notes/2-Software Quality/">
+                <span class="level-item">2-Software Quality</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link has-text-black-ter" href="/">1</a></li>
-            
-            <li><a class="pagination-link is-current" href="/page/2/">2</a></li>
-            
-        </ul>
-    </nav>
+        
+    </div>
 </div>
+
+
 </div>
                 
 
@@ -355,7 +253,7 @@
         <nav class="level">
             <div class="level-item has-text-centered">
                 <div>
-                    <img class="image is-128x128 has-mb-6" src="/images/lyh.jpg" alt="PickleXin">
+                    <img class="image is-128x128 has-mb-6" src="/images/cat1.jpg" alt="PickleXin">
                     
                     <p class="is-size-4 is-block">
                         PickleXin
@@ -378,7 +276,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        12
                     </p>
                 </div>
             </div>
@@ -506,7 +404,7 @@
                 <span class="level-item">Software Quality Assurance</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">7</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/Software-Quality-Assurance/Class-Notes/">
@@ -514,7 +412,7 @@
                 <span class="level-item">Class Notes</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li></ul></li>
             </ul>
@@ -536,94 +434,64 @@
         
         <article class="media">
             
-            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Introduction to Software Testing/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Introduction to Software Testing">
-                </p>
-            </a>
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-09T16:00:00.000Z">2018-12-10</time></div>
+                    <a href="/2018/12/10/Software Quality Assurance/Individual techniques/Function testing/" class="has-link-black-ter is-size-6">6-Test &amp; Evaluate</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:06.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/6-Test & Evaluate/" class="has-link-black-ter is-size-6">6-Test &amp; Evaluate</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:05.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/5-Define Evaluation Mission/" class="has-link-black-ter is-size-6">5-Define Evaluation Mission</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:04.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/4-The RUP Test Discipline/" class="has-link-black-ter is-size-6">4-The RUP Test Discipline</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:03.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Introduction to Software Testing/" class="has-link-black-ter is-size-6">Introduction to Software Testing</a>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/3-Introduction to Software Testing/" class="has-link-black-ter is-size-6">3-Introduction to Software Testing</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Quality/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Quality">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:02.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Quality/" class="has-link-black-ter is-size-6">Software Quality</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Engineering Practices/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Engineering Practices">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:01.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Engineering Practices/" class="has-link-black-ter is-size-6">Software Engineering Practices</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/07/Linux/Linux用户用户组和文件权限/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux用户用户组和文件权限">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/Linux用户用户组和文件权限/" class="has-link-black-ter is-size-6">Linux用户用户组和文件权限</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/07/Linux/Vi常见命令/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Vi常见命令">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/Vi常见命令/" class="has-link-black-ter is-size-6">Vi常见命令</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
                 </div>
             </div>
@@ -647,7 +515,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">11</span>
                 </span>
             </a>
         </li>
@@ -701,94 +569,64 @@
         
         <article class="media">
             
-            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Introduction to Software Testing/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Introduction to Software Testing">
-                </p>
-            </a>
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-09T16:00:00.000Z">2018-12-10</time></div>
+                    <a href="/2018/12/10/Software Quality Assurance/Individual techniques/Function testing/" class="has-link-black-ter is-size-6">6-Test &amp; Evaluate</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:06.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/6-Test & Evaluate/" class="has-link-black-ter is-size-6">6-Test &amp; Evaluate</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:05.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/5-Define Evaluation Mission/" class="has-link-black-ter is-size-6">5-Define Evaluation Mission</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:04.000Z">2018-12-08</time></div>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/4-The RUP Test Discipline/" class="has-link-black-ter is-size-6">4-The RUP Test Discipline</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:03.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Introduction to Software Testing/" class="has-link-black-ter is-size-6">Introduction to Software Testing</a>
+                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/3-Introduction to Software Testing/" class="has-link-black-ter is-size-6">3-Introduction to Software Testing</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Quality/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Quality">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:02.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Quality/" class="has-link-black-ter is-size-6">Software Quality</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Engineering Practices/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Software Engineering Practices">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T18:22:01.000Z">2018-12-08</time></div>
-                    <a href="/2018/12/08/Software Quality Assurance/Class Notes/Software Engineering Practices/" class="has-link-black-ter is-size-6">Software Engineering Practices</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Class-Notes/">Class Notes</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/07/Linux/Linux用户用户组和文件权限/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux用户用户组和文件权限">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/Linux用户用户组和文件权限/" class="has-link-black-ter is-size-6">Linux用户用户组和文件权限</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2018/12/07/Linux/Vi常见命令/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Vi常见命令">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time></div>
-                    <a href="/2018/12/07/Linux/Vi常见命令/" class="has-link-black-ter is-size-6">Vi常见命令</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
                     </p>
                 </div>
             </div>
@@ -812,7 +650,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">11</span>
                 </span>
             </a>
         </li>
@@ -858,7 +696,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="My Personal Website" height="28">
+                    <img src="/images/logo.svg" alt="3-Introduction to Software Testing" height="28">
                 
                 </a>
                 <p class="is-size-7">
