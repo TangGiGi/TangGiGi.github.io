@@ -3,18 +3,208 @@
   
     
     <entry>
-      <title>6-Test &amp; Evaluate</title>
-      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/Function%20testing/"/>
-      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/Function%20testing/</url>
+      <title>11-structual testing</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/11-structual%20testing/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/11-structual%20testing/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<a id="more"></a><p><br></p><ul><li><h1 id="DD-path覆盖"><a href="#DD-path覆盖" class="headerlink" title="DD-path覆盖"></a><strong>DD-path覆盖</strong></h1><ul><li>给定程序的一组测试用例，如果在程序上执行时，遍历程序图中的每个DD路径，则它们构成DD路径覆盖。<br><br></li></ul></li><li><h1 id="branch覆盖"><a href="#branch覆盖" class="headerlink" title="branch覆盖"></a><strong>branch覆盖</strong></h1><ul><li>给定程序的一组测试用例，如果在程序上执行时，遍历程序图中的决策（predicate）的每个分支（输出），则它们构成分支覆盖。<br><br></li></ul></li><li><h1 id="path-coverage"><a href="#path-coverage" class="headerlink" title="path coverage"></a><strong>path coverage</strong></h1><ul><li>给定程序的一组测试用例，如果在程序上执行时，遍历程序图中从源节点到汇聚节点的每条路径，则它们构成路径覆盖。<br><br></li></ul></li><li><h1 id="node-coverage"><a href="#node-coverage" class="headerlink" title="node coverage"></a><strong>node coverage</strong></h1><ul><li>如果在程序上执行时，遍历程序图中的每个节点，则它们构成节点覆盖。<br><br></li></ul></li><li><h1 id="edge-coverage"><a href="#edge-coverage" class="headerlink" title="edge coverage"></a><strong>edge coverage</strong></h1><ul><li>遍历程序图中的每个边，则它们构成边缘覆盖。</li></ul></li></ul>]]></content>
       
       
       <categories>
           
           <category> Software Quality Assurance </category>
           
-          <category> Class Notes </category>
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>10-Stochastic or Random Test</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/10-Stochastic%20or%20Random%20Test/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/10-Stochastic%20or%20Random%20Test/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>What</li><li>Why</li><li>特点<a id="more"></a><br></li></ul></li><li><h1 id="随机测试"><a href="#随机测试" class="headerlink" title="随机测试"></a><strong>随机测试</strong></h1><ul><li>黑盒测试</li><li>输入:Random，independent</li><li>输出:Compared against software specifications to verify that the test output is pass or fail</li><li>测试过程：自动化</li><li>覆盖范围：广泛但浅显<br><br></li></ul></li><li><h1 id="Why"><a href="#Why" class="headerlink" title="Why"></a><strong>Why</strong></h1><ul><li>随机测试可以让我们轻松的根据测试结果估算软件可靠性。</li><li>可以从随机测试中获得数据用于估计软件的可靠性(其他测试方法不能用这种方式来估算软件可靠性）</li><li>相比于其他更为周到的测试方法，可以节约精力和时间<br><br></li></ul></li><li><h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a><strong>特点</strong></h1><ul><li>无需任何特定测试</li><li>在无文档、无计划下的软件测试</li><li>可以发现测试用例覆盖不到的bug</li><li>随机测试几乎可以在任何时候进行</li><li>测试软件的鲁棒性</li><li>发现低优先级高严重性的bug<br><br></li></ul></li><li><h1 id="对比"><a href="#对比" class="headerlink" title="对比"></a><strong>对比</strong></h1>与模糊测试的区别：<br>  模糊测试：随机数据<br>  随机测试：随机行为<br>与探索性测试的区别：<br>  随机测试：思维过程无序<br>  探索性测试：思维过程具有有序性、合理性</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>9-Scenario testing</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/9-Scenario%20testing/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/9-Scenario%20testing/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="场景测试"><a href="#场景测试" class="headerlink" title="场景测试"></a><strong>场景测试</strong></h1><ul><li>在软件开发过程的测试阶段中，由于实际系统过分庞大和复杂，很难测试其全部功能，而只能测试其与执行的任务有类似性的主要功能<a id="more"></a><br></li><li>目标<ul><li>使用具有挑战性的案例来反映实际的使用</li></ul></li><li>测试者<ul><li>Anyone</li></ul></li><li>覆盖率<ul><li>场景所能覆盖的所有区域</li></ul></li><li>可能存在的问题<ul><li>有经验的用户在实际使用时的复杂交互</li></ul></li><li>活动<ul><li>采访相关人员，写场景剧本然后执行测试</li></ul></li><li>复杂度<ul><li>高</li></ul></li><li>被测试系统阶段<ul><li>后期 需要稳定 集成的功能<br><br></li></ul></li></ul></li><li><h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a><strong>优势</strong></h1><ul><li>可以帮助解决复杂、现实中的问题。解决一些因为复杂而难以建模分析的情况。</li><li>暴露随着时间的流逝而可能会出现的错误。</li><li>可以使测试情景与将来的工作情境尽可能相似，测出的结果具有很好的预测效果</li></ul></li><li><h1 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a><strong>缺陷</strong></h1><ul><li>单个功能的错误会让这个测试变得效率底下。</li><li>必须思虑周详以达成好的覆盖。测试者需要较有经验。</li><li>分析过程较为人为化，客观性受到影响</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>8-User Testing</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/8-User%20Testing/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/8-User%20Testing/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="用户测试"><a href="#用户测试" class="headerlink" title="用户测试"></a><strong>用户测试</strong></h1><ul><li>定义：以用户为为参与主体的测试</li><li>引入原因：用户作为软件最终使用的主体</li><li>测试目标：测试软件的总体情况及用户体验</li><li>测试者：用户</li><li>覆盖面：很难度量</li><li>测试启动时间：软件开发基本完成<a id="more"></a><br></li></ul></li><li><h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a><strong>优点</strong></h1><ul><li>暴露设计的问题</li><li>能找到高错误率的区域</li><li>测试过程能够被监控</li><li>能够通过内部实验室注意有争议的区域<br><br></li></ul></li><li><h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a><strong>缺点</strong></h1><ul><li>覆盖面不能够保证</li><li>测试用例弱</li><li>结果好坏不一</li><li>必须区分营销测试与技术测试</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>7-Exploratory Testing</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/7-Exploratory%20Testing/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/7-Exploratory%20Testing/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="探索性测试"><a href="#探索性测试" class="headerlink" title="探索性测试"></a><strong>探索性测试</strong></h1><ul><li>探索性测试（ET）可以说是一种测试思维技术。它没有很多实际的测试方法、技术和工具，但是却是所有测试人员都应该掌握的一种测试思维方式。探索测试强调测试人员的主观能动性，避免繁杂的测试计划和测试用例设计的文档制作过程，强调在碰到问题时及时改变测试策略<a id="more"></a><br><br>探索性测试的最大特色是在对测试对象进行测试的同时学习测试对象并设计测试，在测试过程中运用获得的关于测试对象的信息设计新的更好的测试.<br>这相对于传统软件测试过程中严格的“先设计，后执行”来说，是具有很大区别的.<br><br>  </li></ul></li><li><h1 id="基本过程"><a href="#基本过程" class="headerlink" title="基本过程"></a><strong>基本过程</strong></h1><ul><li>识别软件系统的目的；</li><li>识别软件系统提供的功能；</li><li>识别软件系统潜在的不稳定的区域；</li><li>在探索软件系统的过程中记录关于软件的消息和问题；</li><li>创建一个测试纲要，使用它来执行测试。</li></ul><p><br></p></li><li><h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a><strong>优点</strong></h1><ul><li>不需要太多的准备工作，能够很快的发现重要的错误。</li><li>测试人员可以根据先前的测试结果来调整之后的测试用例，这在某种意义上可以加快bug发现的过程。</li><li>对产品质量有个整体概念，可以作为整个项目里工作分级的一个基础。<br><br></li></ul></li><li><h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a><strong>缺点</strong></h1><ul><li>测试用例很难全面覆盖。</li><li>容易出现重复测试，且测试难以跟踪。</li><li>需要测试人员具有较高水平。<br><br></li></ul></li><li><h1 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a><strong>适用范围</strong></h1><ul><li>需要对新功能或是新产品提供快速的反馈的测试</li><li>为测试用例的设计,前期进行尝试性测试</li><li>已经过了传统测试,但需要进一步测试</li><li>对已有测试用例的改进</li><li>要求在短时间内发现一些重要缺陷的测试</li><li>管理人员需要测试一下测试人员的工作成果</li><li>测试某一特定类型的缺陷</li><li>测试一些已知的缺陷</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>6-Regression testing</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/6-Regression%20testing/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/6-Regression%20testing/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="回归测试（Regression-testing）"><a href="#回归测试（Regression-testing）" class="headerlink" title="回归测试（Regression testing） "></a><strong>回归测试（Regression testing） </strong></h1><ul><li>指在发生修改之后重新测试先前的测试以保证修改的正确性。理论上，软件产生新版本都需要进行回归测试，验证以前发现和修复的错误是否在新软件版本上再次出现。<a id="more"></a><br></li></ul></li><li>回归测试通常被认为是“程序的重新确认”；<ul><li>“纠正型回归测试”指对程序修改后进行回归测试；</li><li>“增量型回归测试”指程序增加新特性后进行测试。<br><br></li></ul></li><li><h1 id="回归测试多余？"><a href="#回归测试多余？" class="headerlink" title="回归测试多余？"></a><strong>回归测试多余？</strong></h1><ul><li>开发人员也可以通过适当的证据证明新增的方法对原方法没有影响，这种情况下回归测试是多余的。<br><br></li></ul></li><li><h1 id="必须进行回归测试的情况"><a href="#必须进行回归测试的情况" class="headerlink" title="必须进行回归测试的情况"></a><strong>必须进行回归测试的情况</strong></h1><ul><li>当对软件的一个子系统进行修改，得到软件的一个新版本，此时回归测试是必需的；</li><li>当对软件的一个或多个构件进行了修改，整个软件也必须进行回归测试</li><li>在某些情况下，当底层硬件发生变化时，无论软件有无变更，也需要进行回归测试<br><br></li></ul></li><li><h1 id="回归测试过程"><a href="#回归测试过程" class="headerlink" title="回归测试过程"></a><strong>回归测试过程</strong></h1><ul><li>测试重确认/选择/最小化/优先级排序<ul><li><strong>测试重确认</strong>：检查p的测试用例，以确定哪些是对p’。重确认确保回归测试时只使用那些对p’有效的用例(p’为新版本)</li><li><strong>测试选择</strong>：对p有效的测试对p’可能是多余的因为它们的执行轨迹不经过p’中已修改过的代码。识别那些执行轨迹经过p’修改部分的测试过程就称为测试选择，优势也称为回归测试选择(RTS)问题</li><li><strong>测试最小化</strong>：根据某些准则丢弃那些多余的测试用例。例如t1和t2都测试了p的功能f，那么在测试最小化的时候，就可能丢弃t2而丢弃t1</li><li><strong>测试优先级排序</strong>：是基于某些准则对测试用例进行排序。当资源受限，通过测试优先级排序，就会发挥作用</li></ul></li><li>测试准备<ul><li>测试准备是指将被测程序置于预期的或者模拟的测试环境中，准备接收数据，并产生，需要的输出信息</li></ul></li><li>测试排序<ul><li>测试过程中有可能关心对软件的测试输入顺序。对具有内部状态且连续运行的软件来讲，测试排序非常重要。银行结算软件、web服务、引擎控制器等都是这类软件</li></ul></li><li>测试执行<br>- </li><li>输出比较</li><li>故障消除</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>5-Stress Testing</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/5-Stress%20Testing/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/5-Stress%20Testing/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>压力测试简述</li><li>压力测试特点</li><li>压力测试步骤</li><li>压力测试实例<a id="more"></a><br></li></ul></li><li><h1 id="Stress-Testing"><a href="#Stress-Testing" class="headerlink" title="Stress Testing"></a><strong>Stress Testing</strong></h1><ul><li>是指不断给被测系统增加压力，直到被测系统被压垮，并在系统被压垮的情况下持续测试。</li><li>以确定系统能承受的最大压力以及系统是否具有良好的容错能力和可恢复能力。<br><br></li></ul></li><li><h1 id="压力测试的特点"><a href="#压力测试的特点" class="headerlink" title="压力测试的特点"></a><strong>压力测试的特点</strong></h1><ul><li>测试者：在软件压力测试方面具备专业知识和一定的操作技能的人</li><li>代码覆盖率：部分覆盖，难以界定是否覆盖完全</li><li>测试阶段：开发项目接近完成</li><li>粗颗粒度：压力测试极其粗糙</li><li>复杂性：根据软件自身的需求有所不同</li><li>优点<ul><li>能暴露系统可能出现的缺陷</li><li>能暴露系统的安全风险</li><li>可能对评估性能、可靠性或效率有帮助</li></ul></li><li>局限性<ul><li>缺陷可能在压力测试下并不明显</li><li>当不知道问题的大致区间时，压力测试就会比较慢</li><li>易出现“不知道因为什么导致了问题”和“有没有遗漏什么”的问题<br><br></li></ul></li></ul></li><li><h1 id="压力测试的步骤"><a href="#压力测试的步骤" class="headerlink" title="压力测试的步骤"></a><strong>压力测试的步骤</strong></h1><ol><li>Identify the Test Environment 确认测试环境</li><li>Identify Performance Acceptance Criteria 确认性能指标</li><li>Plan and Design Tests 计划并设计测试</li><li>Configure the Test Environment 配置测试环境</li><li>Implement the Test Design 实现设计好的测试</li><li>Execute the Test 执行测试</li><li>Analyze Results, Report, and Retest 分析、报告、重复测试</li></ol></li></ul><p><br></p><ul><li><h1 id="压力测试与其他测试的关系"><a href="#压力测试与其他测试的关系" class="headerlink" title="压力测试与其他测试的关系"></a><strong>压力测试与其他测试的关系</strong></h1>常见的测试有：负载测试、压力测试和性能测试。<br>三者测试目的不同，但其手段和方法在一定程度上比较相似，通常会使用相同的测试环境和测试工具，而且都会监控系统所占用资源的情况以及其它相应的性能指标。</li></ul><ol><li><strong>tester</strong>：三者都应该具有一定的专业水平</li><li><strong>coverage</strong>：三者均为部分覆盖，存在局限性，难以确定是否覆盖了所有可能的缺陷</li><li><strong>potential problem</strong>：压力测试是期望系统崩溃；负载测试是期望得到系统的响应时间和质量；性能测试时为了了解应用程序在常规参数下的行为方式</li><li><strong>activities</strong>：压力测试往往要增加比负载测试多的并发用户，一般要比系统设计的并发量大，而性能测试验证产品资源的使用情况，可用性及可靠性</li><li><strong>evaluation</strong>：压力测试是看服务器能否在崩溃后自我恢复，任何意外故障是否会损害系统安全性；负载测试是看系统的响应时间和质量是否符合设计要求及当前的基础设施是否足以运行应用程序；性能测试是看系统是否符合业务的性能需求，验证该应用程序能否正常运行</li><li><strong>focus</strong>：性能测试的关注点在于程序运行的响应时间和并发量，负载测试的关注点在于系统并发量的多少，而压力测试更关注在超过了系统极限值的限制范围后系统的影响。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>4-Risk-based Testing</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/4-Risk-based%20Testing/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/4-Risk-based%20Testing/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>Targets, concept and benefits of RBT</li><li>Risk and Risk management</li><li>Risk-based testing approach</li><li>Risk-based testing in practice</li><li>Risk matrix and Risk reporting</li><li>Risk-based testing and test automation<a id="more"></a><br></li></ul></li><li><h1 id="Why-Risk-based-Testing"><a href="#Why-Risk-based-Testing" class="headerlink" title="Why Risk-based Testing?"></a><strong>Why Risk-based Testing?</strong></h1><ul><li>Software projects are very <strong>rarely on time,schedule or budget.</strong> Very often early project phases are delayed.</li><li>When eventually comes down to testing, the time to delivery is <strong>extremely short</strong> and there is <strong>no budget left</strong> due to the development overrun.</li><li>During development everybody is as a rule extremely busy resulting the test preparation activities not receiving the <strong>appropriate attention.</strong><br><br></li></ul></li><li><h1 id="RBT"><a href="#RBT" class="headerlink" title="RBT"></a><strong>RBT</strong></h1><ul><li>RBT(Risk-based Testing) is a test method deciding the test strategy by analyzing and accessing the risk of product.</li><li>Reduced resource consumption(i.e., more efficient testing)</li><li>Improved quality by spending more time on critical functions.<br><br></li></ul></li><li><h1 id="Risk-and-Risk-management"><a href="#Risk-and-Risk-management" class="headerlink" title="Risk and Risk management"></a><strong>Risk and Risk management</strong></h1><ul><li>Risk Identification</li><li>Risk Strategy</li><li>Risk Assessment</li><li>Risk Mitigation</li><li>Risk Reporting</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>3-Specification-based testing</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/3-Specification-based%20testing/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/3-Specification-based%20testing/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a><strong>定义</strong></h1><ul><li>黑盒测试、功能测试、数据驱动测试</li><li>测试者不了解程序的内部情况，不需具备应用程序的代码、内部结构和编程语言的专门知识。只知道程序的输入、输出和系统的功能，这是从用户的角度针对软件界面、功能及外部结构进行测试，而不考虑程序内部逻辑结构。测试案例是依应用系统应该做的功能，照规范、规格或要求等设计。测试者选择有效输入和无效输入来验证是否正确的输出。<a id="more"></a></li></ul></li><li>基本属性<ul><li>目标：核验需求文档里每个要求的一致性。</li><li>测试者：可以任何人。</li><li>覆盖内容：文档化的需求以及一些特性。</li><li>潜在问题：实现与规格不匹配的问题。</li><li>评估方法：实现是否与规格匹配。</li><li>复杂度：由规格说明书决定</li><li>苛刻度：有规格说明书决定<br><br></li></ul></li><li>如何在缺少规格说明书的情况下获取信息?有什么可行的替代方法？<ul><li>在缺少规格说明书或者是规格说明书不正确的时候可以使用使用如下资源<ul><li>软件更新备忘录</li><li>用户手册草稿</li><li>产品资料</li><li>已发布的样式指南和UI标准</li><li>已发布的标准</li><li>第三方产品兼容性测试套件</li><li>内部备忘录</li><li>营销展示、产品概念</li><li>Bug报告</li><li>逆向工程 ….<br><br></li></ul></li></ul></li><li><h1 id="规格说明"><a href="#规格说明" class="headerlink" title="规格说明"></a><strong>规格说明</strong></h1><ul><li>规格说明书要求做到精确和细化需求中描述的系统功能性需求和约束。</li><li>规格说明是为了技术人员编写的</li><li>规格说明书的形式可以是多种多样的。下面列出几个常见的规格说明书形式：<ul><li>需求文档 用例 模型 形式化方法 原型  …</li></ul></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>2-Equivalence analysis</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/2-Equivalence%20analysis/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/2-Equivalence%20analysis/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>等价类划分</li><li>等价类划分指南</li><li>等价类划分实例<a id="more"></a><br></li></ul></li><li><h1 id="等价类"><a href="#等价类" class="headerlink" title="等价类"></a><strong>等价类</strong></h1><ul><li>等价类是指某个输入域的子集合。在该子集合中，各个输入数据对于揭示程序中的错误都是等效的。<br><br></li></ul></li><li><h1 id="等价类划分"><a href="#等价类划分" class="headerlink" title="等价类划分"></a><strong>等价类划分</strong></h1><ul><li>等价类划分，指一种典型的、重要的<strong>黑盒测试方法</strong>，它将程序所有可能的输入数据划分为若干个等价类。然后从每个部分中选取具有代表性的数据当做测试用例。利用这一方法设计测试用例可以不考虑程序的内部结构，以需求规格说明书为依据，选择适当的典型子集，认真分析和推敲说明书的各项需求，特别是功能需求，尽可能多地发现错误。等价类划分法是一种系统性的确定要输入的测试条件的方法。<br><br></li></ul></li><li><h1 id="有效等价类划分"><a href="#有效等价类划分" class="headerlink" title="有效等价类划分"></a><strong>有效等价类划分</strong></h1><ul><li>有效等价类指对于程序规格说明来说，是合理的、有意义的输入数据构成的集合。利用有效等价类可以检验程序是否实现了规格说明预先规定的功能和性能。有效等价类可以是一个，也可以是多个，根据系统的输入域划分若干部分，然后从每个部分中选取少数有代表性数据当做数据测试的测试用例，等价类是输入域的集合。</li><li>以下是对有效等价类数据集的一些例子：<ul><li>终端用户输入的命令</li><li>与最终用户交互的系统提示</li><li>接受相关的用户文件的名称</li><li>提供初始化值和边界等</li><li>提供格式化输出数据的命令</li><li>在图形模式（比如鼠标点击时）提供的数据</li><li>失败时显示的回应消息<br><br></li></ul></li></ul></li><li><h1 id="无效等价类划分"><a href="#无效等价类划分" class="headerlink" title="无效等价类划分"></a><strong>无效等价类划分</strong></h1><ul><li>无效等价类和有效等价类相反，无效等价类是指对于软件规格说明而言，没有意义的、不合理的输入数据集合。利用无效等价类，可以找出程序异常说明情况，检查程序的功能和性能的实现是否有不符合规格说明要求的地方。</li><li>以下是无效等价类数据集的一些例子：<ul><li>终端在一个不正确的地方提供适当的值</li><li>验证外部边界的值</li><li>验证与边界和外部边界值的数值数据<br><br></li></ul></li></ul></li><li><h1 id="等价类划分指南"><a href="#等价类划分指南" class="headerlink" title="等价类划分指南"></a><strong>等价类划分指南</strong></h1><ul><li>等价类划分的方法<ul><li><strong>输入条件制定了一个域</strong></li><li><strong>输入条件指定了一组值的集合</strong>: 为集合中的每个元素创建一个等价类，为一个无效输入也创建一个等价类</li><li><strong>输入条件指定了每一个单独的值</strong>：如果系统对每一个有效输入的处理都不同，那么为每一个有效输入创建一个等价类</li><li><strong>输入条件指定了有效值的数量</strong>：为正确的输入数量创建一个等价类，为无效输入创建两个等价类——一个数量为零，一个比N大</li><li><strong>输入条件指定了一个必须值</strong>：为该必须值创建一个等价类，为非必须值创建一个等价类</li><li><strong>分割等价类</strong>：如果系统以不同方式处理一个划分好的等价类中的元素，那么分割该等价类为更小的等价类</li></ul></li><li>从等价类中识别测试用例<ol><li>为每个等价类指定一个唯一的标识符</li><li>对于每个还未被测试用例覆盖到的有效输入等价类，生成新的测试用例，尽量多地覆盖还未覆盖到的等价类，按照这一步骤重复进行，直到所有的有效等价类都被覆盖为止</li><li>对于每个还未被测试用例覆盖到的无效输入等价类，生成新的测试用例，仅覆盖一个还未覆盖到的等价类，按照这一步骤重复进行，直到所有的无效等价类都被覆盖为止。<br><br></li></ol></li></ul></li><li><h1 id="等价类划分实例"><a href="#等价类划分实例" class="headerlink" title="等价类划分实例"></a><strong>等价类划分实例</strong></h1><h2 id="Ex-A"><a href="#Ex-A" class="headerlink" title="Ex A"></a><strong>Ex A</strong></h2>申请账号时，用户必须输入用户名、密码、确认密码，对每一项输入条件要求如下：用户命要求为6位以上，18位以下，使用英文字母、数字、“-”、“”,并且首字符必须为字母或数字；密码在6~16位之间，只能用英文字母、数字、“-”、“”,并且区分大小写。列出等价类表和测试用例。</li></ul><p><strong>等价类表：</strong><br><img src="/img/soa/ex1_1.jpg" alt=""><br><strong>等价类的测试用例：</strong><br><img src="/img/soa/ex1_2.jpg" alt=""><br><br></p><h2 id="Ex-B"><a href="#Ex-B" class="headerlink" title="Ex B"></a><strong>Ex B</strong></h2><p>一个程序读入3个整数，把这3个数值看作一个三角形的3条边的长度值。这个程序要打印出信息，说明这个三个数值不构成三角形、或是一般三角形、或是等腰的三角形、或是等边三角形。列出等价类表和测试用例。<br><strong>分析题目中给出和隐含的对输入条件的要求：</strong></p><ol><li>整数   2. 三个数   3. 非零数  4. 正数  5. 两边之和大于第三边   6.等腰   7. 等边<br>如果a、b、c满足条件1~4，则输出下列四种情况之一：<br>1）如果不满足条件5，则程序输出为“非三角形”<br>2）如果三条边相等即满足条件7，则程序输出为“等边三角形”<br>3）如果只有两条边相等，及满足条件6，则程序输出为“等腰三角形”<br>4）如果三条边都不相等，则程序输出为“一般三角形”<br><br><br><strong>等价类表</strong><br><img src="/img/soa/ex2_1.jpg" alt=""><br><br><br><strong>覆盖有效等价类的测试用例</strong><br><img src="/img/soa/ex2_2.jpg" alt=""><br><br><br><strong>覆盖无效类等价类的测试用例</strong><br><img src="/img/soa/ex2_3.jpg" alt=""></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>1-Function testing</title>
+      <link href="/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/1-Function%20testing/"/>
+      <url>/2018/12/10/Software%20Quality%20Assurance/Individual%20techniques/1-Function%20testing/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="Function-testing"><a href="#Function-testing" class="headerlink" title="Function testing"></a><strong>Function testing</strong></h1><ul><li>也叫黑盒单元测试</li><li>针对每个功能单元进行的一种黑盒测试。<a id="more"></a><br></li></ul></li><li>测试人员<ul><li>可以是任何人：编码人员、测试人员等</li></ul></li><li>覆盖程度<ul><li>覆盖所有的功能以及用户可见的变量</li></ul></li><li>测试的目的<ul><li>为了使每个功能能够单独运作</li></ul></li><li>测试方法<ul><li>穷举法</li><li>边界值分析法</li><li>基于单/多缺陷假设设计测试样例</li><li>等价类划分法</li><li>典型数据法</li><li>…</li></ul></li><li>如何分析结果<ul><li>寻找同类功能做对比.同类功能：例如显卡的功能测试，找同类显卡，在相同的输入条件下比较输出结果。</li></ul></li><li>复杂程度<ul><li>对已实现的各个功能设计测试样例进行测试</li></ul></li><li>严格程度<ul><li>指测试方法对软件错误的容忍程度，即其发现软件错误的能力大小</li></ul></li><li>对系统完成度的要求<ul><li>每一个功能单元完成后便可以进行功能测试</li></ul></li><li>优点<ul><li>对每个测试项目进行全面分析</li><li>Easy to do as each function is implemented</li></ul></li><li>缺点<ul><li>Misses interactions</li><li>Misses exploration of the benefits offered by the program</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Quality Assurance </category>
+          
+          <category> Individual techniques </category>
           
       </categories>
       
@@ -121,7 +311,7 @@
       <link href="/2018/12/08/Software%20Quality%20Assurance/Class%20Notes/1-Software%20Engineering%20Practices/"/>
       <url>/2018/12/08/Software%20Quality%20Assurance/Class%20Notes/1-Software%20Engineering%20Practices/</url>
       
-        <content type="html"><![CDATA[<p><code>Some things Testers should know about them</code></p><ul><li><h1 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a><strong>Objectives</strong></h1><ul><li>Identify some common software development problems. </li><li>Identify six software engineering practices for addressing common software development problems</li></ul></li></ul><a id="more"></a><h2 id="常见的软件开发问题症状"><a href="#常见的软件开发问题症状" class="headerlink" title="常见的软件开发问题症状"></a>常见的软件开发问题症状</h2><ul><li>User or business needs not met</li><li>Requirements churn</li><li>Modules don’t integrate</li><li>Hard to maintain</li><li>Late discovery of flaws</li><li>Poor quality or poor user experience</li><li>Poor performance under load</li><li>No coordinated team effort</li><li>Build-and-release issues</li></ul><h2 id="六种软件工程实践"><a href="#六种软件工程实践" class="headerlink" title="六种软件工程实践"></a>六种软件工程实践</h2><p><strong>Develop Iteratively</strong><br><strong>Manage Requirements</strong><br><strong>Use Component Architectures</strong><br><strong>Model Visually (UML)</strong><br><strong>Continuously Verify Quality</strong><br><strong>Manage Change</strong></p><ol><li><p>Develop Iteratively </p><ul><li>瀑布模型特点</li><li>Delays confirmation of critical risk resolution</li><li>Measures progress by assessing work-products that are poor predictors of time-to-completion</li><li>Delays and aggregates integration and testing</li><li>Precludes early deployment</li><li>Frequently results in major unplanned project extensions</li></ul><ul><li>迭代模型特点<br><img src="/img/soa/iterative.png" alt=""></li><li>最早的迭代可以解决最大的风险.每次迭代都会生成可执行版本.</li><li>每次迭代都包括集成和测试。<br><strong>迭代有助于:</strong></li></ul><ul><li>在进行大量投资之前解决重大风险</li><li>实现早期客观反馈</li><li>使测试和集成持续进行</li><li>将项目重点放在可实现的短期目标里程碑上</li><li>可以部署完成的最终系统的部分实现<br><img src="/img/soa/riskprofiles.png" alt="Rick Profiles"></li></ul></li></ol><ol start="2"><li>Manage Requirements<br> <img src="/img/soa/map.png" alt=""><ul><li>为了帮助管理需求与从这些需求派生的测试之间的关系，您可以在这些元素之间建立可跟踪性关系.<br><strong>可追溯性有助于我们做很多事情，包括：</strong></li><li>评估项目对需求变更的影响</li><li>评估测试失败对需求的影响（如果测试失败，可能不满足要求）</li><li>验证应用程序是否仅执行预期的操作</li><li>验证实施是否满足系统的所有要求</li><li>管理项目范围</li><li>管理变更</li></ul></li></ol><ol start="3"><li>Component-Based Architecture<ul><li>弹性<ul><li>满足当前和未来的要求</li><li>提高可扩展性</li><li>允许重用</li><li>封装系统依赖性</li></ul></li><li>基于组件<ul><li>重用或自定义组件</li><li>从市售组件中选择</li><li>逐步发展现有软件</li></ul></li></ul></li></ol><ol start="4"><li>Model Visually (UML)<br>详情见软件分析与设计课程总结</li></ol><ol start="5"><li>Continuously Verify Quality<br>详情见软件分析与设计课程总结</li></ol><ol start="6"><li>Manage Change<ul><li>Changes to enable iterative development<ul><li>Secure workspaces for each worker</li><li>Parallel development possible</li></ul></li><li>Automated integration/build management</li></ul></li></ol>]]></content>
+        <content type="html"><![CDATA[<p><code>Some things Testers should know about them</code></p><ul><li><h1 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a><strong>Objectives</strong></h1><ul><li>Identify some common software development problems.</li><li>Identify six software engineering practices for addressing common software development problems</li></ul></li></ul><a id="more"></a><h2 id="常见的软件开发问题症状"><a href="#常见的软件开发问题症状" class="headerlink" title="常见的软件开发问题症状"></a>常见的软件开发问题症状</h2><ul><li>User or business needs not met</li><li>Requirements churn</li><li>Modules don’t integrate</li><li>Hard to maintain</li><li>Late discovery of flaws</li><li>Poor quality or poor user experience</li><li>Poor performance under load</li><li>No coordinated team effort</li><li>Build-and-release issues</li></ul><h2 id="六种软件工程实践"><a href="#六种软件工程实践" class="headerlink" title="六种软件工程实践"></a>六种软件工程实践</h2><p><strong>Develop Iteratively</strong><br><strong>Manage Requirements</strong><br><strong>Use Component Architectures</strong><br><strong>Model Visually (UML)</strong><br><strong>Continuously Verify Quality</strong><br><strong>Manage Change</strong></p><ol><li><p>Develop Iteratively </p><ul><li>瀑布模型特点</li><li>Delays confirmation of critical risk resolution</li><li>Measures progress by assessing work-products that are poor predictors of time-to-completion</li><li>Delays and aggregates integration and testing</li><li>Precludes early deployment</li><li>Frequently results in major unplanned project extensions</li></ul><ul><li>迭代模型特点<br><img src="/img/soa/iterative.png" alt=""></li><li>最早的迭代可以解决最大的风险.每次迭代都会生成可执行版本.</li><li>每次迭代都包括集成和测试。<br><strong>迭代有助于:</strong></li></ul><ul><li>在进行大量投资之前解决重大风险</li><li>实现早期客观反馈</li><li>使测试和集成持续进行</li><li>将项目重点放在可实现的短期目标里程碑上</li><li>可以部署完成的最终系统的部分实现<br><img src="/img/soa/riskprofiles.png" alt="Rick Profiles"></li></ul></li></ol><ol start="2"><li>Manage Requirements<br> <img src="/img/soa/map.png" alt=""><ul><li>为了帮助管理需求与从这些需求派生的测试之间的关系，您可以在这些元素之间建立可跟踪性关系.<br><strong>可追溯性有助于我们做很多事情，包括：</strong></li><li>评估项目对需求变更的影响</li><li>评估测试失败对需求的影响（如果测试失败，可能不满足要求）</li><li>验证应用程序是否仅执行预期的操作</li><li>验证实施是否满足系统的所有要求</li><li>管理项目范围</li><li>管理变更</li></ul></li></ol><ol start="3"><li>Component-Based Architecture<ul><li>弹性<ul><li>满足当前和未来的要求</li><li>提高可扩展性</li><li>允许重用</li><li>封装系统依赖性</li></ul></li><li>基于组件<ul><li>重用或自定义组件</li><li>从市售组件中选择</li><li>逐步发展现有软件</li></ul></li></ul></li></ol><ol start="4"><li>Model Visually (UML)<br>详情见软件分析与设计课程总结</li></ol><ol start="5"><li>Continuously Verify Quality<br>详情见软件分析与设计课程总结</li></ol><ol start="6"><li>Manage Change<ul><li>Changes to enable iterative development<ul><li>Secure workspaces for each worker</li><li>Parallel development possible</li></ul></li><li>Automated integration/build management</li></ul></li></ol>]]></content>
       
       
       <categories>
@@ -129,6 +319,23 @@
           <category> Software Quality Assurance </category>
           
           <category> Class Notes </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>学用linux</title>
+      <link href="/2018/12/07/Linux/%E5%AD%A6%E7%94%A8linux/"/>
+      <url>/2018/12/07/Linux/%E5%AD%A6%E7%94%A8linux/</url>
+      
+        <content type="html"><![CDATA[<h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br><a id="more"></a><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find path criterion action</span><br></pre></td></tr></table></figure></p><p><strong>path</strong>：要搜索的文件系统部分（指定的目录及其所有子目录）。如果什么也没指定，则将使用当前目录下的文件系统。<br><strong>criterion</strong>：文件应该具有的属性：<br>-name pattern 搜索名称中包含给定模式的文件。如果模式中包含元字符或通配符，则必须用引号将它括起。否则，它将由 shell 解释，而不是由 find 解释。<br>-type file_type 搜索文件类型。适用的文件类型如下：“d”（用于目录）、“f”（用于文件）或者“l”（用于符号链接）。<br>-ctime [+/-]days 搜索恰好在指定的几天前进行上一次修改的那些文件。<br><strong>action</strong>:影响以下条件或将搜索作为一个整体进行控制的选项，例如：<br> -print<br> -exec command  可使用选项 -exec 调用其他命令<br> <em>例子</em><br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find ~ -name kk* -type f –exec grep first &#123;&#125; \; -print</span><br></pre></td></tr></table></figure></p><p> {} 这两个括号代表找到的并传递到命令 grep 的文件名的占位符。分号用于结束 -exec指令。由于它是特殊字符，所以在它前面放一个反斜杠，以此来标记它。</p><h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p> locate 是 find -name 的替代命令（必须装有软件包 findutils-locate）。首次使用要用updatedb生成/更新数据库。</p><h1 id="查找命令所在目录whereis"><a href="#查找命令所在目录whereis" class="headerlink" title="查找命令所在目录whereis"></a>查找命令所在目录whereis</h1><p> 命令 whereis 将返回二进制（选项 -b）、手册页（选项 -m）和指定命令的源代码（选项 -s）。该命令的速度比 find 快，但不如 find 全面。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;whereis -b ls</span><br><span class="line">&gt;whereis -m ls</span><br><span class="line">&gt;whereis -s ls</span><br></pre></td></tr></table></figure></p><h1 id="which"><a href="#which" class="headerlink" title="which"></a>which</h1><p> which 将搜索在变量 PATH 中为指定命令列出的所有路径，并返回该命令的完整路径。命令 which 特别适用于以下情况：不同目录中存在某个命令的几个版本，并且您想知道在未指定路径的情况下输入时将执行哪个版本。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;which find</span><br></pre></td></tr></table></figure></p><h1 id="type"><a href="#type" class="headerlink" title="type"></a>type</h1><p>命令 type command 可用来查找在输入 command 时执行哪类命令，是 shell 内置命令还是外部命令。选项 -a 在文件系统中传递采用该名称的命令的所有实例。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;type type</span><br><span class="line">&gt;type grep</span><br></pre></td></tr></table></figure></p><h1 id="搜索文件内容-grep"><a href="#搜索文件内容-grep" class="headerlink" title="搜索文件内容 grep"></a>搜索文件内容 grep</h1><p>当需要查找包含特殊词、短语或项的所有文件，并且是扫描所有文件而不在编辑器中打开它们时<br><strong>&gt;grep search_pattern filename</strong><br>该命令将在文件名中进行搜索以寻找与 search_pattern 匹配的所有文本，并打印包含该模式的行。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">命令 grep 的可用选项如下：</span><br><span class="line">    -i 忽略大小写。</span><br><span class="line">    -l 仅显示包含搜索字符串的文件的名称。</span><br><span class="line">    -r 递归地搜索整个目录树。</span><br><span class="line">    -v 给定不包含搜索字符串的所有行。</span><br><span class="line">    -n 显示行号。</span><br></pre></td></tr></table></figure></p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;grep test  d* </span><br><span class="line">//显示所有以d开头的文件中包含test的行</span><br><span class="line">&gt;grep -n test aa bb cc</span><br><span class="line">//显示在aa，bb，cc文件中匹配test的行。</span><br></pre></td></tr></table></figure><h1 id="安装RPM包"><a href="#安装RPM包" class="headerlink" title="安装RPM包"></a>安装RPM包</h1><p>用rpm安装软件的命令格式如下：<br><strong> rpm  -i  [安装选项]  rpm 软件包名 </strong><br>安装选项有很多，常用的如下：<br>   -vh ：显示安装过程中的详细信息；<br>   –percent：显示安装进度的百分比；<br>   –test：不进行安装软件包，只进行安装测试并显示简单的报告；<br>   –force：忽略任何错误，强制安装软件包。</p><h1 id="更新、卸载RPM包"><a href="#更新、卸载RPM包" class="headerlink" title="更新、卸载RPM包"></a>更新、卸载RPM包</h1><p><strong> rpm  -u  rpm软件包名 </strong><br><strong> rpm  -e  rpm软件包名 </strong></p><p>查询已安装的包版本<br>rpm –qa |grep  软件包名</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
           
       </categories>
       
@@ -153,11 +360,28 @@
     </entry>
     
     <entry>
-      <title>学用linux</title>
-      <link href="/2018/12/07/Linux/%E5%AD%A6%E7%94%A8linux/"/>
-      <url>/2018/12/07/Linux/%E5%AD%A6%E7%94%A8linux/</url>
+      <title>Vi常见命令</title>
+      <link href="/2018/12/07/Linux/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/"/>
+      <url>/2018/12/07/Linux/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
       
-        <content type="html"><![CDATA[<h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br><a id="more"></a><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find path criterion action</span><br></pre></td></tr></table></figure></p><p><strong>path</strong>：要搜索的文件系统部分（指定的目录及其所有子目录）。如果什么也没指定，则将使用当前目录下的文件系统。<br><strong>criterion</strong>：文件应该具有的属性：<br>-name pattern 搜索名称中包含给定模式的文件。如果模式中包含元字符或通配符，则必须用引号将它括起。否则，它将由 shell 解释，而不是由 find 解释。<br>-type file_type 搜索文件类型。适用的文件类型如下：“d”（用于目录）、“f”（用于文件）或者“l”（用于符号链接）。<br>-ctime [+/-]days 搜索恰好在指定的几天前进行上一次修改的那些文件。<br><strong>action</strong>:影响以下条件或将搜索作为一个整体进行控制的选项，例如：<br> -print<br> -exec command  可使用选项 -exec 调用其他命令<br> <em>例子</em><br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find ~ -name kk* -type f –exec grep first &#123;&#125; \; -print</span><br></pre></td></tr></table></figure></p><p> {} 这两个括号代表找到的并传递到命令 grep 的文件名的占位符。分号用于结束 -exec指令。由于它是特殊字符，所以在它前面放一个反斜杠，以此来标记它。</p><h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p> locate 是 find -name 的替代命令（必须装有软件包 findutils-locate）。首次使用要用updatedb生成/更新数据库。</p><h1 id="查找命令所在目录whereis"><a href="#查找命令所在目录whereis" class="headerlink" title="查找命令所在目录whereis"></a>查找命令所在目录whereis</h1><p> 命令 whereis 将返回二进制（选项 -b）、手册页（选项 -m）和指定命令的源代码（选项 -s）。该命令的速度比 find 快，但不如 find 全面。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;whereis -b ls</span><br><span class="line">&gt;whereis -m ls</span><br><span class="line">&gt;whereis -s ls</span><br></pre></td></tr></table></figure></p><h1 id="which"><a href="#which" class="headerlink" title="which"></a>which</h1><p> which 将搜索在变量 PATH 中为指定命令列出的所有路径，并返回该命令的完整路径。命令 which 特别适用于以下情况：不同目录中存在某个命令的几个版本，并且您想知道在未指定路径的情况下输入时将执行哪个版本。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;which find</span><br></pre></td></tr></table></figure></p><h1 id="type"><a href="#type" class="headerlink" title="type"></a>type</h1><p>命令 type command 可用来查找在输入 command 时执行哪类命令，是 shell 内置命令还是外部命令。选项 -a 在文件系统中传递采用该名称的命令的所有实例。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;type type</span><br><span class="line">&gt;type grep</span><br></pre></td></tr></table></figure></p><h1 id="搜索文件内容-grep"><a href="#搜索文件内容-grep" class="headerlink" title="搜索文件内容 grep"></a>搜索文件内容 grep</h1><p>当需要查找包含特殊词、短语或项的所有文件，并且是扫描所有文件而不在编辑器中打开它们时<br><strong>&gt;grep search_pattern filename</strong><br>该命令将在文件名中进行搜索以寻找与 search_pattern 匹配的所有文本，并打印包含该模式的行。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">命令 grep 的可用选项如下：</span><br><span class="line">    -i 忽略大小写。</span><br><span class="line">    -l 仅显示包含搜索字符串的文件的名称。</span><br><span class="line">    -r 递归地搜索整个目录树。</span><br><span class="line">    -v 给定不包含搜索字符串的所有行。</span><br><span class="line">    -n 显示行号。</span><br></pre></td></tr></table></figure></p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;grep test  d* </span><br><span class="line">//显示所有以d开头的文件中包含test的行</span><br><span class="line">&gt;grep -n test aa bb cc</span><br><span class="line">//显示在aa，bb，cc文件中匹配test的行。</span><br></pre></td></tr></table></figure><h1 id="安装RPM包"><a href="#安装RPM包" class="headerlink" title="安装RPM包"></a>安装RPM包</h1><p>用rpm安装软件的命令格式如下：<br><strong> rpm  -i  [安装选项]  rpm 软件包名 </strong><br>安装选项有很多，常用的如下：<br>   -vh ：显示安装过程中的详细信息；<br>   –percent：显示安装进度的百分比；<br>   –test：不进行安装软件包，只进行安装测试并显示简单的报告；<br>   –force：忽略任何错误，强制安装软件包。</p><h1 id="更新、卸载RPM包"><a href="#更新、卸载RPM包" class="headerlink" title="更新、卸载RPM包"></a>更新、卸载RPM包</h1><p><strong> rpm  -u  rpm软件包名 </strong><br><strong> rpm  -e  rpm软件包名 </strong></p><p>查询已安装的包版本<br>rpm –qa |grep  软件包名</p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/img/vi/vi.png" alt="常用命令"><br><a id="more"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Linux网络服务</title>
+      <link href="/2018/12/07/Linux/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/"/>
+      <url>/2018/12/07/Linux/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>NTP(network time protocol)</li><li>Linux打印服务<a id="more"></a><br></li></ul></li><li><h1 id="NTP"><a href="#NTP" class="headerlink" title="NTP"></a><strong>NTP</strong></h1><ul><li>ntp通过与时间服务器同步使本机时间与UTC(世界协调时间）同步</li><li>UTC也称为GMT（格林尼治时间）</li><li>本地时间</li><li>/etc/sysconfig/clock<ul><li>ZONE</li><li>UTC</li></ul></li><li>Linux 系统中有 2 个主要的时钟：</li><li>硬件时钟。这是一个独立于 CPU 中运行的所有控制程序而运行的时钟。也称为时间时钟、RTC、BIOS 时钟或 CMOS 时钟。</li><li>系统时间。这是 Linux 内核内部时钟的时间，并且由计时器中断驱动。</li><li>当 Linux 第一次启动时，系统时间与硬件时钟同步。之后， Linux 只使用系统时间。</li><li>date</li><li>xntp 通过提供以下服务解决同步问题：</li><li>xntp 定期根据收集到的更正数据更正本地计算机时钟。</li><li>xntp 会随时借助网络中的时间服务器更正本地时间。</li><li>xntp 支持对本地参考时钟（如无线电控制的时钟）进行管理。<br><br></li></ul></li><li><h1 id="Linux打印服务"><a href="#Linux打印服务" class="headerlink" title="Linux打印服务"></a><strong>Linux打印服务</strong></h1><ul><li>CUPS (Common Unix Printing System )<ul><li>是行式打印机守护程序Line Print Daemon (LPD)的后继，在redhat中仍使用部分LPD命令进行打印机调整与监视。</li></ul></li><li>LPD （行式打印机守护程序）<ul><li>在发送实际打印数据之前，将先发送一些与作业相关的数据，例如打印机队列。LPD 服务的端口号是 515</li></ul></li><li>IPP （因特网打印协议） <ul><li>是一个基于HTTP 协议的相对较新的（自 1999）协议。使用 IPP，所传送的与作业有关的数据比其他协议要多得多。CUPS 使用 IPP 进行内部数据传送。这是在 CUPS 服务器之间转发队列的首选协议。IPP 的端口号是 631</li></ul></li><li>SMB （服务讯息块）。CUPS 还支持在连接到 Windows 共享的打印机上进行打印，SMB 使用端口号 137、138 和 139</li></ul></li></ul>]]></content>
       
       
       <categories>
@@ -187,11 +411,11 @@
     </entry>
     
     <entry>
-      <title>Vi常见命令</title>
-      <link href="/2018/12/07/Linux/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/"/>
-      <url>/2018/12/07/Linux/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
+      <title>Linux网络服务-Internet服务</title>
+      <link href="/2018/12/07/Linux/Linux%20%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1-%20Internet%E6%9C%8D%E5%8A%A1/"/>
+      <url>/2018/12/07/Linux/Linux%20%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1-%20Internet%E6%9C%8D%E5%8A%A1/</url>
       
-        <content type="html"><![CDATA[<p><img src="/img/vi/vi.png" alt="常用命令"><br><a id="more"></a></p>]]></content>
+        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>Xinetd</li><li>Ftp</li><li>Http</li><li>SSH<a id="more"></a><br></li></ul></li><li><h1 id="Xinetd-Extended-Internet-Daemon"><a href="#Xinetd-Extended-Internet-Daemon" class="headerlink" title="Xinetd (Extended Internet Daemon)"></a><strong>Xinetd (Extended Internet Daemon)</strong></h1><ul><li>守护进程Daemon</li><li>运行在后台的一种特殊程序，独立于控制终端执行某种任务或者等待处理某些发生的事件，如smbd，named等</li><li>Linux的大多数服务是用守护程序实现的，守护程序打开一个端口并且监听该端口，等待客户机的连接。一旦客户机提交了连接请求，守护程序就创建一个子进程来响应，而父进程继续监听更多的服务请求。因此每个守护程序可以处理多个客户服务的请求。</li><li>服务器上的许多服务都是通过超级守护程序包 inetd 或 xinetd 来管理和启动的。</li><li>超级守护程序充当一组服务发出连接请求时的中介者。它直接接受连接请求、启动所需的服务并将请求传递到新启动的服务器。如果客户机和服务器之间的连接终止，则由  xinetd 启动的服务器将从内存中删除。</li><li>通过 inetd 启动服务既有优点也有缺点。最大的优点就是节省资源（尤其是内存），因为服务器仅在需要时才启动。但是，缺点是在装载、启动和连接所需服务时将发生延迟。</li><li>守护程序的运行方式<ul><li>独立运行的守护程序</li><li>由init脚本管理</li><li>其脚本存放在/etc/rc.d/init.d/目录下</li></ul></li><li>由Xinetd运行的守护程序<ul><li>由xinetd管理启动</li><li>服务的配置文件存放在/etc/xinetd.d/目录下</li></ul></li><li>可用pstree查看当前进程树<br><br></li></ul></li><li><h1 id="Xinetd特点"><a href="#Xinetd特点" class="headerlink" title="Xinetd特点"></a><strong>Xinetd特点</strong></h1><ul><li>强大的访问控制功能：提供对用户的审查和权限控制、限制连接数目、设定特定的连接时间</li><li>强大的日志功能：可以为每一个服务设置日志等级：为每个服务设置日志文件；记录起止时间；记录非法访问请求</li><li>专项功能：可以将客户端的请求交到另外的主机去处理</li><li>与客户端的交互功能<br><br></li></ul></li><li><h1 id="配置Xinetd"><a href="#配置Xinetd" class="headerlink" title="配置Xinetd"></a><strong>配置Xinetd</strong></h1><ul><li><strong>配置文件 /etc/xinetd.conf</strong><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">默认配置参数</span><br><span class="line"> defaults    为所有的服务指定缺省值</span><br><span class="line"> &#123;</span><br><span class="line">     key operator parameter parameter. . .</span><br><span class="line">     instances ＝ 60</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li></ul></li></ul><p>includedir /etc/xinetd.d  //指明配置文件目录<br>将提示 xinetd 解释目录/etc/xinetd.d/ 中的所有文件以配置服务</p><ul><li><p><strong>配置其网络服务</strong></p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  service service_name</span><br><span class="line">  &#123;</span><br><span class="line">    key operator parameter parameter. . .</span><br><span class="line">   &#125;</span><br><span class="line">运算符有 =、-= 和 +=</span><br><span class="line">  可在目录 /etc/xinetd.d/ 中为每个服务创建一个单独的配置文件</span><br></pre></td></tr></table></figure></li><li><p><strong>例子</strong></p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">service telnet&#123;</span><br><span class="line">  socket_type = stream</span><br><span class="line">  wait = no</span><br><span class="line">  user = root</span><br><span class="line">  server = /usr/sbin/in.telnetd</span><br><span class="line">  disable = no</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
       
       
       <categories>
