@@ -2,22 +2,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>XJTU SE XX</title>
+<title>Linux网络服务-Internet服务 - XJTU SE XX</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="个人博客">
+    <meta name="description" content="Content Xinetd Ftp Http SSH">
 <meta name="keywords" content="xjtusexx">
-<meta property="og:type" content="website">
-<meta property="og:title" content="XJTU SE XX">
-<meta property="og:url" content="http://www.studentxiaoxin.top/page/5/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux网络服务-Internet服务">
+<meta property="og:url" content="http://www.studentxiaoxin.top/2018/12/07/Linux/Class Notes/Linux 网络服务- Internet服务/index.html">
 <meta property="og:site_name" content="XJTU SE XX">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="Content Xinetd Ftp Http SSH">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2018-12-12T14:26:43.987Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="XJTU SE XX">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="Linux网络服务-Internet服务">
+<meta name="twitter:description" content="Content Xinetd Ftp Http SSH">
 
 
 
@@ -83,7 +84,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="XJTU SE XX" height="28">
+                <img src="/images/logo.svg" alt="Linux网络服务-Internet服务" height="28">
             
             </a>
         </div>
@@ -128,56 +129,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 read (About 584 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/07/Linux/Class Notes/linux简介/">Linux简介</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="man"><a href="#man" class="headerlink" title="man"></a>man</h1><p>man （/usr/share/man）<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/07/Linux/Class Notes/linux简介/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         
@@ -201,7 +153,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/12/07/Linux/Class Notes/Linux 网络服务- Internet服务/">Linux网络服务-Internet服务</a>
+                Linux网络服务-Internet服务
             
         </h1>
         <div class="content">
@@ -210,146 +162,84 @@
 <li>Xinetd</li>
 <li>Ftp</li>
 <li>Http</li>
-<li>SSH</li></ul></li></ul>
+<li>SSH<a id="more"></a>
+<br></li>
+</ul>
+</li>
+<li><h1 id="Xinetd-Extended-Internet-Daemon"><a href="#Xinetd-Extended-Internet-Daemon" class="headerlink" title="Xinetd (Extended Internet Daemon)"></a><strong>Xinetd (Extended Internet Daemon)</strong></h1><ul>
+<li>守护进程Daemon</li>
+<li>运行在后台的一种特殊程序，独立于控制终端执行某种任务或者等待处理某些发生的事件，如smbd，named等</li>
+<li>Linux的大多数服务是用守护程序实现的，守护程序打开一个端口并且监听该端口，等待客户机的连接。一旦客户机提交了连接请求，守护程序就创建一个子进程来响应，而父进程继续监听更多的服务请求。因此每个守护程序可以处理多个客户服务的请求。</li>
+<li>服务器上的许多服务都是通过超级守护程序包 inetd 或 xinetd 来管理和启动的。</li>
+<li>超级守护程序充当一组服务发出连接请求时的中介者。它直接接受连接请求、启动所需的服务并将请求传递到新启动的服务器。如果客户机和服务器之间的连接终止，则由  xinetd 启动的服务器将从内存中删除。</li>
+<li>通过 inetd 启动服务既有优点也有缺点。最大的优点就是节省资源（尤其是内存），因为服务器仅在需要时才启动。但是，缺点是在装载、启动和连接所需服务时将发生延迟。</li>
+<li>守护程序的运行方式<ul>
+<li>独立运行的守护程序</li>
+<li>由init脚本管理</li>
+<li>其脚本存放在/etc/rc.d/init.d/目录下</li>
+</ul>
+</li>
+<li>由Xinetd运行的守护程序<ul>
+<li>由xinetd管理启动</li>
+<li>服务的配置文件存放在/etc/xinetd.d/目录下</li>
+</ul>
+</li>
+<li>可用pstree查看当前进程树<br><br></li>
+</ul>
+</li>
+<li><h1 id="Xinetd特点"><a href="#Xinetd特点" class="headerlink" title="Xinetd特点"></a><strong>Xinetd特点</strong></h1><ul>
+<li>强大的访问控制功能：提供对用户的审查和权限控制、限制连接数目、设定特定的连接时间</li>
+<li>强大的日志功能：可以为每一个服务设置日志等级：为每个服务设置日志文件；记录起止时间；记录非法访问请求</li>
+<li>专项功能：可以将客户端的请求交到另外的主机去处理</li>
+<li>与客户端的交互功能<br><br></li>
+</ul>
+</li>
+<li><h1 id="配置Xinetd"><a href="#配置Xinetd" class="headerlink" title="配置Xinetd"></a><strong>配置Xinetd</strong></h1><ul>
+<li><strong>配置文件 /etc/xinetd.conf</strong><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">默认配置参数</span><br><span class="line"> defaults    为所有的服务指定缺省值</span><br><span class="line"> &#123;</span><br><span class="line">     key operator parameter parameter. . .</span><br><span class="line">     instances ＝ 60</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>includedir /etc/xinetd.d  //指明配置文件目录<br>将提示 xinetd 解释目录/etc/xinetd.d/ 中的所有文件以配置服务</p>
+<ul>
+<li><p><strong>配置其网络服务</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  service service_name</span><br><span class="line">  &#123;</span><br><span class="line">    key operator parameter parameter. . .</span><br><span class="line">   &#125;</span><br><span class="line">运算符有 =、-= 和 +=</span><br><span class="line">  可在目录 /etc/xinetd.d/ 中为每个服务创建一个单独的配置文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>例子</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">service telnet&#123;</span><br><span class="line">  socket_type = stream</span><br><span class="line">  wait = no</span><br><span class="line">  user = root</span><br><span class="line">  server = /usr/sbin/in.telnetd</span><br><span class="line">  disable = no</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/07/Linux/Class Notes/Linux 网络服务- Internet服务/#more">Read More</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>
 </div>
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-07T08:57:18.000Z">2018-12-07</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6 分钟 read (About 968 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/07/Linux/Class Notes/学用linux/">学用linux</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/07/Linux/Class Notes/学用linux/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-11-04T12:52:47.000Z">2018-11-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Android/">Android</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 read (About 389 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/11/04/Android/Android案例-弹出菜单/">Android案例-弹出菜单</a>
-            
-        </h1>
-        <div class="content">
-            <figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnMenu</span><span class="hljs-params">(View view)</span></span>&#123;</span><br><span class="line">        <span class="hljs-comment">// 获取自定义的菜单布局文件</span></span><br><span class="line">        View popupWindow_view = getLayoutInflater().inflate(R.layout.menu, <span class="hljs-keyword">null</span>,<span class="hljs-keyword">false</span>);</span><br><span class="line">        <span class="hljs-comment">// 创建PopupWindow实例,设置菜单宽度和高度为包裹其自身内容</span></span><br><span class="line">        popupWindow = <span class="hljs-keyword">new</span> PopupWindow(popupWindow_view, ActionBar.LayoutParams.WRAP_CONTENT,</span><br><span class="line">                ActionBar.LayoutParams.WRAP_CONTENT, <span class="hljs-keyword">true</span>);</span><br><span class="line">        <span class="hljs-comment">//设置菜单显示在按钮的下面</span></span><br><span class="line">        popupWindow.showAsDropDown(findViewById(R.id.btn_menu),<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);</span><br><span class="line">        <span class="hljs-comment">// 点击其他地方消失</span></span><br></pre></td></tr></table></figure>
-<p> menu.xml为弹出菜单</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/11/04/Android/Android案例-弹出菜单/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-    
 <div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous">
-            <a class="is-flex-grow has-text-black-ter" href="/page/4/">Préc</a>
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/12/07/Linux/Class Notes/linux简介/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Linux简介</span>
+            </a>
         </div>
-        <div class="pagination-next is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/page/6/">Suiv</a>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/07/Linux/Class Notes/学用linux/">
+                <span class="level-item">学用linux</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link has-text-black-ter" href="/">1</a></li>
-            
-            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/page/4/">4</a></li>
-            
-            <li><a class="pagination-link is-current" href="/page/5/">5</a></li>
-            
-        </ul>
-    </nav>
+        
+    </div>
 </div>
+
+
 </div>
                 
 
@@ -815,7 +705,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="XJTU SE XX" height="28">
+                    <img src="/images/logo.svg" alt="Linux网络服务-Internet服务" height="28">
                 
                 </a>
                 <p class="is-size-7">

@@ -145,7 +145,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 read (About 220 words)
+                    3 分钟 read (About 404 words)
                 </span>
                 
             </div>
@@ -177,7 +177,7 @@
 </ul>
 </li>
 <li><h1 id="edge-coverage"><a href="#edge-coverage" class="headerlink" title="edge coverage"></a><strong>edge coverage</strong></h1><ul>
-<li>遍历程序图中的每个边，则它们构成边缘覆盖。</li>
+<li>遍历程序图中的每个边，则它们构成边缘覆盖。<br><br><br><strong>语句覆盖</strong><br>使所有的判断语句都能执行一次的条件案例，例如当判断语句事组合语句的时候，并且用or连接，只满足一个案例即可<br><strong>判定覆盖（分支覆盖）</strong><br>针对判断语句，在设定案例的时候，要设定True和False的两种案例；与语句覆盖不同的是增加了False的情况<br><strong>条件覆盖</strong><br>针对判断语句里面案例的取值都要去一次，不考虑条件的取值<br><strong>判定/条件覆盖</strong><br>判定覆盖各条件覆盖交叉，针对于判定中的条件取值<br><strong>组合覆盖</strong><br>判定-条件覆盖的加强版 </li>
 </ul>
 </li>
 </ul>
@@ -405,10 +405,10 @@
 <div class="card card-transparent">
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
         <div class="pagination-previous is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/page/0/">Anterior</a>
+            <a class="is-flex-grow has-text-black-ter" href="/page/0/">Préc</a>
         </div>
         <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/page/2/">Siguiente</a>
+            <a class="is-flex-grow has-text-black-ter" href="/page/2/">Suiv</a>
         </div>
         <ul class="pagination-list is-hidden-mobile">
             
@@ -457,7 +457,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Entradas
+                        Articles
                     </p>
                     <p class="title has-text-weight-normal">
                         24
@@ -467,7 +467,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categorias
+                        Catégories
                     </p>
                     <p class="title has-text-weight-normal">
                         5
@@ -477,7 +477,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Etiquetas
+                        Tags
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -487,7 +487,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
-                SEGUIR</a>
+                SUIVRE</a>
         </div>
         
         
@@ -536,7 +536,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Links
+            Liens
         </h3>
         <ul class="menu-list">
         
@@ -563,7 +563,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categorias
+                Catégories
             </h3>
             <ul class="menu-list">
             <li>
@@ -621,7 +621,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Récents
         </h3>
         
         <article class="media">
@@ -697,7 +697,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -732,7 +732,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -756,7 +756,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Récents
         </h3>
         
         <article class="media">
@@ -832,7 +832,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -867,7 +867,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -1024,10 +1024,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Entradas',
+                POSTS: 'Articles',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categorias',
-                TAGS: 'Etiquetas',
+                CATEGORIES: 'Catégories',
+                TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
