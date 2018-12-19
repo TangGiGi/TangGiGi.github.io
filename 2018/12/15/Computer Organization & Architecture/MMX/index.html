@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/MMX课内实验/3.png">
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/MMX课内实验/4.png">
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/MMX课内实验/FPS.png">
-<meta property="og:updated_time" content="2018-12-19T12:56:42.824Z">
+<meta property="og:updated_time" content="2018-12-19T13:28:07.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MMX课内实验">
 <meta name="twitter:description" content="实验内容使用普通和 MMX 技术实现淡入淡出效果，比较其时间花费。">
@@ -155,7 +155,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 分钟 read (About 1423 words)
+                    10 分钟 read (About 1460 words)
                 </span>
                 
             </div>
@@ -177,6 +177,7 @@
 <li>属性菜单-&gt;Linker-&gt;常规-&gt;附加库目录-&gt;选择SDL/lib/X86</li>
 <li>属性菜单-&gt;Linker-&gt;输入-&gt;附加依赖项-&gt;填入<code>SDL2.lib; SDL2main.lib;</code></li>
 <li>属性菜单-&gt;Linker-&gt;系统-&gt;子系统-&gt;改为未设置</li>
+<li>如果出现<code>找不到SDL2.lib</code>的错误,可以尝试把<code>SDL2.lib</code>复制到项目的可执行文件的同一级目录下</li>
 </ol>
 <h1 id="SDL-准备工作"><a href="#SDL-准备工作" class="headerlink" title="SDL 准备工作"></a><strong>SDL 准备工作</strong></h1><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> SCREEN_WIDTH = <span class="hljs-number">1920</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> SCREEN_HEIGHT = <span class="hljs-number">1080</span>;</span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> len = SCREEN_WIDTH * SCREEN_HEIGHT * <span class="hljs-number">4</span>;</span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>  T = <span class="hljs-number">2000</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>* tar, *pic1, *pic2;</span><br><span class="line">SDL_Window *gWindow = <span class="hljs-literal">nullptr</span>;</span><br><span class="line">SDL_Surface *gScreenSurface = <span class="hljs-literal">nullptr</span>, *gpic1 = <span class="hljs-literal">nullptr</span>, *gpic2 = <span class="hljs-literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//开始测试之前的准备工作</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">before</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line"><span class="hljs-comment">//初始化SDL视频子系统</span></span><br><span class="line"><span class="hljs-keyword">if</span> (SDL_Init(SDL_INIT_VIDEO) &lt; <span class="hljs-number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Window could not be created! SDL_Error: %s\n"</span>, SDL_GetError());</span><br><span class="line">    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//创建窗口</span></span><br><span class="line">gWindow = SDL_CreateWindow(<span class="hljs-string">"SHOW BMP"</span>,<span class="hljs-comment">//窗口标题</span></span><br><span class="line">    SDL_WINDOWPOS_CENTERED,<span class="hljs-comment">//窗口位置设置</span></span><br><span class="line">    SDL_WINDOWPOS_CENTERED,</span><br><span class="line">    SCREEN_WIDTH,<span class="hljs-comment">//窗口的宽度</span></span><br><span class="line">    SCREEN_HEIGHT,<span class="hljs-comment">//窗口的高度</span></span><br><span class="line">    SDL_WINDOW_SHOWN<span class="hljs-comment">//显示窗口</span></span><br><span class="line">);</span><br><span class="line"><span class="hljs-keyword">if</span> (gWindow == <span class="hljs-literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Window could not be created! SDL_Error: %s\n"</span>, SDL_GetError());</span><br><span class="line">    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//将gWindow和gScreenSurface链接</span></span><br><span class="line">gScreenSurface = SDL_GetWindowSurface(gWindow);</span><br><span class="line"><span class="hljs-comment">//找到输出图像所在的位置</span></span><br><span class="line">tar = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>*)(gScreenSurface-&gt;pixels);</span><br><span class="line"><span class="hljs-comment">//获取图像文件的数据大小</span></span><br><span class="line">len = gScreenSurface-&gt;h * gScreenSurface-&gt;pitch;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">after</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">SDL_FreeSurface(gpic1);<span class="hljs-comment">//释放空间</span></span><br><span class="line">SDL_FreeSurface(gpic2);</span><br><span class="line">gpic1 = <span class="hljs-literal">nullptr</span>;</span><br><span class="line">gpic2 = <span class="hljs-literal">nullptr</span>;</span><br><span class="line">SDL_DestroyWindow(gWindow);<span class="hljs-comment">//销毁窗口</span></span><br><span class="line">gWindow = <span class="hljs-literal">nullptr</span>;</span><br><span class="line">SDL_Quit();<span class="hljs-comment">//退出SDL</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="普通方法"><a href="#普通方法" class="headerlink" title="普通方法"></a><strong>普通方法</strong></h1><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">brute_force</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line"><span class="hljs-keyword">int</span> time_st = SDL_GetTicks(), cnt = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">while</span> (SDL_GetTicks() - time_st &lt; T) &#123;</span><br><span class="line"><span class="hljs-keyword">double</span> shade = (<span class="hljs-keyword">double</span>)(SDL_GetTicks() - time_st) / T; <span class="hljs-comment">//获取当前渐变进度</span></span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    tar[i] = pic1[i] + (pic2[i] - pic1[i]) * shade;</span><br><span class="line">&#125;</span><br><span class="line">++cnt;</span><br><span class="line">SDL_UpdateWindowSurface(gWindow); <span class="hljs-comment">//完成计算后刷新图像</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"FPS = %d\n"</span>, cnt * <span class="hljs-number">1000</span>/ T);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -247,7 +248,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Articles
+                        Posts
                     </p>
                     <p class="title has-text-weight-normal">
                         26
@@ -257,7 +258,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Catégories
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
                         8
@@ -277,7 +278,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
-                SUIVRE</a>
+                Follow</a>
         </div>
         
         
@@ -373,7 +374,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Liens
+            Links
         </h3>
         <ul class="menu-list">
         
@@ -400,7 +401,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Catégories
+                Categories
             </h3>
             <ul class="menu-list">
             <li>
@@ -482,7 +483,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recent
         </h3>
         
         <article class="media">
@@ -617,7 +618,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recent
         </h3>
         
         <article class="media">
@@ -885,9 +886,9 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Articles',
+                POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Catégories',
+                CATEGORIES: 'Categories',
                 TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
