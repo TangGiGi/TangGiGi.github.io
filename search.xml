@@ -20,7 +20,24 @@
     </entry>
     
     <entry>
-      <title>期末总结</title>
+      <title>机组期末总结</title>
+      <link href="/2018/12/15/Computer%20Organization%20&amp;%20Architecture/summary/"/>
+      <url>/2018/12/15/Computer%20Organization%20&amp;%20Architecture/summary/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Organization-amp-Architecture"><a href="#Organization-amp-Architecture" class="headerlink" title="Organization &amp; Architecture"></a>Organization &amp; Architecture</h1><ul><li><p>Computer architecture</p><ul><li>允许我们使用制造技术<em>有效地</em>实现信息处理应用程序的 <strong>抽象层的设计</strong></li><li>对程序员可见</li><li>直接影响程序的逻辑执行</li><li>概念结构和功能特征</li></ul></li><li><p>Computer Organization</p><ul><li>体系结构中指定的 <em>实现</em> 和 <em>互连</em> 的操作单元（or 组件）</li><li>系统设计者可见</li><li>架构的的一种实现</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Computer Organization &amp; Architecture </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>操作系统期末总结</title>
       <link href="/2018/12/13/Operating%20System/summary/"/>
       <url>/2018/12/13/Operating%20System/summary/</url>
       
@@ -360,6 +377,25 @@
     </entry>
     
     <entry>
+      <title>Linux网络服务</title>
+      <link href="/2018/12/07/Linux/Class%20Notes/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/"/>
+      <url>/2018/12/07/Linux/Class%20Notes/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</url>
+      
+        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>NTP(network time protocol)</li><li>Linux打印服务<a id="more"></a><br></li></ul></li><li><h1 id="NTP"><a href="#NTP" class="headerlink" title="NTP"></a><strong>NTP</strong></h1><ul><li>ntp通过与时间服务器同步使本机时间与UTC(世界协调时间）同步</li><li>UTC也称为GMT（格林尼治时间）</li><li>本地时间</li><li>/etc/sysconfig/clock<ul><li>ZONE</li><li>UTC</li></ul></li><li>Linux 系统中有 2 个主要的时钟：</li><li>硬件时钟。这是一个独立于 CPU 中运行的所有控制程序而运行的时钟。也称为时间时钟、RTC、BIOS 时钟或 CMOS 时钟。</li><li>系统时间。这是 Linux 内核内部时钟的时间，并且由计时器中断驱动。</li><li>当 Linux 第一次启动时，系统时间与硬件时钟同步。之后， Linux 只使用系统时间。</li><li>date</li><li>xntp 通过提供以下服务解决同步问题：</li><li>xntp 定期根据收集到的更正数据更正本地计算机时钟。</li><li>xntp 会随时借助网络中的时间服务器更正本地时间。</li><li>xntp 支持对本地参考时钟（如无线电控制的时钟）进行管理。<br><br></li></ul></li><li><h1 id="Linux打印服务"><a href="#Linux打印服务" class="headerlink" title="Linux打印服务"></a><strong>Linux打印服务</strong></h1><ul><li>CUPS (Common Unix Printing System )<ul><li>是行式打印机守护程序Line Print Daemon (LPD)的后继，在redhat中仍使用部分LPD命令进行打印机调整与监视。</li></ul></li><li>LPD （行式打印机守护程序）<ul><li>在发送实际打印数据之前，将先发送一些与作业相关的数据，例如打印机队列。LPD 服务的端口号是 515</li></ul></li><li>IPP （因特网打印协议） <ul><li>是一个基于HTTP 协议的相对较新的（自 1999）协议。使用 IPP，所传送的与作业有关的数据比其他协议要多得多。CUPS 使用 IPP 进行内部数据传送。这是在 CUPS 服务器之间转发队列的首选协议。IPP 的端口号是 631</li></ul></li><li>SMB （服务讯息块）。CUPS 还支持在连接到 Windows 共享的打印机上进行打印，SMB 使用端口号 137、138 和 139</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+          <category> Class Notes </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
       <title>Linux网络服务-Internet服务</title>
       <link href="/2018/12/07/Linux/Class%20Notes/Linux%20%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1-%20Internet%E6%9C%8D%E5%8A%A1/"/>
       <url>/2018/12/07/Linux/Class%20Notes/Linux%20%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1-%20Internet%E6%9C%8D%E5%8A%A1/</url>
@@ -398,49 +434,30 @@
     </entry>
     
     <entry>
-      <title>Linux简介</title>
-      <link href="/2018/12/07/Linux/Class%20Notes/linux%E7%AE%80%E4%BB%8B/"/>
-      <url>/2018/12/07/Linux/Class%20Notes/linux%E7%AE%80%E4%BB%8B/</url>
-      
-        <content type="html"><![CDATA[<h1 id="man"><a href="#man" class="headerlink" title="man"></a>man</h1><p>man （/usr/share/man）<br><a id="more"></a><br>如果输入命令 man 后英语手册页没有自动显示，则您可以使用参数LANG=en_EN来显示英语版本的手册页。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; LANG=en_EN man man</span><br></pre></td></tr></table></figure></p><p>给出关于man的具体描述，包括以下几个部分其中每个手册页标题的左右侧是命令名和手册页所属的章节号。标题的中间是章节的名称。</p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">NAME          命令的名称和简短描述</span><br><span class="line">SYNOPSIS      语法的描述</span><br><span class="line">DESCRIPTION   命令的详细描述</span><br><span class="line">OPTIONS       提供的所有可用选项的描述</span><br><span class="line">COMMANDS      在程序运行时可以分配给该程序的说明</span><br><span class="line">FILES         使用某种方法连接到命令的文件</span><br><span class="line">SEE ALSO      相关命令的提示</span><br><span class="line">DIAGNOSTICS   程序可能出现的错误消息</span><br><span class="line">EXAMPLE       调用命令的示例</span><br><span class="line">BUGS          命令的已知错误和问题</span><br></pre></td></tr></table></figure><p>手册页可以分为以下不同的小节</p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1 可执行程序和 shell 命令（用户命令）</span><br><span class="line">2 系统调用</span><br><span class="line">3 功能和库例程</span><br><span class="line">4 设备文件</span><br><span class="line">5 配置文件和文件格式</span><br><span class="line">6 游戏</span><br><span class="line">7 宏软件包和文件格式</span><br><span class="line">8 系统管理命令</span><br></pre></td></tr></table></figure><p>例如<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;man 1 crontab</span><br><span class="line">&gt;man 5 crontab</span><br></pre></td></tr></table></figure></p><p>使用命令 whatis 显示某个命令或实用程序的所有可用手册页的简短描述<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;whatis crontab</span><br></pre></td></tr></table></figure></p><h1 id="Info"><a href="#Info" class="headerlink" title="Info"></a>Info</h1><p>/usr/share/info/<br>Info工具是一个基于菜单的超文本系统，由GNU项目开发并由Linux发布。info工具包括一些关于Linux shell、工具、GNU项目开发程序的说明文档。与man相比，info工具可显示更完整的最新的GNU工具信息<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;info ls</span><br></pre></td></tr></table></figure></p><h1 id="–help"><a href="#–help" class="headerlink" title="–help"></a>–help</h1><p>“–help”是一个工具选项<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;ls --help</span><br></pre></td></tr></table></figure></p><h1 id="Howto文档"><a href="#Howto文档" class="headerlink" title="Howto文档"></a>Howto文档</h1><p>/usr/share/doc/howto<br>or <a href="http://www.tldp.org/index.html" target="_blank" rel="noopener">http://www.tldp.org/index.html</a></p><h1 id="在线文档"><a href="#在线文档" class="headerlink" title="在线文档"></a>在线文档</h1><p>一些在线信息<br><a href="http://www.tldp.org" target="_blank" rel="noopener">http://www.tldp.org</a><br><a href="http://www.linux.org" target="_blank" rel="noopener">http://www.linux.org</a><br><a href="http://www.redhat.com" target="_blank" rel="noopener">http://www.redhat.com</a><br><a href="http://www.suse.com" target="_blank" rel="noopener">http://www.suse.com</a><br><a href="http://www.xfree86.org" target="_blank" rel="noopener">http://www.xfree86.org</a><br><a href="http://www.linuxplanet.com" target="_blank" rel="noopener">http://www.linuxplanet.com</a><br><a href="http://www.cert.org" target="_blank" rel="noopener">http://www.cert.org</a><br><a href="http://www.securityfocus.com" target="_blank" rel="noopener">http://www.securityfocus.com</a><br><a href="http://www.kernel.org" target="_blank" rel="noopener">http://www.kernel.org</a><br><a href="http://man.linuxde.net/" target="_blank" rel="noopener">http://man.linuxde.net/</a></p><p>在以下目录中提供了大多数已安装软件包包的帮助文件：<br>/usr/share/doc/packages/package-name</p><h2 id="ls-l-查看文件的属性"><a href="#ls-l-查看文件的属性" class="headerlink" title="ls -l 查看文件的属性"></a>ls -l 查看文件的属性</h2><p>普通文件          -rw-r–r–<br>目录文件          drwxr-xr-x<br>字符设备文件      crw-rw-rw-<br>块设备文件        brw-r—–<br>套接字文件        srwxrwxrwx<br>链接文件          lrwxrwxr—<br>FIFO文件          prwxr—r– </p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-          <category> Class Notes </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    <entry>
-      <title>Linux网络服务</title>
-      <link href="/2018/12/07/Linux/Class%20Notes/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/"/>
-      <url>/2018/12/07/Linux/Class%20Notes/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</url>
-      
-        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>NTP(network time protocol)</li><li>Linux打印服务<a id="more"></a><br></li></ul></li><li><h1 id="NTP"><a href="#NTP" class="headerlink" title="NTP"></a><strong>NTP</strong></h1><ul><li>ntp通过与时间服务器同步使本机时间与UTC(世界协调时间）同步</li><li>UTC也称为GMT（格林尼治时间）</li><li>本地时间</li><li>/etc/sysconfig/clock<ul><li>ZONE</li><li>UTC</li></ul></li><li>Linux 系统中有 2 个主要的时钟：</li><li>硬件时钟。这是一个独立于 CPU 中运行的所有控制程序而运行的时钟。也称为时间时钟、RTC、BIOS 时钟或 CMOS 时钟。</li><li>系统时间。这是 Linux 内核内部时钟的时间，并且由计时器中断驱动。</li><li>当 Linux 第一次启动时，系统时间与硬件时钟同步。之后， Linux 只使用系统时间。</li><li>date</li><li>xntp 通过提供以下服务解决同步问题：</li><li>xntp 定期根据收集到的更正数据更正本地计算机时钟。</li><li>xntp 会随时借助网络中的时间服务器更正本地时间。</li><li>xntp 支持对本地参考时钟（如无线电控制的时钟）进行管理。<br><br></li></ul></li><li><h1 id="Linux打印服务"><a href="#Linux打印服务" class="headerlink" title="Linux打印服务"></a><strong>Linux打印服务</strong></h1><ul><li>CUPS (Common Unix Printing System )<ul><li>是行式打印机守护程序Line Print Daemon (LPD)的后继，在redhat中仍使用部分LPD命令进行打印机调整与监视。</li></ul></li><li>LPD （行式打印机守护程序）<ul><li>在发送实际打印数据之前，将先发送一些与作业相关的数据，例如打印机队列。LPD 服务的端口号是 515</li></ul></li><li>IPP （因特网打印协议） <ul><li>是一个基于HTTP 协议的相对较新的（自 1999）协议。使用 IPP，所传送的与作业有关的数据比其他协议要多得多。CUPS 使用 IPP 进行内部数据传送。这是在 CUPS 服务器之间转发队列的首选协议。IPP 的端口号是 631</li></ul></li><li>SMB （服务讯息块）。CUPS 还支持在连接到 Windows 共享的打印机上进行打印，SMB 使用端口号 137、138 和 139</li></ul></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-          <category> Class Notes </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    <entry>
       <title>学用linux</title>
       <link href="/2018/12/07/Linux/Class%20Notes/%E5%AD%A6%E7%94%A8linux/"/>
       <url>/2018/12/07/Linux/Class%20Notes/%E5%AD%A6%E7%94%A8linux/</url>
       
         <content type="html"><![CDATA[<h1 id="文件查找-find"><a href="#文件查找-find" class="headerlink" title="文件查找 find"></a>文件查找 find</h1><p>find 在命令行上搜索文件<br><a id="more"></a><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find path criterion action</span><br></pre></td></tr></table></figure></p><p><strong>path</strong>：要搜索的文件系统部分（指定的目录及其所有子目录）。如果什么也没指定，则将使用当前目录下的文件系统。<br><strong>criterion</strong>：文件应该具有的属性：<br>-name pattern 搜索名称中包含给定模式的文件。如果模式中包含元字符或通配符，则必须用引号将它括起。否则，它将由 shell 解释，而不是由 find 解释。<br>-type file_type 搜索文件类型。适用的文件类型如下：“d”（用于目录）、“f”（用于文件）或者“l”（用于符号链接）。<br>-ctime [+/-]days 搜索恰好在指定的几天前进行上一次修改的那些文件。<br><strong>action</strong>:影响以下条件或将搜索作为一个整体进行控制的选项，例如：<br> -print<br> -exec command  可使用选项 -exec 调用其他命令<br> <em>例子</em><br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;find ~ -name kk* -type f –exec grep first &#123;&#125; \; -print</span><br></pre></td></tr></table></figure></p><p> {} 这两个括号代表找到的并传递到命令 grep 的文件名的占位符。分号用于结束 -exec指令。由于它是特殊字符，所以在它前面放一个反斜杠，以此来标记它。</p><h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p> locate 是 find -name 的替代命令（必须装有软件包 findutils-locate）。首次使用要用updatedb生成/更新数据库。</p><h1 id="查找命令所在目录whereis"><a href="#查找命令所在目录whereis" class="headerlink" title="查找命令所在目录whereis"></a>查找命令所在目录whereis</h1><p> 命令 whereis 将返回二进制（选项 -b）、手册页（选项 -m）和指定命令的源代码（选项 -s）。该命令的速度比 find 快，但不如 find 全面。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;whereis -b ls</span><br><span class="line">&gt;whereis -m ls</span><br><span class="line">&gt;whereis -s ls</span><br></pre></td></tr></table></figure></p><h1 id="which"><a href="#which" class="headerlink" title="which"></a>which</h1><p> which 将搜索在变量 PATH 中为指定命令列出的所有路径，并返回该命令的完整路径。命令 which 特别适用于以下情况：不同目录中存在某个命令的几个版本，并且您想知道在未指定路径的情况下输入时将执行哪个版本。<br> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;which find</span><br></pre></td></tr></table></figure></p><h1 id="type"><a href="#type" class="headerlink" title="type"></a>type</h1><p>命令 type command 可用来查找在输入 command 时执行哪类命令，是 shell 内置命令还是外部命令。选项 -a 在文件系统中传递采用该名称的命令的所有实例。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;type type</span><br><span class="line">&gt;type grep</span><br></pre></td></tr></table></figure></p><h1 id="搜索文件内容-grep"><a href="#搜索文件内容-grep" class="headerlink" title="搜索文件内容 grep"></a>搜索文件内容 grep</h1><p>当需要查找包含特殊词、短语或项的所有文件，并且是扫描所有文件而不在编辑器中打开它们时<br><strong>&gt;grep search_pattern filename</strong><br>该命令将在文件名中进行搜索以寻找与 search_pattern 匹配的所有文本，并打印包含该模式的行。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">命令 grep 的可用选项如下：</span><br><span class="line">    -i 忽略大小写。</span><br><span class="line">    -l 仅显示包含搜索字符串的文件的名称。</span><br><span class="line">    -r 递归地搜索整个目录树。</span><br><span class="line">    -v 给定不包含搜索字符串的所有行。</span><br><span class="line">    -n 显示行号。</span><br></pre></td></tr></table></figure></p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;grep test  d* </span><br><span class="line">//显示所有以d开头的文件中包含test的行</span><br><span class="line">&gt;grep -n test aa bb cc</span><br><span class="line">//显示在aa，bb，cc文件中匹配test的行。</span><br></pre></td></tr></table></figure><h1 id="安装RPM包"><a href="#安装RPM包" class="headerlink" title="安装RPM包"></a>安装RPM包</h1><p>用rpm安装软件的命令格式如下：<br><strong> rpm  -i  [安装选项]  rpm 软件包名 </strong><br>安装选项有很多，常用的如下：<br>   -vh ：显示安装过程中的详细信息；<br>   –percent：显示安装进度的百分比；<br>   –test：不进行安装软件包，只进行安装测试并显示简单的报告；<br>   –force：忽略任何错误，强制安装软件包。</p><h1 id="更新、卸载RPM包"><a href="#更新、卸载RPM包" class="headerlink" title="更新、卸载RPM包"></a>更新、卸载RPM包</h1><p><strong> rpm  -u  rpm软件包名 </strong><br><strong> rpm  -e  rpm软件包名 </strong></p><p>查询已安装的包版本<br>rpm –qa |grep  软件包名</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+          <category> Class Notes </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Linux简介</title>
+      <link href="/2018/12/07/Linux/Class%20Notes/linux%E7%AE%80%E4%BB%8B/"/>
+      <url>/2018/12/07/Linux/Class%20Notes/linux%E7%AE%80%E4%BB%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="man"><a href="#man" class="headerlink" title="man"></a>man</h1><p>man （/usr/share/man）<br><a id="more"></a><br>如果输入命令 man 后英语手册页没有自动显示，则您可以使用参数LANG=en_EN来显示英语版本的手册页。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; LANG=en_EN man man</span><br></pre></td></tr></table></figure></p><p>给出关于man的具体描述，包括以下几个部分其中每个手册页标题的左右侧是命令名和手册页所属的章节号。标题的中间是章节的名称。</p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">NAME          命令的名称和简短描述</span><br><span class="line">SYNOPSIS      语法的描述</span><br><span class="line">DESCRIPTION   命令的详细描述</span><br><span class="line">OPTIONS       提供的所有可用选项的描述</span><br><span class="line">COMMANDS      在程序运行时可以分配给该程序的说明</span><br><span class="line">FILES         使用某种方法连接到命令的文件</span><br><span class="line">SEE ALSO      相关命令的提示</span><br><span class="line">DIAGNOSTICS   程序可能出现的错误消息</span><br><span class="line">EXAMPLE       调用命令的示例</span><br><span class="line">BUGS          命令的已知错误和问题</span><br></pre></td></tr></table></figure><p>手册页可以分为以下不同的小节</p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1 可执行程序和 shell 命令（用户命令）</span><br><span class="line">2 系统调用</span><br><span class="line">3 功能和库例程</span><br><span class="line">4 设备文件</span><br><span class="line">5 配置文件和文件格式</span><br><span class="line">6 游戏</span><br><span class="line">7 宏软件包和文件格式</span><br><span class="line">8 系统管理命令</span><br></pre></td></tr></table></figure><p>例如<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;man 1 crontab</span><br><span class="line">&gt;man 5 crontab</span><br></pre></td></tr></table></figure></p><p>使用命令 whatis 显示某个命令或实用程序的所有可用手册页的简短描述<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;whatis crontab</span><br></pre></td></tr></table></figure></p><h1 id="Info"><a href="#Info" class="headerlink" title="Info"></a>Info</h1><p>/usr/share/info/<br>Info工具是一个基于菜单的超文本系统，由GNU项目开发并由Linux发布。info工具包括一些关于Linux shell、工具、GNU项目开发程序的说明文档。与man相比，info工具可显示更完整的最新的GNU工具信息<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;info ls</span><br></pre></td></tr></table></figure></p><h1 id="–help"><a href="#–help" class="headerlink" title="–help"></a>–help</h1><p>“–help”是一个工具选项<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;ls --help</span><br></pre></td></tr></table></figure></p><h1 id="Howto文档"><a href="#Howto文档" class="headerlink" title="Howto文档"></a>Howto文档</h1><p>/usr/share/doc/howto<br>or <a href="http://www.tldp.org/index.html" target="_blank" rel="noopener">http://www.tldp.org/index.html</a></p><h1 id="在线文档"><a href="#在线文档" class="headerlink" title="在线文档"></a>在线文档</h1><p>一些在线信息<br><a href="http://www.tldp.org" target="_blank" rel="noopener">http://www.tldp.org</a><br><a href="http://www.linux.org" target="_blank" rel="noopener">http://www.linux.org</a><br><a href="http://www.redhat.com" target="_blank" rel="noopener">http://www.redhat.com</a><br><a href="http://www.suse.com" target="_blank" rel="noopener">http://www.suse.com</a><br><a href="http://www.xfree86.org" target="_blank" rel="noopener">http://www.xfree86.org</a><br><a href="http://www.linuxplanet.com" target="_blank" rel="noopener">http://www.linuxplanet.com</a><br><a href="http://www.cert.org" target="_blank" rel="noopener">http://www.cert.org</a><br><a href="http://www.securityfocus.com" target="_blank" rel="noopener">http://www.securityfocus.com</a><br><a href="http://www.kernel.org" target="_blank" rel="noopener">http://www.kernel.org</a><br><a href="http://man.linuxde.net/" target="_blank" rel="noopener">http://man.linuxde.net/</a></p><p>在以下目录中提供了大多数已安装软件包包的帮助文件：<br>/usr/share/doc/packages/package-name</p><h2 id="ls-l-查看文件的属性"><a href="#ls-l-查看文件的属性" class="headerlink" title="ls -l 查看文件的属性"></a>ls -l 查看文件的属性</h2><p>普通文件          -rw-r–r–<br>目录文件          drwxr-xr-x<br>字符设备文件      crw-rw-rw-<br>块设备文件        brw-r—–<br>套接字文件        srwxrwxrwx<br>链接文件          lrwxrwxr—<br>FIFO文件          prwxr—r– </p>]]></content>
       
       
       <categories>
