@@ -22,7 +22,13 @@
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/5.png">
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/6.png">
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/7.png">
-<meta property="og:updated_time" content="2018-12-24T14:41:56.394Z">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/8.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/9.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/10.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/11.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/12.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/13.png">
+<meta property="og:updated_time" content="2018-12-27T07:06:44.575Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机组期末总结">
 <meta name="twitter:description" content="Organization &amp;amp; Architecture Computer architecture  允许我们使用制造技术有效地实现信息处理应用程序的 抽象层的设计 对程序员可见 直接影响程序的逻辑执行 概念结构和功能特征   Computer Organization  体系结构中指定的 实现 和 互连 的操作单元（or 组件） 系统设计者可见 架构的的一种实现">
@@ -124,7 +130,7 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catálogo" href="javascript:;">
                     <i class="fas fa-list-ul"></i>
                 </a>
                 
@@ -157,7 +163,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 read (About 667 words)
+                    8 分钟 read (About 1171 words)
                 </span>
                 
             </div>
@@ -307,7 +313,85 @@
 <li>关联映射</li>
 <li>组关联映射</li>
 </ul>
-
+<h1 id="Internal-Memory"><a href="#Internal-Memory" class="headerlink" title="Internal Memory"></a>Internal Memory</h1><ul>
+<li>RAM<br>random-access memory</li>
+<li>Dynamic RAM<ul>
+<li>bits 存在电容器中</li>
+<li>通电时也要刷新</li>
+<li>结构简单 便宜 功耗低</li>
+<li>慢</li>
+<li><img src="\img\COA\期末总结\8.png" alt="Dynamic RAM Structure"></li>
+<li>写</li>
+<li>Bit line 给电压 高 1 低 0</li>
+<li>电荷传给电容器</li>
+<li>读</li>
+<li>Address line 选中</li>
+<li>电荷从电容器-&gt;bit line-&gt;放大器 比较 0 或 1</li>
+<li>电容器必须回写</li>
+</ul>
+</li>
+<li>Static RAM<ul>
+<li><img src="\img\COA\期末总结\9.png" alt="Stating RAM Structure"></li>
+<li>晶体管布置提供了稳定的逻辑状态</li>
+<li>state 1</li>
+<li>C1 high, C2 low</li>
+<li>T1 T4 off, T2 T3 on</li>
+<li>state 0</li>
+<li>C2 high, C1 low</li>
+<li>T2 T3 off, T1 T4 on</li>
+<li>T5 T6是开关</li>
+</ul>
+</li>
+<li>DRAM SRAM 两者对比<ul>
+<li>都不稳定 需要充电才能存数据</li>
+<li>DRAM:容易实现 小 更密集 便宜 需要刷新 容量更大</li>
+<li>SRAM:快 当cache</li>
+</ul>
+</li>
+<li>ROM<ul>
+<li>永久存储</li>
+<li>只读 不可写</li>
+<li>只要有一位错了 整个芯片用不了了</li>
+<li>应用:微程序 库子程序 BIOS</li>
+</ul>
+</li>
+<li>PROM<ul>
+<li>可编程的ROM</li>
+<li>编写需要特殊设备</li>
+<li>灵活 便捷</li>
+</ul>
+</li>
+</ul>
+<h1 id="External-Memory"><a href="#External-Memory" class="headerlink" title="External Memory"></a>External Memory</h1><p><img src="\img\COA\期末总结\10.png" alt="Disk Data Layout"><br><img src="\img\COA\期末总结\11.png" alt="Disk Layout Methods"></p>
+<ul>
+<li>如何找到扇区呢?<ul>
+<li>通过格式化磁盘将额外数据（控制数据）放入扇区</li>
+<li>标记轨道和扇区<br><img src="\img\COA\期末总结\12.png" alt="Organization of Disk System"><br><img src="\img\COA\期末总结\13.png" alt="Timing of a disk I/O"><br>等待IO设备和等待IO通道的时间是不确定的.</li>
+</ul>
+</li>
+<li>寻道时间 seek time<ul>
+<li>找到相关数据的轨道头</li>
+<li>时间不确定(启动磁头臂的时间 加速和遍历轨道的时间)</li>
+<li>估算公式: T= S + n * M</li>
+<li>S 开始时间 n 遍历轨道 m 与磁盘驱动相关的常数</li>
+</ul>
+</li>
+<li>旋转延迟 Rotational delay<ul>
+<li>一般取平均延迟</li>
+</ul>
+</li>
+<li>传输时间 Transfer time<ul>
+<li>①需要传输的字节数 ② 旋转速度</li>
+<li>T = b/(rN)</li>
+<li>b 要传输的字节数 N 轨道上的字节数 r 旋转速度 rpm/60</li>
+</ul>
+</li>
+<li>访问时间 access time<ul>
+<li>上三者相加</li>
+</ul>
+</li>
+</ul>
+<h1 id="Input-Output"><a href="#Input-Output" class="headerlink" title="Input/Output"></a>Input/Output</h1><h1 id="Operating-System-Support"><a href="#Operating-System-Support" class="headerlink" title="Operating System Support"></a>Operating System Support</h1><h1 id="Computer-Arithmetic"><a href="#Computer-Arithmetic" class="headerlink" title="Computer Arithmetic"></a>Computer Arithmetic</h1><h1 id="Instruction-Sets-Characteristics-and-Functions"><a href="#Instruction-Sets-Characteristics-and-Functions" class="headerlink" title="Instruction Sets: Characteristics and Functions"></a>Instruction Sets: Characteristics and Functions</h1><h1 id="Instruction-Sets-Addressing-Modes-and-Formats"><a href="#Instruction-Sets-Addressing-Modes-and-Formats" class="headerlink" title="Instruction Sets: Addressing Modes and Formats"></a>Instruction Sets: Addressing Modes and Formats</h1><h1 id="CPU-Structure-and-Function"><a href="#CPU-Structure-and-Function" class="headerlink" title="CPU Structure and Function"></a>CPU Structure and Function</h1><h1 id="Reduced-Instruction-Set-Computers"><a href="#Reduced-Instruction-Set-Computers" class="headerlink" title="Reduced Instruction Set Computers"></a>Reduced Instruction Set Computers</h1><h1 id="InstructionLevel-Parallelism-and-Superscalar-Processors"><a href="#InstructionLevel-Parallelism-and-Superscalar-Processors" class="headerlink" title="InstructionLevel Parallelism and Superscalar Processors"></a>InstructionLevel Parallelism and Superscalar Processors</h1><h1 id="Control-Unit-Operation"><a href="#Control-Unit-Operation" class="headerlink" title="Control Unit Operation"></a>Control Unit Operation</h1>
         </div>
         
         
@@ -365,7 +449,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        Entradas
                     </p>
                     <p class="title has-text-weight-normal">
                         27
@@ -375,7 +459,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        Categorias
                     </p>
                     <p class="title has-text-weight-normal">
                         8
@@ -385,7 +469,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Etiquetas
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -395,7 +479,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
-                Follow</a>
+                SEGUIR</a>
         </div>
         
         
@@ -441,7 +525,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Catalogue
+                Catálogo
             </h3>
             <ul class="menu-list"><li>
         <a class="is-flex" href="#Organization-amp-Architecture">
@@ -455,6 +539,50 @@
         <a class="is-flex" href="#Cache">
         <span class="has-mr-6">3</span>
         <span>Cache</span>
+        </a></li><li>
+        <a class="is-flex" href="#Internal-Memory">
+        <span class="has-mr-6">4</span>
+        <span>Internal Memory</span>
+        </a></li><li>
+        <a class="is-flex" href="#External-Memory">
+        <span class="has-mr-6">5</span>
+        <span>External Memory</span>
+        </a></li><li>
+        <a class="is-flex" href="#Input-Output">
+        <span class="has-mr-6">6</span>
+        <span>Input/Output</span>
+        </a></li><li>
+        <a class="is-flex" href="#Operating-System-Support">
+        <span class="has-mr-6">7</span>
+        <span>Operating System Support</span>
+        </a></li><li>
+        <a class="is-flex" href="#Computer-Arithmetic">
+        <span class="has-mr-6">8</span>
+        <span>Computer Arithmetic</span>
+        </a></li><li>
+        <a class="is-flex" href="#Instruction-Sets-Characteristics-and-Functions">
+        <span class="has-mr-6">9</span>
+        <span>Instruction Sets: Characteristics and Functions</span>
+        </a></li><li>
+        <a class="is-flex" href="#Instruction-Sets-Addressing-Modes-and-Formats">
+        <span class="has-mr-6">10</span>
+        <span>Instruction Sets: Addressing Modes and Formats</span>
+        </a></li><li>
+        <a class="is-flex" href="#CPU-Structure-and-Function">
+        <span class="has-mr-6">11</span>
+        <span>CPU Structure and Function</span>
+        </a></li><li>
+        <a class="is-flex" href="#Reduced-Instruction-Set-Computers">
+        <span class="has-mr-6">12</span>
+        <span>Reduced Instruction Set Computers</span>
+        </a></li><li>
+        <a class="is-flex" href="#InstructionLevel-Parallelism-and-Superscalar-Processors">
+        <span class="has-mr-6">13</span>
+        <span>InstructionLevel Parallelism and Superscalar Processors</span>
+        </a></li><li>
+        <a class="is-flex" href="#Control-Unit-Operation">
+        <span class="has-mr-6">14</span>
+        <span>Control Unit Operation</span>
         </a></li></ul>
         </div>
     </div>
@@ -494,7 +622,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Categorias
             </h3>
             <ul class="menu-list">
             <li>
@@ -576,7 +704,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
@@ -652,7 +780,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -687,7 +815,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
                 
@@ -711,7 +839,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
@@ -787,7 +915,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -822,7 +950,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
                 
@@ -979,10 +1107,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Entradas',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
