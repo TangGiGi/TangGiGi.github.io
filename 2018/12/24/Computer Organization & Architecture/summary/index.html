@@ -28,7 +28,24 @@
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/11.png">
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/12.png">
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/13.png">
-<meta property="og:updated_time" content="2018-12-27T07:06:44.575Z">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/14.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/15.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/16.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/17.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/18.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/19.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/20.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/21.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/22.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/23.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/24.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/25.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/26.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/27.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/28.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/29.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/30.png">
+<meta property="og:updated_time" content="2018-12-27T10:03:55.003Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机组期末总结">
 <meta name="twitter:description" content="Organization &amp;amp; Architecture Computer architecture  允许我们使用制造技术有效地实现信息处理应用程序的 抽象层的设计 对程序员可见 直接影响程序的逻辑执行 概念结构和功能特征   Computer Organization  体系结构中指定的 实现 和 互连 的操作单元（or 组件） 系统设计者可见 架构的的一种实现">
@@ -163,7 +180,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8 分钟 read (About 1171 words)
+                    19 分钟 read (About 2816 words)
                 </span>
                 
             </div>
@@ -220,6 +237,9 @@
 </li>
 </ul>
 </li>
+</ul>
+<p></p><p id="p1"></p>
+<ul>
 <li><p>指令的流程</p>
 <ul>
 <li>指令地址计算</li>
@@ -386,12 +406,282 @@
 <li>b 要传输的字节数 N 轨道上的字节数 r 旋转速度 rpm/60</li>
 </ul>
 </li>
-<li>访问时间 access time<ul>
+<li><p>访问时间 access time</p>
+<ul>
 <li>上三者相加</li>
 </ul>
 </li>
+<li><p>RAID</p>
+<ul>
+<li>Redundant Array of Independent Disks</li>
+<li>通过OS将一组物理磁盘视为单个逻辑驱动器</li>
+<li>跨物理驱动器分布的数据</li>
+<li>可以使用冗余容量来存储奇偶校验信息</li>
 </ul>
-<h1 id="Input-Output"><a href="#Input-Output" class="headerlink" title="Input/Output"></a>Input/Output</h1><h1 id="Operating-System-Support"><a href="#Operating-System-Support" class="headerlink" title="Operating System Support"></a>Operating System Support</h1><h1 id="Computer-Arithmetic"><a href="#Computer-Arithmetic" class="headerlink" title="Computer Arithmetic"></a>Computer Arithmetic</h1><h1 id="Instruction-Sets-Characteristics-and-Functions"><a href="#Instruction-Sets-Characteristics-and-Functions" class="headerlink" title="Instruction Sets: Characteristics and Functions"></a>Instruction Sets: Characteristics and Functions</h1><h1 id="Instruction-Sets-Addressing-Modes-and-Formats"><a href="#Instruction-Sets-Addressing-Modes-and-Formats" class="headerlink" title="Instruction Sets: Addressing Modes and Formats"></a>Instruction Sets: Addressing Modes and Formats</h1><h1 id="CPU-Structure-and-Function"><a href="#CPU-Structure-and-Function" class="headerlink" title="CPU Structure and Function"></a>CPU Structure and Function</h1><h1 id="Reduced-Instruction-Set-Computers"><a href="#Reduced-Instruction-Set-Computers" class="headerlink" title="Reduced Instruction Set Computers"></a>Reduced Instruction Set Computers</h1><h1 id="InstructionLevel-Parallelism-and-Superscalar-Processors"><a href="#InstructionLevel-Parallelism-and-Superscalar-Processors" class="headerlink" title="InstructionLevel Parallelism and Superscalar Processors"></a>InstructionLevel Parallelism and Superscalar Processors</h1><h1 id="Control-Unit-Operation"><a href="#Control-Unit-Operation" class="headerlink" title="Control Unit Operation"></a>Control Unit Operation</h1>
+</li>
+<li><p>RAID 0</p>
+<ul>
+<li>无冗余</li>
+<li>数据条跨所有磁盘</li>
+<li>提升速度:多个数据请求可能不在同一磁盘上.磁盘并行寻求.一组数据可能跨多个磁盘进行条带化</li>
+<li>应用:高数据传输能力.高IO请求<br><img src="\img\COA\期末总结\14.png" alt=""><br><img src="\img\COA\期末总结\15.png" alt=""></li>
+</ul>
+</li>
+<li><p>RAID 1</p>
+<ul>
+<li>数据条跨磁盘</li>
+<li>每个磁盘条2个副本位于不同的磁盘上</li>
+<li>读1 写2</li>
+<li>恢复简单,容错性好.如果读取请求率高,则其性能是RAID0的两倍</li>
+<li>贵</li>
+<li>应用:存储系统软件或数据非常重要的文件<br><img src="\img\COA\期末总结\16.png" alt=""></li>
+</ul>
+</li>
+<li><p>RAID 2</p>
+<ul>
+<li>未实现</li>
+<li>所有磁盘是同步的,任何时候磁头位于所有磁盘的相同位置</li>
+<li>非常小的磁盘条,单个字节或字</li>
+<li>并行访问数据和奇偶校验</li>
+<li>非常多冗余<br><img src="\img\COA\期末总结\17.png" alt=""></li>
+</ul>
+</li>
+<li><p>RAID 3</p>
+<ul>
+<li>与RAID2 相似</li>
+<li>只有一个冗余磁盘.</li>
+<li>可以从幸存的数据和奇偶校验信息重建有关故障驱动器的数据</li>
+<li>very high transfer rates</li>
+<li>一次只能执行一个IO请求</li>
+</ul>
+</li>
+</ul>
+<p>例:5个磁盘阵列，X0~X3表示数据，X4表示奇偶校验.X4（i）= X3（i）⊕X2（i）⊕X1（i）⊕X0（i）如果X0损坏，则上述等式异或两侧X4（i）⊕X0（i）<br>X0（i）= X4（i）⊕X3（i）⊕X2（i）⊕X1（i）<br><img src="\img\COA\期末总结\18.png" alt=""></p>
+<ul>
+<li><p>RAID 4</p>
+<ul>
+<li>与RAID2 类似 但是磁盘条更大</li>
+<li>每个磁盘独立运行</li>
+<li>适用于高IO请求</li>
+<li>Bit by bit parity calculated across stripes on each disk</li>
+<li>奇偶校验存储在奇偶校验磁盘上</li>
+<li><img src="\img\COA\期末总结\19.png" alt=""></li>
+<li><img src="\img\COA\期末总结\20.png" alt=""></li>
+<li>磁盘条上1次写请求则最少需要2次读2次写操作</li>
+<li>奇偶校验磁盘成为瓶颈</li>
+</ul>
+</li>
+<li><p>RAID 5</p>
+<ul>
+<li>与RAID4 类似</li>
+<li>常用于网络服务器</li>
+<li><img src="\img\COA\期末总结\21.png" alt=""></li>
+</ul>
+</li>
+<li><p>RAID 6</p>
+<ul>
+<li>两种不同的奇偶校验计算，存储在不同磁盘上的单独条带中</li>
+<li>极高的数据可用性,即使两个条带发生故障也可以恢复</li>
+<li>写惩罚</li>
+<li><img src="\img\COA\期末总结\22.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h1 id="Input-Output"><a href="#Input-Output" class="headerlink" title="Input/Output"></a>Input/Output</h1><ul>
+<li>Why IO模块?<ul>
+<li>种类繁多的外围设备<ul>
+<li>提供不同数量的数据</li>
+<li>以不同的速度</li>
+<li>根据不同的时序</li>
+<li>以不同的格式</li>
+</ul>
+</li>
+<li>都慢于CPU和RAM</li>
+<li>外围设备不直接连接到系统总线</li>
+<li>需要IO模块计算机</li>
+</ul>
+</li>
+</ul>
+<p><img src="\img\COA\期末总结\23.png" alt="Generic Model of I/O Modular"><br><img src="\img\COA\期末总结\24.png" alt="External Device Block Diagram"></p>
+<ul>
+<li><p>磁盘驱动</p>
+<ul>
+<li>一种是与IO模块进行数据 控制 和状态信号交换</li>
+<li>另一种是用于控制磁盘读写机制</li>
+</ul>
+</li>
+<li><p>IO模块的功能</p>
+<ul>
+<li>控制和计时</li>
+<li>CPU  ~ IO 通信</li>
+<li>设备 ~ IO 通信</li>
+<li>内存 ~ IO 通信</li>
+<li>数据缓冲</li>
+<li>错误检测</li>
+</ul>
+</li>
+<li><p>IO steps</p>
+<ul>
+<li>CPU检查IO模块和设备状态</li>
+<li>IO模块返回状态</li>
+<li>如果准备好，CPU请求数据传输</li>
+<li>IO模块从设备获取数据</li>
+<li>IO模块将数据传输到CPU</li>
+</ul>
+</li>
+<li><p>IO Communication</p>
+<ul>
+<li>命令解码：<ul>
+<li>读取扇区 搜索轨道 扫描ID</li>
+<li>可以读取或写入哪些块。</li>
+</ul>
+</li>
+<li>数据交换<ul>
+<li>外部数据 -&gt; IO模块buffer By 本地总线</li>
+<li>IO模块buffer -&gt; CPU/内存 By 系统总线</li>
+</ul>
+</li>
+<li>状态报告<ul>
+<li>busy ready error etc.</li>
+</ul>
+</li>
+<li>地址识别<ul>
+<li>识别每个外围设备</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据缓冲 Data Buffering</p>
+<ul>
+<li>使外围设备适应CPU/主存的速度</li>
+<li>CPU/DRAM <--> IO buffer</--></li>
+<li>IO buffer <--> 外围设备</--></li>
+</ul>
+</li>
+<li><p>错误检测 Error Detection</p>
+<ul>
+<li>IO模块通常负责错误检测并向CPU报告错误</li>
+<li>硬件故障:卡纸 坏的磁盘轨道</li>
+<li>传输错误:bit错误 数据丢失 …</li>
+</ul>
+</li>
+</ul>
+<p><img src="\img\COA\期末总结\25.png" alt="IO Module Structure"></p>
+<ul>
+<li><p>输入输出模式</p>
+<ul>
+<li>Programmed IO</li>
+<li>中断驱动IO</li>
+<li>直接内存访问（DMA）</li>
+<li>IO通道</li>
+<li>IO处理器</li>
+</ul>
+</li>
+<li><p>Programmed IO和中断驱动IO的缺点</p>
+<ul>
+<li>Programmed IO需要占用所有CPU时间</li>
+<li>中断驱动的IO仍需要主动CPU干预，但CPU使用率比Programmed IO更高（传输速率更低）</li>
+<li>在这两种模式下，数据传输必须遍历CPU<ul>
+<li>转移率有限</li>
+<li>CPU被捆绑了</li>
+</ul>
+</li>
+<li>传输大量数据时，DMA是一种更有效的技术</li>
+</ul>
+</li>
+<li><p>DMA</p>
+<ul>
+<li>在CPU外部</li>
+<li>总线上的附加模块（硬件）</li>
+<li>DMA控制器从CPU接管IO.</li>
+<li>无需CPU干预即可将数据块传输到内存或从内存传输</li>
+<li>实际上，DMA也是一个IO模块</li>
+<li>Act as a maser on the bus</li>
+<li>Memory system acts like slave</li>
+<li>管理字节-字转换</li>
+<li>优先级：DMA &gt; CPU</li>
+</ul>
+</li>
+<li><p>CPU和DMA之间的三种数据传输模式：</p>
+<ul>
+<li>块传输模式（垄断模式）<ul>
+<li>整个数据块以一个连续的顺序传输</li>
+<li>如果DMA传输数据，CPU将被禁用一段时间，直到DMA释放总线</li>
+<li>用于将程序或数据文件加载到内存中</li>
+</ul>
+</li>
+<li>Cycle stealing mode<ul>
+<li>DMA仅在CPU不需要时才使用总线或强制CPU暂时暂停操作</li>
+<li>DMA传输一个数据字，然后释放总线</li>
+<li>DMA交错指令和数据传输</li>
+</ul>
+</li>
+<li>透明模式（备用模式）<ul>
+<li>DMA and CPU use bus by division time multiplexing</li>
+<li>需要大部分时间，但效率最高</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="\img\COA\期末总结\26.png" alt="DMA Structure"></p>
+<ul>
+<li><p>DMA操作</p>
+<ul>
+<li>预处理：CPU告诉DMA控制器<ul>
+<li>读/写</li>
+<li>设备地址</li>
+<li>数据存储块的起始地址</li>
+<li>要转移的数据量</li>
+<li>CPU继续进行其他工作</li>
+</ul>
+</li>
+<li>数据传输：DMA控制器处理传输（逐字）</li>
+<li>后处理：DMA控制器在完成后发送中断</li>
+</ul>
+</li>
+<li><p>DMA Transfer Cycle Stealing</p>
+<ul>
+<li>DMA控制器接管总线一个周期</li>
+<li>传输一个字的数据</li>
+<li>不是中断<ul>
+<li>因为CPU不切换上下文</li>
+</ul>
+</li>
+<li>CPU在访问总线之前就suspended<ul>
+<li>即在 取指 或 取操作数 或 数据写入 之前 (<a href="#p1">指令的流程</a>)</li>
+</ul>
+</li>
+<li>减慢CPU速度但不会像CPU那样进行传输</li>
+</ul>
+</li>
+</ul>
+<p><img src="\img\COA\期末总结\27.png" alt=""></p>
+<ul>
+<li>DMA Configurations<ul>
+<li>单总线,独立DMA控制器<ul>
+<li>每次传输需要用到总线<strong>2次</strong>. IO-&gt;DMA DMA-memory</li>
+<li>CPU suspended <strong>2次</strong></li>
+<li><img src="\img\COA\期末总结\28.png" alt=""></li>
+</ul>
+</li>
+<li>单总线,集成DMA控制器<ul>
+<li>控制器支持&gt;1个设备</li>
+<li>每次传输需要用到总线<strong>1次</strong> DMA-&gt;memory</li>
+<li>CPU suspended <strong>1次</strong></li>
+<li><img src="\img\COA\期末总结\29.png" alt=""></li>
+</ul>
+</li>
+<li>单独的IO总线<ul>
+<li>每次传输需要用到总线<strong>1次</strong> DMA-&gt;memory</li>
+<li>CPU suspended <strong>1次</strong></li>
+<li><img src="\img\COA\期末总结\30.png" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Operating-System-Support"><a href="#Operating-System-Support" class="headerlink" title="Operating System Support"></a>Operating System Support</h1><h1 id="Computer-Arithmetic"><a href="#Computer-Arithmetic" class="headerlink" title="Computer Arithmetic"></a>Computer Arithmetic</h1><h1 id="Instruction-Sets-Characteristics-and-Functions"><a href="#Instruction-Sets-Characteristics-and-Functions" class="headerlink" title="Instruction Sets: Characteristics and Functions"></a>Instruction Sets: Characteristics and Functions</h1><h1 id="Instruction-Sets-Addressing-Modes-and-Formats"><a href="#Instruction-Sets-Addressing-Modes-and-Formats" class="headerlink" title="Instruction Sets: Addressing Modes and Formats"></a>Instruction Sets: Addressing Modes and Formats</h1><h1 id="CPU-Structure-and-Function"><a href="#CPU-Structure-and-Function" class="headerlink" title="CPU Structure and Function"></a>CPU Structure and Function</h1><h1 id="Reduced-Instruction-Set-Computers"><a href="#Reduced-Instruction-Set-Computers" class="headerlink" title="Reduced Instruction Set Computers"></a>Reduced Instruction Set Computers</h1><h1 id="InstructionLevel-Parallelism-and-Superscalar-Processors"><a href="#InstructionLevel-Parallelism-and-Superscalar-Processors" class="headerlink" title="InstructionLevel Parallelism and Superscalar Processors"></a>InstructionLevel Parallelism and Superscalar Processors</h1><h1 id="Control-Unit-Operation"><a href="#Control-Unit-Operation" class="headerlink" title="Control Unit Operation"></a>Control Unit Operation</h1>
         </div>
         
         
