@@ -45,7 +45,8 @@
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/28.png">
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/29.png">
 <meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/30.png">
-<meta property="og:updated_time" content="2018-12-27T10:03:55.003Z">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/31.png">
+<meta property="og:updated_time" content="2019-01-02T07:08:32.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机组期末总结">
 <meta name="twitter:description" content="Organization &amp;amp; Architecture Computer architecture  允许我们使用制造技术有效地实现信息处理应用程序的 抽象层的设计 对程序员可见 直接影响程序的逻辑执行 概念结构和功能特征   Computer Organization  体系结构中指定的 实现 和 互连 的操作单元（or 组件） 系统设计者可见 架构的的一种实现">
@@ -147,7 +148,7 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="Catálogo" href="javascript:;">
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
                     <i class="fas fa-list-ul"></i>
                 </a>
                 
@@ -180,7 +181,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    19 分钟 read (About 2816 words)
+                    20 分钟 read (About 2985 words)
                 </span>
                 
             </div>
@@ -316,7 +317,7 @@
 </li>
 <li><p>总线的通讯控制模块</p>
 <ul>
-<li>通讯控制:解决如何开始和结束传输，如何协调主从模块</li>
+<li>通讯控制:解决如何开始和结束传输,如何协调主从模块</li>
 </ul>
 </li>
 </ul>
@@ -456,7 +457,7 @@
 </ul>
 </li>
 </ul>
-<p>例:5个磁盘阵列，X0~X3表示数据，X4表示奇偶校验.X4（i）= X3（i）⊕X2（i）⊕X1（i）⊕X0（i）如果X0损坏，则上述等式异或两侧X4（i）⊕X0（i）<br>X0（i）= X4（i）⊕X3（i）⊕X2（i）⊕X1（i）<br><img src="\img\COA\期末总结\18.png" alt=""></p>
+<p>例:5个磁盘阵列,X0~X3表示数据,X4表示奇偶校验.X4（i）= X3（i）⊕X2（i）⊕X1（i）⊕X0（i）如果X0损坏,则上述等式异或两侧X4（i）⊕X0（i）<br>X0（i）= X4（i）⊕X3（i）⊕X2（i）⊕X1（i）<br><img src="\img\COA\期末总结\18.png" alt=""></p>
 <ul>
 <li><p>RAID 4</p>
 <ul>
@@ -480,7 +481,7 @@
 </li>
 <li><p>RAID 6</p>
 <ul>
-<li>两种不同的奇偶校验计算，存储在不同磁盘上的单独条带中</li>
+<li>两种不同的奇偶校验计算,存储在不同磁盘上的单独条带中</li>
 <li>极高的数据可用性,即使两个条带发生故障也可以恢复</li>
 <li>写惩罚</li>
 <li><img src="\img\COA\期末总结\22.png" alt=""></li>
@@ -524,7 +525,7 @@
 <ul>
 <li>CPU检查IO模块和设备状态</li>
 <li>IO模块返回状态</li>
-<li>如果准备好，CPU请求数据传输</li>
+<li>如果准备好,CPU请求数据传输</li>
 <li>IO模块从设备获取数据</li>
 <li>IO模块将数据传输到CPU</li>
 </ul>
@@ -580,13 +581,13 @@
 <li><p>Programmed IO和中断驱动IO的缺点</p>
 <ul>
 <li>Programmed IO需要占用所有CPU时间</li>
-<li>中断驱动的IO仍需要主动CPU干预，但CPU使用率比Programmed IO更高（传输速率更低）</li>
-<li>在这两种模式下，数据传输必须遍历CPU<ul>
+<li>中断驱动的IO仍需要主动CPU干预,但CPU使用率比Programmed IO更高（传输速率更低）</li>
+<li>在这两种模式下,数据传输必须遍历CPU<ul>
 <li>转移率有限</li>
 <li>CPU被捆绑了</li>
 </ul>
 </li>
-<li>传输大量数据时，DMA是一种更有效的技术</li>
+<li>传输大量数据时,DMA是一种更有效的技术</li>
 </ul>
 </li>
 <li><p>DMA</p>
@@ -595,7 +596,7 @@
 <li>总线上的附加模块（硬件）</li>
 <li>DMA控制器从CPU接管IO.</li>
 <li>无需CPU干预即可将数据块传输到内存或从内存传输</li>
-<li>实际上，DMA也是一个IO模块</li>
+<li>实际上,DMA也是一个IO模块</li>
 <li>Act as a maser on the bus</li>
 <li>Memory system acts like slave</li>
 <li>管理字节-字转换</li>
@@ -606,19 +607,19 @@
 <ul>
 <li>块传输模式（垄断模式）<ul>
 <li>整个数据块以一个连续的顺序传输</li>
-<li>如果DMA传输数据，CPU将被禁用一段时间，直到DMA释放总线</li>
+<li>如果DMA传输数据,CPU将被禁用一段时间,直到DMA释放总线</li>
 <li>用于将程序或数据文件加载到内存中</li>
 </ul>
 </li>
 <li>Cycle stealing mode<ul>
 <li>DMA仅在CPU不需要时才使用总线或强制CPU暂时暂停操作</li>
-<li>DMA传输一个数据字，然后释放总线</li>
+<li>DMA传输一个数据字,然后释放总线</li>
 <li>DMA交错指令和数据传输</li>
 </ul>
 </li>
 <li>透明模式（备用模式）<ul>
 <li>DMA and CPU use bus by division time multiplexing</li>
-<li>需要大部分时间，但效率最高</li>
+<li>需要大部分时间,但效率最高</li>
 </ul>
 </li>
 </ul>
@@ -658,7 +659,8 @@
 </ul>
 <p><img src="\img\COA\期末总结\27.png" alt=""></p>
 <ul>
-<li>DMA Configurations<ul>
+<li><p>DMA Configurations</p>
+<ul>
 <li>单总线,独立DMA控制器<ul>
 <li>每次传输需要用到总线<strong>2次</strong>. IO-&gt;DMA DMA-memory</li>
 <li>CPU suspended <strong>2次</strong></li>
@@ -680,8 +682,21 @@
 </li>
 </ul>
 </li>
+<li><p>IO 通道</p>
+<ul>
+<li>IO通道是一个IO模块,具有自己的处理器,可以执行IO程序.IO程序位于主存中.实际上,IO通道代表了DMA概念的扩展.因此,IO通道具有执行IO指令和控制IO操作的能力.</li>
+<li><strong>功能:</strong></li>
+<li>从CPU接受命令(微指令)</li>
+<li>从内存加载IO程序,并给设备发送命令</li>
+<li>记录设备状态和中断</li>
+<li>Buffer, control and transfer data, provide path for transferring </li>
+<li><strong>流程:</strong></li>
+<li>CPU发送IO命令 并等待 IO通道和设备ready -&gt; CPU开启通道 返回主程序 -&gt; 通道执行IO程序以在存储器和设备之间传输数据<br>-&gt;数据传输完成后,中断CPU</li>
 </ul>
-<h1 id="Operating-System-Support"><a href="#Operating-System-Support" class="headerlink" title="Operating System Support"></a>Operating System Support</h1><h1 id="Computer-Arithmetic"><a href="#Computer-Arithmetic" class="headerlink" title="Computer Arithmetic"></a>Computer Arithmetic</h1><h1 id="Instruction-Sets-Characteristics-and-Functions"><a href="#Instruction-Sets-Characteristics-and-Functions" class="headerlink" title="Instruction Sets: Characteristics and Functions"></a>Instruction Sets: Characteristics and Functions</h1><h1 id="Instruction-Sets-Addressing-Modes-and-Formats"><a href="#Instruction-Sets-Addressing-Modes-and-Formats" class="headerlink" title="Instruction Sets: Addressing Modes and Formats"></a>Instruction Sets: Addressing Modes and Formats</h1><h1 id="CPU-Structure-and-Function"><a href="#CPU-Structure-and-Function" class="headerlink" title="CPU Structure and Function"></a>CPU Structure and Function</h1><h1 id="Reduced-Instruction-Set-Computers"><a href="#Reduced-Instruction-Set-Computers" class="headerlink" title="Reduced Instruction Set Computers"></a>Reduced Instruction Set Computers</h1><h1 id="InstructionLevel-Parallelism-and-Superscalar-Processors"><a href="#InstructionLevel-Parallelism-and-Superscalar-Processors" class="headerlink" title="InstructionLevel Parallelism and Superscalar Processors"></a>InstructionLevel Parallelism and Superscalar Processors</h1><h1 id="Control-Unit-Operation"><a href="#Control-Unit-Operation" class="headerlink" title="Control Unit Operation"></a>Control Unit Operation</h1>
+</li>
+</ul>
+<h1 id="Computer-Arithmetic"><a href="#Computer-Arithmetic" class="headerlink" title="Computer Arithmetic"></a>Computer Arithmetic</h1><p><img src="\img\COA\期末总结\31.png" alt="ALU Inputs and Outputs"></p>
+<h1 id="Instruction-Sets-Characteristics-and-Functions"><a href="#Instruction-Sets-Characteristics-and-Functions" class="headerlink" title="Instruction Sets: Characteristics and Functions"></a>Instruction Sets: Characteristics and Functions</h1><h1 id="Instruction-Sets-Addressing-Modes-and-Formats"><a href="#Instruction-Sets-Addressing-Modes-and-Formats" class="headerlink" title="Instruction Sets: Addressing Modes and Formats"></a>Instruction Sets: Addressing Modes and Formats</h1><h1 id="CPU-Structure-and-Function"><a href="#CPU-Structure-and-Function" class="headerlink" title="CPU Structure and Function"></a>CPU Structure and Function</h1><h1 id="Reduced-Instruction-Set-Computers"><a href="#Reduced-Instruction-Set-Computers" class="headerlink" title="Reduced Instruction Set Computers"></a>Reduced Instruction Set Computers</h1><h1 id="InstructionLevel-Parallelism-and-Superscalar-Processors"><a href="#InstructionLevel-Parallelism-and-Superscalar-Processors" class="headerlink" title="InstructionLevel Parallelism and Superscalar Processors"></a>InstructionLevel Parallelism and Superscalar Processors</h1><h1 id="Control-Unit-Operation"><a href="#Control-Unit-Operation" class="headerlink" title="Control Unit Operation"></a>Control Unit Operation</h1>
         </div>
         
         
@@ -739,27 +754,27 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Entradas
+                        Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        27
+                        26
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categorias
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        7
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Etiquetas
+                        Tags
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -769,7 +784,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
-                SEGUIR</a>
+                Follow</a>
         </div>
         
         
@@ -815,7 +830,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Catálogo
+                Catalogue
             </h3>
             <ul class="menu-list"><li>
         <a class="is-flex" href="#Organization-amp-Architecture">
@@ -842,36 +857,32 @@
         <span class="has-mr-6">6</span>
         <span>Input/Output</span>
         </a></li><li>
-        <a class="is-flex" href="#Operating-System-Support">
-        <span class="has-mr-6">7</span>
-        <span>Operating System Support</span>
-        </a></li><li>
         <a class="is-flex" href="#Computer-Arithmetic">
-        <span class="has-mr-6">8</span>
+        <span class="has-mr-6">7</span>
         <span>Computer Arithmetic</span>
         </a></li><li>
         <a class="is-flex" href="#Instruction-Sets-Characteristics-and-Functions">
-        <span class="has-mr-6">9</span>
+        <span class="has-mr-6">8</span>
         <span>Instruction Sets: Characteristics and Functions</span>
         </a></li><li>
         <a class="is-flex" href="#Instruction-Sets-Addressing-Modes-and-Formats">
-        <span class="has-mr-6">10</span>
+        <span class="has-mr-6">9</span>
         <span>Instruction Sets: Addressing Modes and Formats</span>
         </a></li><li>
         <a class="is-flex" href="#CPU-Structure-and-Function">
-        <span class="has-mr-6">11</span>
+        <span class="has-mr-6">10</span>
         <span>CPU Structure and Function</span>
         </a></li><li>
         <a class="is-flex" href="#Reduced-Instruction-Set-Computers">
-        <span class="has-mr-6">12</span>
+        <span class="has-mr-6">11</span>
         <span>Reduced Instruction Set Computers</span>
         </a></li><li>
         <a class="is-flex" href="#InstructionLevel-Parallelism-and-Superscalar-Processors">
-        <span class="has-mr-6">13</span>
+        <span class="has-mr-6">12</span>
         <span>InstructionLevel Parallelism and Superscalar Processors</span>
         </a></li><li>
         <a class="is-flex" href="#Control-Unit-Operation">
-        <span class="has-mr-6">14</span>
+        <span class="has-mr-6">13</span>
         <span>Control Unit Operation</span>
         </a></li></ul>
         </div>
@@ -912,7 +923,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categorias
+                Categories
             </h3>
             <ul class="menu-list">
             <li>
@@ -948,14 +959,6 @@
                 <span class="level-item tag">6</span>
             </span>
         </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/Operating-System/">
-            <span class="level-start">
-                <span class="level-item">Operating System</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
         <a class="level is-marginless" href="/categories/Software-Quality-Assurance/">
             <span class="level-start">
                 <span class="level-item">Software Quality Assurance</span>
@@ -994,7 +997,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
@@ -1027,19 +1030,6 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T12:00:00.000Z">2018-12-13</time></div>
-                    <a href="/2018/12/13/Operating System/summary/" class="has-link-black-ter is-size-6">操作系统期末总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Operating-System/">Operating System</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-09T16:00:11.000Z">2018-12-10</time></div>
                     <a href="/2018/12/10/Software Quality Assurance/Individual techniques/11-structual testing/" class="has-link-black-ter is-size-6">11-structual testing</a>
                     <p class="is-size-7 is-uppercase">
@@ -1062,6 +1052,19 @@
             </div>
         </article>
         
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-09T16:00:09.000Z">2018-12-10</time></div>
+                    <a href="/2018/12/10/Software Quality Assurance/Individual techniques/9-Scenario testing/" class="has-link-black-ter is-size-6">9-Scenario testing</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Individual-techniques/">Individual techniques</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
 
@@ -1070,7 +1073,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -1080,7 +1083,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">26</span>
+                    <span class="level-item tag">25</span>
                 </span>
             </a>
         </li>
@@ -1105,7 +1108,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -1129,7 +1132,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
@@ -1162,19 +1165,6 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T12:00:00.000Z">2018-12-13</time></div>
-                    <a href="/2018/12/13/Operating System/summary/" class="has-link-black-ter is-size-6">操作系统期末总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Operating-System/">Operating System</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-09T16:00:11.000Z">2018-12-10</time></div>
                     <a href="/2018/12/10/Software Quality Assurance/Individual techniques/11-structual testing/" class="has-link-black-ter is-size-6">11-structual testing</a>
                     <p class="is-size-7 is-uppercase">
@@ -1197,6 +1187,19 @@
             </div>
         </article>
         
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-09T16:00:09.000Z">2018-12-10</time></div>
+                    <a href="/2018/12/10/Software Quality Assurance/Individual techniques/9-Scenario testing/" class="has-link-black-ter is-size-6">9-Scenario testing</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a> / <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Individual-techniques/">Individual techniques</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
 
@@ -1205,7 +1208,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -1215,7 +1218,7 @@
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">26</span>
+                    <span class="level-item tag">25</span>
                 </span>
             </a>
         </li>
@@ -1240,7 +1243,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -1265,7 +1268,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2018 肖鑫&nbsp;
+                &copy; 2019 肖鑫&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
                 </p>
             </div>
@@ -1397,10 +1400,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Entradas',
+                POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categorias',
-                TAGS: 'Etiquetas',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
