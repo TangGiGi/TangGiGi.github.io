@@ -3,16 +3,67 @@
   
     
     <entry>
-      <title>个人易错点</title>
-      <link href="/Python/note4/"/>
-      <url>/Python/note4/</url>
+      <title>正规表达式与有限自动机预备知识</title>
+      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E6%AD%A3%E8%A7%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E6%9C%89%E9%99%90%E8%87%AA%E5%8A%A8%E6%9C%BA%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/"/>
+      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E6%AD%A3%E8%A7%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E6%9C%89%E9%99%90%E8%87%AA%E5%8A%A8%E6%9C%BA%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
       
-        <content type="html"><![CDATA[<p>#判断是否为None<br><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span>(flag <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>):</span><br><span class="line">  doSomething()</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span>(<span class="hljs-keyword">not</span>(flag <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>)):</span><br><span class="line">  doSomething()</span><br></pre></td></tr></table></figure></p>]]></content>
+        <content type="html"><![CDATA[<a id="more"></a>]]></content>
       
       
       <categories>
           
-          <category> Python </category>
+          <category> 编译原理 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>代码实现-词法分析</title>
+      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/"/>
+      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<a id="more"></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译原理 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>课堂笔记-词法分析</title>
+      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/"/>
+      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<h1 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h1><ul><li><strong>任务</strong> : 从左至右逐个字符地扫描源程序，产生一个个的<strong>单词符号</strong>，把作为字符串的源程序改造成为单词符号串的<strong>中间程序</strong>。 </li><li><strong>输入</strong> : 源程序</li><li><strong>输出</strong> : 单词符号={ 关键字 , 标识符 , 常数 , 运算符 , 界符 }</li></ul><a id="more"></a><h2 id="把词法分析从语法分析中脱离出来的优点"><a href="#把词法分析从语法分析中脱离出来的优点" class="headerlink" title="把词法分析从语法分析中脱离出来的优点"></a>把词法分析从语法分析中脱离出来的<strong>优点</strong></h2><ul><li>使编译程序的结构更加<strong>简洁</strong>、<strong>清晰</strong>和<strong>条理化</strong>。</li><li>词法分析和语法<strong>分析方法不同</strong>，词法分析可以使用正则文法自动构造scanner</li><li>有利于提高语法分析的<strong>效率</strong></li><li>可以改善词法分析的细节，甚至于一个语法分析配几个scanner，把不同的输入变成一种内部表示。</li></ul><h2 id="词法分析器的设计"><a href="#词法分析器的设计" class="headerlink" title="词法分析器的设计"></a>词法分析器的设计</h2><p>1.预处理 2.单词符号的识别(超前搜索) 3.状态转换图 4.状态转换图的实现 </p><h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><ul><li><strong>必要性</strong> : 编辑性字符如空白符、回车符等，除了出现在文字常数中以外，在别处出现都没有意义</li><li><strong>功能</strong> : 剔出无用字符</li><li><strong>实现</strong> : 预处理子程序</li></ul><h2 id="超前搜索"><a href="#超前搜索" class="headerlink" title="超前搜索"></a>超前搜索</h2><ul><li>标识符的识别</li><li>常数的识别</li><li>算符和界符的识别</li></ul><h2 id="状态转换图"><a href="#状态转换图" class="headerlink" title="状态转换图"></a>状态转换图</h2><ul><li><strong>功能</strong> : 用于识别一定的字符串</li><li><strong>初态</strong> : 圆圈表示</li><li><strong>终态</strong> : 双圈表示</li><li>* : 表示多读进了一个字符</li></ul><h2 id="状态转换图的实现"><a href="#状态转换图的实现" class="headerlink" title="状态转换图的实现"></a>状态转换图的实现</h2><p>详见代码实现</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译原理 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>课堂笔记-引论</title>
+      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%BC%95%E8%AE%BA/"/>
+      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%BC%95%E8%AE%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h1><h2 id="编译理论应用"><a href="#编译理论应用" class="headerlink" title="编译理论应用"></a>编译理论应用</h2><p><img src="/img/编译原理/1.png" alt=""><br><a id="more"></a></p><h2 id="翻译程序"><a href="#翻译程序" class="headerlink" title="翻译程序"></a>翻译程序</h2><ul><li><strong>翻译程序</strong>={<strong>输入</strong>:某语言,<strong>输出</strong>:另外一种语言}</li></ul><h2 id="编译程序"><a href="#编译程序" class="headerlink" title="编译程序"></a>编译程序</h2><ul><li><strong>编译程序</strong>={<strong>输入</strong>:高级语言源程序,<strong>输出</strong>:面向机器的代码}</li><li><strong>面向机器的代码</strong>还可能要由<strong>汇编程序</strong>或<strong>装配程序</strong>作进一步加工，得出目标程序，交给计算机执行。</li></ul><h2 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h2><p>1.词法分析 2.语法分析 3.中间代码生成 4.代码优化 5.目标代码生成</p><h2 id="1-词法分析"><a href="#1-词法分析" class="headerlink" title="1.词法分析"></a>1.词法分析</h2><ul><li>任务 : 输入源程序、扫描、分解字符串，识别出一个个单词（定义符、标识符、运算符、界符、常数）。</li><li><strong>输入</strong> : 源程序字符串</li><li><strong>输出</strong> : 单词符号</li><li>依据 : 构词规则</li><li>主要理论基础 : 自动机理论</li></ul><h2 id="2-语法分析"><a href="#2-语法分析" class="headerlink" title="2.语法分析"></a>2.语法分析</h2><ul><li>任务 : 在词法分析基础上，将单词符号串转化为语法单位（语法范畴）（短语、子句、句子、程序段、程序），并确定整个输入串是否构成语法上正确的程序。</li><li><strong>输入</strong> : 单词符号</li><li><strong>输出</strong> : 语法单位</li><li>依据 : 语法规则</li><li>主要理论基础 : 上下文无关文法</li></ul><h2 id="3-中间代码生成"><a href="#3-中间代码生成" class="headerlink" title="3.中间代码生成"></a>3.中间代码生成</h2><ul><li>任务 : 对语法分析所识别出的各类语法范畴，分析其含义，并进行初步翻译（产生中间代码）</li><li><strong>输入</strong> : 语法单位</li><li><strong>输出</strong> : 中间代码</li><li>依据 : 语义规则</li><li>主要理论基础 : 属性文法</li></ul><h2 id="4-代码优化"><a href="#4-代码优化" class="headerlink" title="4.代码优化"></a>4.代码优化</h2><ul><li>任务 : 对于代码（主要是中间代码）进行加工变换，以期能够产生更为高效（省时间和空间）的目标代码　</li><li><strong>输入</strong> : 中间代码</li><li><strong>输出</strong> : 优化后的中间代码</li><li>依据 : 程序等价变换规则</li><li>主要理论基础 : 数据流方程</li></ul><h2 id="5-目标代码生成"><a href="#5-目标代码生成" class="headerlink" title="5.目标代码生成"></a>5.目标代码生成</h2><ul><li>任务 : 将中间代码变换成特定机器上的低级语言代码</li><li><strong>输入</strong> : 中间代码</li><li><strong>输出</strong> : 目标代码</li><li>依据 : 硬件体系结构、指令系统</li></ul><h2 id="表格与表格管理"><a href="#表格与表格管理" class="headerlink" title="表格与表格管理"></a>表格与表格管理</h2><ul><li>编译各阶段均须维持表格并进行表格管理。</li><li>建表的技术支持是数据结构。</li><li>表格的分类、结构、处理方法决定于语言及机器，还有优化措施。</li></ul><h1 id="遍"><a href="#遍" class="headerlink" title="遍"></a>遍</h1><ul><li>是对源程序或源程序的中间结果<strong>从头到尾扫描一次</strong>，并作有关的<strong>加工处理</strong>，生成新的<strong>中间结果</strong>或<strong>目标程序</strong></li></ul><h1 id="T型图"><a href="#T型图" class="headerlink" title="T型图"></a>T型图</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译原理 </category>
           
       </categories>
       
@@ -25,23 +76,6 @@
       <url>/Python/%E4%B8%AA%E4%BA%BA%E6%98%93%E9%94%99%E7%82%B9/</url>
       
         <content type="html"><![CDATA[<p>#判断是否为None<br><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span>(flag <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>):</span><br><span class="line">  doSomething()</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span>(<span class="hljs-keyword">not</span>(flag <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>)):</span><br><span class="line">  doSomething()</span><br></pre></td></tr></table></figure></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Python </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    <entry>
-      <title>循环中跳过异常</title>
-      <link href="/Python/note3/"/>
-      <url>/Python/note3/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">for</span> html <span class="hljs-keyword">in</span> linestr :  </span><br><span class="line">    <span class="hljs-keyword">try</span>:</span><br><span class="line">        dosomething()</span><br><span class="line">    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:</span><br><span class="line">        print(<span class="hljs-string">"erro msg"</span>)</span><br><span class="line">        <span class="hljs-keyword">continue</span></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -114,7 +148,7 @@
       
       <categories>
           
-          <category> Computer Network </category>
+          <category> 计算机网络 </category>
           
       </categories>
       
@@ -165,7 +199,7 @@
       
       <categories>
           
-          <category> Computer Organization &amp; Architecture </category>
+          <category> 计算机组成原理 </category>
           
       </categories>
       
@@ -182,7 +216,7 @@
       
       <categories>
           
-          <category> Computer Organization &amp; Architecture </category>
+          <category> 计算机组成原理 </category>
           
       </categories>
       
@@ -199,7 +233,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -218,7 +252,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -237,7 +271,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -256,7 +290,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -275,7 +309,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -294,7 +328,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -313,7 +347,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -332,7 +366,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -351,7 +385,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -370,7 +404,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -389,7 +423,7 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
           <category> Individual techniques </category>
           
@@ -408,9 +442,9 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -427,9 +461,9 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -446,9 +480,9 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -465,9 +499,9 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -484,9 +518,9 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -503,28 +537,9 @@
       
       <categories>
           
-          <category> Software Quality Assurance </category>
+          <category> 软件质量保证 </category>
           
-          <category> Class Notes </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    <entry>
-      <title>Linux网络服务</title>
-      <link href="/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/"/>
-      <url>/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</url>
-      
-        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>NTP(network time protocol)</li><li>Linux打印服务<a id="more"></a><br></li></ul></li><li><h1 id="NTP"><a href="#NTP" class="headerlink" title="NTP"></a><strong>NTP</strong></h1><ul><li>ntp通过与时间服务器同步使本机时间与UTC(世界协调时间）同步</li><li>UTC也称为GMT（格林尼治时间）</li><li>本地时间</li><li>/etc/sysconfig/clock<ul><li>ZONE</li><li>UTC</li></ul></li><li>Linux 系统中有 2 个主要的时钟：</li><li>硬件时钟。这是一个独立于 CPU 中运行的所有控制程序而运行的时钟。也称为时间时钟、RTC、BIOS 时钟或 CMOS 时钟。</li><li>系统时间。这是 Linux 内核内部时钟的时间，并且由计时器中断驱动。</li><li>当 Linux 第一次启动时，系统时间与硬件时钟同步。之后， Linux 只使用系统时间。</li><li>date</li><li>xntp 通过提供以下服务解决同步问题：</li><li>xntp 定期根据收集到的更正数据更正本地计算机时钟。</li><li>xntp 会随时借助网络中的时间服务器更正本地时间。</li><li>xntp 支持对本地参考时钟（如无线电控制的时钟）进行管理。<br><br></li></ul></li><li><h1 id="Linux打印服务"><a href="#Linux打印服务" class="headerlink" title="Linux打印服务"></a><strong>Linux打印服务</strong></h1><ul><li>CUPS (Common Unix Printing System )<ul><li>是行式打印机守护程序Line Print Daemon (LPD)的后继，在redhat中仍使用部分LPD命令进行打印机调整与监视。</li></ul></li><li>LPD （行式打印机守护程序）<ul><li>在发送实际打印数据之前，将先发送一些与作业相关的数据，例如打印机队列。LPD 服务的端口号是 515</li></ul></li><li>IPP （因特网打印协议） <ul><li>是一个基于HTTP 协议的相对较新的（自 1999）协议。使用 IPP，所传送的与作业有关的数据比其他协议要多得多。CUPS 使用 IPP 进行内部数据传送。这是在 CUPS 服务器之间转发队列的首选协议。IPP 的端口号是 631</li></ul></li><li>SMB （服务讯息块）。CUPS 还支持在连接到 Windows 共享的打印机上进行打印，SMB 使用端口号 137、138 和 139</li></ul></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -543,7 +558,7 @@
           
           <category> Linux </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -562,7 +577,7 @@
           
           <category> Linux </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -581,7 +596,7 @@
           
           <category> Linux </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -589,18 +604,18 @@
     </entry>
     
     <entry>
-      <title>Linux用户用户组和文件权限</title>
-      <link href="/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%94%A8%E6%88%B7%E7%94%A8%E6%88%B7%E7%BB%84%E5%92%8C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/"/>
-      <url>/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%94%A8%E6%88%B7%E7%94%A8%E6%88%B7%E7%BB%84%E5%92%8C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/</url>
+      <title>Linux网络服务</title>
+      <link href="/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/"/>
+      <url>/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</url>
       
-        <content type="html"><![CDATA[<a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>NTP(network time protocol)</li><li>Linux打印服务<a id="more"></a><br></li></ul></li><li><h1 id="NTP"><a href="#NTP" class="headerlink" title="NTP"></a><strong>NTP</strong></h1><ul><li>ntp通过与时间服务器同步使本机时间与UTC(世界协调时间）同步</li><li>UTC也称为GMT（格林尼治时间）</li><li>本地时间</li><li>/etc/sysconfig/clock<ul><li>ZONE</li><li>UTC</li></ul></li><li>Linux 系统中有 2 个主要的时钟：</li><li>硬件时钟。这是一个独立于 CPU 中运行的所有控制程序而运行的时钟。也称为时间时钟、RTC、BIOS 时钟或 CMOS 时钟。</li><li>系统时间。这是 Linux 内核内部时钟的时间，并且由计时器中断驱动。</li><li>当 Linux 第一次启动时，系统时间与硬件时钟同步。之后， Linux 只使用系统时间。</li><li>date</li><li>xntp 通过提供以下服务解决同步问题：</li><li>xntp 定期根据收集到的更正数据更正本地计算机时钟。</li><li>xntp 会随时借助网络中的时间服务器更正本地时间。</li><li>xntp 支持对本地参考时钟（如无线电控制的时钟）进行管理。<br><br></li></ul></li><li><h1 id="Linux打印服务"><a href="#Linux打印服务" class="headerlink" title="Linux打印服务"></a><strong>Linux打印服务</strong></h1><ul><li>CUPS (Common Unix Printing System )<ul><li>是行式打印机守护程序Line Print Daemon (LPD)的后继，在redhat中仍使用部分LPD命令进行打印机调整与监视。</li></ul></li><li>LPD （行式打印机守护程序）<ul><li>在发送实际打印数据之前，将先发送一些与作业相关的数据，例如打印机队列。LPD 服务的端口号是 515</li></ul></li><li>IPP （因特网打印协议） <ul><li>是一个基于HTTP 协议的相对较新的（自 1999）协议。使用 IPP，所传送的与作业有关的数据比其他协议要多得多。CUPS 使用 IPP 进行内部数据传送。这是在 CUPS 服务器之间转发队列的首选协议。IPP 的端口号是 631</li></ul></li><li>SMB （服务讯息块）。CUPS 还支持在连接到 Windows 共享的打印机上进行打印，SMB 使用端口号 137、138 和 139</li></ul></li></ul>]]></content>
       
       
       <categories>
           
           <category> Linux </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
           
       </categories>
       
@@ -619,7 +634,26 @@
           
           <category> Linux </category>
           
-          <category> Class Notes </category>
+          <category> 课堂笔记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Linux用户用户组和文件权限</title>
+      <link href="/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%94%A8%E6%88%B7%E7%94%A8%E6%88%B7%E7%BB%84%E5%92%8C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/"/>
+      <url>/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%94%A8%E6%88%B7%E7%94%A8%E6%88%B7%E7%BB%84%E5%92%8C%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/</url>
+      
+        <content type="html"><![CDATA[<a id="more"></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+          <category> 课堂笔记 </category>
           
       </categories>
       
