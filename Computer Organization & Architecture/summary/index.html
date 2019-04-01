@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>机组期末总结 - Software Engineering Student XX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="Organization &amp;amp; Architecture Computer architecture  允许我们使用制造技术有效地实现信息处理应用程序的 抽象层的设计 对程序员可见 直接影响程序的逻辑执行 概念结构和功能特征   Computer Organization  体系结构中指定的 实现 和 互连 的操作单元（or 组件） 系统设计者可见 架构的的一种实现">
+<meta name="keywords" content="xjtusexx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机组期末总结">
+<meta property="og:url" content="http://www.studentxiaoxin.top/Computer Organization & Architecture/summary/index.html">
+<meta property="og:site_name" content="Software Engineering Student XX">
+<meta property="og:description" content="Organization &amp;amp; Architecture Computer architecture  允许我们使用制造技术有效地实现信息处理应用程序的 抽象层的设计 对程序员可见 直接影响程序的逻辑执行 概念结构和功能特征   Computer Organization  体系结构中指定的 实现 和 互连 的操作单元（or 组件） 系统设计者可见 架构的的一种实现">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/1.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/2.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/3.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/4.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/5.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/6.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/7.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/8.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/9.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/10.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/11.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/12.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/13.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/14.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/15.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/16.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/17.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/18.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/19.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/20.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/21.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/22.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/23.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/24.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/25.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/26.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/27.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/28.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/29.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/30.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/31.png">
+<meta property="og:updated_time" content="2019-04-01T04:40:47.574Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机组期末总结">
+<meta name="twitter:description" content="Organization &amp;amp; Architecture Computer architecture  允许我们使用制造技术有效地实现信息处理应用程序的 抽象层的设计 对程序员可见 直接影响程序的逻辑执行 概念结构和功能特征   Computer Organization  体系结构中指定的 实现 和 互连 的操作单元（or 组件） 系统设计者可见 架构的的一种实现">
+<meta name="twitter:image" content="http://www.studentxiaoxin.top/img/COA/期末总结/1.png">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="机组期末总结" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/TangGiGi">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-23T18:22:01.000Z">2018-12-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Computer-Organization-Architecture/">Computer Organization & Architecture</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    20 分钟 read (About 2985 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                机组期末总结
+            
+        </h1>
+        <div class="content">
+            <h1 id="Organization-amp-Architecture"><a href="#Organization-amp-Architecture" class="headerlink" title="Organization &amp; Architecture"></a>Organization &amp; Architecture</h1><ul>
+<li><p>Computer architecture</p>
+<ul>
+<li>允许我们使用制造技术<em>有效地</em>实现信息处理应用程序的 <strong>抽象层的设计</strong></li>
+<li>对程序员可见</li>
+<li>直接影响程序的逻辑执行</li>
+<li>概念结构和功能特征</li>
+</ul>
+</li>
+<li><p>Computer Organization</p>
+<ul>
+<li>体系结构中指定的 <em>实现</em> 和 <em>互连</em> 的操作单元（or 组件）</li>
+<li>系统设计者可见</li>
+<li>架构的的一种实现<a id="more"></a>
+<img src="\img\COA\期末总结\1.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h1 id="计算机顶级视图"><a href="#计算机顶级视图" class="headerlink" title="计算机顶级视图"></a>计算机顶级视图</h1><ul>
+<li><p>von Neuman architecture 3个重要概念</p>
+<ul>
+<li>Data and instruction are stored in a single read-write memory</li>
+<li>The contents of the memory are addressed by location</li>
+<li>Execution occurs in a sequential fashion </li>
+</ul>
+</li>
+<li><p>指令周期</p>
+<ul>
+<li>取指周期<ul>
+<li>处理器取指 From Memory Located by PC</li>
+<li>PC++</li>
+<li>指令-&gt; Instruction Register</li>
+<li>处理器对指令译码并执行所需的操作</li>
+</ul>
+</li>
+<li>执行周期<ul>
+<li>CPU与主存 进行数据交换</li>
+<li>CPU与IO模块 进行数据交换</li>
+<li><strong>数据处理</strong></li>
+<li>控制(jump等)</li>
+<li>或以上组合</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p></p><p id="p1"></p>
+<ul>
+<li><p>指令的流程</p>
+<ul>
+<li>指令地址计算</li>
+<li>取指</li>
+<li>指令译码</li>
+<li>||:操作数地址计算</li>
+<li>取操作数:||</li>
+<li>数据操作</li>
+<li>||:操作数地址计算</li>
+<li>存操作数:||</li>
+<li>检查中断</li>
+<li>有则执行中断<br>||:反复的意思:||</li>
+</ul>
+</li>
+<li><p>中断</p>
+<ul>
+<li>允许其他模块中断CPU执行顺序的机制</li>
+<li>提高CPU的实用性</li>
+<li>允许CPU处理紧急事件</li>
+<li>包括 程序中断 Timer中断 IO中断 硬件失效中断</li>
+</ul>
+</li>
+<li><p>Multiple Interrupts</p>
+<ul>
+<li>中断被中断了</li>
+<li>怎么办呢<ul>
+<li>不管新中断</li>
+<li>定义优先级</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Interconnection structures:The collection of paths connecting of {主存,IO模块,CPU}</p>
+<p>总线:communication paths connecting two or more components</p>
+<ul>
+<li><p>系统总线</p>
+<ul>
+<li>数据总线<ul>
+<li>数据总线带宽=机器字长=寄存器长</li>
+</ul>
+</li>
+<li>地址总线<ul>
+<li>带宽决定有多少memory</li>
+</ul>
+</li>
+<li>控制总线</li>
+</ul>
+</li>
+<li><p>总线仲裁</p>
+<ul>
+<li>不止一个模块连着总线,但一次只能有一个模块控制着</li>
+<li>集中式仲裁:有个控制器决定哪个模块占用总线</li>
+<li>Daisy chain polling<ul>
+<li><img src="\img\COA\期末总结\2.png" alt=""></li>
+<li>优:可扩展性好</li>
+<li>缺:电路故障敏感</li>
+</ul>
+</li>
+<li>Counter timing polling<ul>
+<li><img src="\img\COA\期末总结\3.png" alt=""></li>
+<li>优:灵活优先 电路故障不敏感</li>
+<li>缺:控制复杂</li>
+</ul>
+</li>
+<li>Separate request<ul>
+<li><img src="\img\COA\期末总结\4.png" alt=""></li>
+<li>优:反应快 灵活优先</li>
+<li>缺:控制复制 线太多</li>
+</ul>
+</li>
+<li>分布式仲裁:没有控制器决定,每个模块都包含对总线的访问控制逻辑</li>
+</ul>
+</li>
+<li><p>总线的通讯控制模块</p>
+<ul>
+<li>通讯控制:解决如何开始和结束传输,如何协调主从模块</li>
+</ul>
+</li>
+</ul>
+<h1 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h1><p>Why Cache?局部性原理.</p>
+<p><img src="\img\COA\期末总结\5.png" alt="Cache Read Operation"></p>
+<ul>
+<li>直接映射<br><img src="\img\COA\期末总结\6.png" alt=""></li>
+</ul>
+<blockquote>
+<p>i =  j mod m</p>
+</blockquote>
+<p>i是cache行<br>j是主存块号<br>m是cache总行<br><img src="\img\COA\期末总结\7.png" alt=""></p>
+<ul>
+<li>关联映射</li>
+<li>组关联映射</li>
+</ul>
+<h1 id="Internal-Memory"><a href="#Internal-Memory" class="headerlink" title="Internal Memory"></a>Internal Memory</h1><ul>
+<li>RAM<br>random-access memory</li>
+<li>Dynamic RAM<ul>
+<li>bits 存在电容器中</li>
+<li>通电时也要刷新</li>
+<li>结构简单 便宜 功耗低</li>
+<li>慢</li>
+<li><img src="\img\COA\期末总结\8.png" alt="Dynamic RAM Structure"></li>
+<li>写</li>
+<li>Bit line 给电压 高 1 低 0</li>
+<li>电荷传给电容器</li>
+<li>读</li>
+<li>Address line 选中</li>
+<li>电荷从电容器-&gt;bit line-&gt;放大器 比较 0 或 1</li>
+<li>电容器必须回写</li>
+</ul>
+</li>
+<li>Static RAM<ul>
+<li><img src="\img\COA\期末总结\9.png" alt="Stating RAM Structure"></li>
+<li>晶体管布置提供了稳定的逻辑状态</li>
+<li>state 1</li>
+<li>C1 high, C2 low</li>
+<li>T1 T4 off, T2 T3 on</li>
+<li>state 0</li>
+<li>C2 high, C1 low</li>
+<li>T2 T3 off, T1 T4 on</li>
+<li>T5 T6是开关</li>
+</ul>
+</li>
+<li>DRAM SRAM 两者对比<ul>
+<li>都不稳定 需要充电才能存数据</li>
+<li>DRAM:容易实现 小 更密集 便宜 需要刷新 容量更大</li>
+<li>SRAM:快 当cache</li>
+</ul>
+</li>
+<li>ROM<ul>
+<li>永久存储</li>
+<li>只读 不可写</li>
+<li>只要有一位错了 整个芯片用不了了</li>
+<li>应用:微程序 库子程序 BIOS</li>
+</ul>
+</li>
+<li>PROM<ul>
+<li>可编程的ROM</li>
+<li>编写需要特殊设备</li>
+<li>灵活 便捷</li>
+</ul>
+</li>
+</ul>
+<h1 id="External-Memory"><a href="#External-Memory" class="headerlink" title="External Memory"></a>External Memory</h1><p><img src="\img\COA\期末总结\10.png" alt="Disk Data Layout"><br><img src="\img\COA\期末总结\11.png" alt="Disk Layout Methods"></p>
+<ul>
+<li>如何找到扇区呢?<ul>
+<li>通过格式化磁盘将额外数据（控制数据）放入扇区</li>
+<li>标记轨道和扇区<br><img src="\img\COA\期末总结\12.png" alt="Organization of Disk System"><br><img src="\img\COA\期末总结\13.png" alt="Timing of a disk I/O"><br>等待IO设备和等待IO通道的时间是不确定的.</li>
+</ul>
+</li>
+<li>寻道时间 seek time<ul>
+<li>找到相关数据的轨道头</li>
+<li>时间不确定(启动磁头臂的时间 加速和遍历轨道的时间)</li>
+<li>估算公式: T= S + n * M</li>
+<li>S 开始时间 n 遍历轨道 m 与磁盘驱动相关的常数</li>
+</ul>
+</li>
+<li>旋转延迟 Rotational delay<ul>
+<li>一般取平均延迟</li>
+</ul>
+</li>
+<li>传输时间 Transfer time<ul>
+<li>①需要传输的字节数 ② 旋转速度</li>
+<li>T = b/(rN)</li>
+<li>b 要传输的字节数 N 轨道上的字节数 r 旋转速度 rpm/60</li>
+</ul>
+</li>
+<li><p>访问时间 access time</p>
+<ul>
+<li>上三者相加</li>
+</ul>
+</li>
+<li><p>RAID</p>
+<ul>
+<li>Redundant Array of Independent Disks</li>
+<li>通过OS将一组物理磁盘视为单个逻辑驱动器</li>
+<li>跨物理驱动器分布的数据</li>
+<li>可以使用冗余容量来存储奇偶校验信息</li>
+</ul>
+</li>
+<li><p>RAID 0</p>
+<ul>
+<li>无冗余</li>
+<li>数据条跨所有磁盘</li>
+<li>提升速度:多个数据请求可能不在同一磁盘上.磁盘并行寻求.一组数据可能跨多个磁盘进行条带化</li>
+<li>应用:高数据传输能力.高IO请求<br><img src="\img\COA\期末总结\14.png" alt=""><br><img src="\img\COA\期末总结\15.png" alt=""></li>
+</ul>
+</li>
+<li><p>RAID 1</p>
+<ul>
+<li>数据条跨磁盘</li>
+<li>每个磁盘条2个副本位于不同的磁盘上</li>
+<li>读1 写2</li>
+<li>恢复简单,容错性好.如果读取请求率高,则其性能是RAID0的两倍</li>
+<li>贵</li>
+<li>应用:存储系统软件或数据非常重要的文件<br><img src="\img\COA\期末总结\16.png" alt=""></li>
+</ul>
+</li>
+<li><p>RAID 2</p>
+<ul>
+<li>未实现</li>
+<li>所有磁盘是同步的,任何时候磁头位于所有磁盘的相同位置</li>
+<li>非常小的磁盘条,单个字节或字</li>
+<li>并行访问数据和奇偶校验</li>
+<li>非常多冗余<br><img src="\img\COA\期末总结\17.png" alt=""></li>
+</ul>
+</li>
+<li><p>RAID 3</p>
+<ul>
+<li>与RAID2 相似</li>
+<li>只有一个冗余磁盘.</li>
+<li>可以从幸存的数据和奇偶校验信息重建有关故障驱动器的数据</li>
+<li>very high transfer rates</li>
+<li>一次只能执行一个IO请求</li>
+</ul>
+</li>
+</ul>
+<p>例:5个磁盘阵列,X0~X3表示数据,X4表示奇偶校验.X4（i）= X3（i）⊕X2（i）⊕X1（i）⊕X0（i）如果X0损坏,则上述等式异或两侧X4（i）⊕X0（i）<br>X0（i）= X4（i）⊕X3（i）⊕X2（i）⊕X1（i）<br><img src="\img\COA\期末总结\18.png" alt=""></p>
+<ul>
+<li><p>RAID 4</p>
+<ul>
+<li>与RAID2 类似 但是磁盘条更大</li>
+<li>每个磁盘独立运行</li>
+<li>适用于高IO请求</li>
+<li>Bit by bit parity calculated across stripes on each disk</li>
+<li>奇偶校验存储在奇偶校验磁盘上</li>
+<li><img src="\img\COA\期末总结\19.png" alt=""></li>
+<li><img src="\img\COA\期末总结\20.png" alt=""></li>
+<li>磁盘条上1次写请求则最少需要2次读2次写操作</li>
+<li>奇偶校验磁盘成为瓶颈</li>
+</ul>
+</li>
+<li><p>RAID 5</p>
+<ul>
+<li>与RAID4 类似</li>
+<li>常用于网络服务器</li>
+<li><img src="\img\COA\期末总结\21.png" alt=""></li>
+</ul>
+</li>
+<li><p>RAID 6</p>
+<ul>
+<li>两种不同的奇偶校验计算,存储在不同磁盘上的单独条带中</li>
+<li>极高的数据可用性,即使两个条带发生故障也可以恢复</li>
+<li>写惩罚</li>
+<li><img src="\img\COA\期末总结\22.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h1 id="Input-Output"><a href="#Input-Output" class="headerlink" title="Input/Output"></a>Input/Output</h1><ul>
+<li>Why IO模块?<ul>
+<li>种类繁多的外围设备<ul>
+<li>提供不同数量的数据</li>
+<li>以不同的速度</li>
+<li>根据不同的时序</li>
+<li>以不同的格式</li>
+</ul>
+</li>
+<li>都慢于CPU和RAM</li>
+<li>外围设备不直接连接到系统总线</li>
+<li>需要IO模块计算机</li>
+</ul>
+</li>
+</ul>
+<p><img src="\img\COA\期末总结\23.png" alt="Generic Model of I/O Modular"><br><img src="\img\COA\期末总结\24.png" alt="External Device Block Diagram"></p>
+<ul>
+<li><p>磁盘驱动</p>
+<ul>
+<li>一种是与IO模块进行数据 控制 和状态信号交换</li>
+<li>另一种是用于控制磁盘读写机制</li>
+</ul>
+</li>
+<li><p>IO模块的功能</p>
+<ul>
+<li>控制和计时</li>
+<li>CPU  ~ IO 通信</li>
+<li>设备 ~ IO 通信</li>
+<li>内存 ~ IO 通信</li>
+<li>数据缓冲</li>
+<li>错误检测</li>
+</ul>
+</li>
+<li><p>IO steps</p>
+<ul>
+<li>CPU检查IO模块和设备状态</li>
+<li>IO模块返回状态</li>
+<li>如果准备好,CPU请求数据传输</li>
+<li>IO模块从设备获取数据</li>
+<li>IO模块将数据传输到CPU</li>
+</ul>
+</li>
+<li><p>IO Communication</p>
+<ul>
+<li>命令解码：<ul>
+<li>读取扇区 搜索轨道 扫描ID</li>
+<li>可以读取或写入哪些块。</li>
+</ul>
+</li>
+<li>数据交换<ul>
+<li>外部数据 -&gt; IO模块buffer By 本地总线</li>
+<li>IO模块buffer -&gt; CPU/内存 By 系统总线</li>
+</ul>
+</li>
+<li>状态报告<ul>
+<li>busy ready error etc.</li>
+</ul>
+</li>
+<li>地址识别<ul>
+<li>识别每个外围设备</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据缓冲 Data Buffering</p>
+<ul>
+<li>使外围设备适应CPU/主存的速度</li>
+<li>CPU/DRAM <--> IO buffer</--></li>
+<li>IO buffer <--> 外围设备</--></li>
+</ul>
+</li>
+<li><p>错误检测 Error Detection</p>
+<ul>
+<li>IO模块通常负责错误检测并向CPU报告错误</li>
+<li>硬件故障:卡纸 坏的磁盘轨道</li>
+<li>传输错误:bit错误 数据丢失 …</li>
+</ul>
+</li>
+</ul>
+<p><img src="\img\COA\期末总结\25.png" alt="IO Module Structure"></p>
+<ul>
+<li><p>输入输出模式</p>
+<ul>
+<li>Programmed IO</li>
+<li>中断驱动IO</li>
+<li>直接内存访问（DMA）</li>
+<li>IO通道</li>
+<li>IO处理器</li>
+</ul>
+</li>
+<li><p>Programmed IO和中断驱动IO的缺点</p>
+<ul>
+<li>Programmed IO需要占用所有CPU时间</li>
+<li>中断驱动的IO仍需要主动CPU干预,但CPU使用率比Programmed IO更高（传输速率更低）</li>
+<li>在这两种模式下,数据传输必须遍历CPU<ul>
+<li>转移率有限</li>
+<li>CPU被捆绑了</li>
+</ul>
+</li>
+<li>传输大量数据时,DMA是一种更有效的技术</li>
+</ul>
+</li>
+<li><p>DMA</p>
+<ul>
+<li>在CPU外部</li>
+<li>总线上的附加模块（硬件）</li>
+<li>DMA控制器从CPU接管IO.</li>
+<li>无需CPU干预即可将数据块传输到内存或从内存传输</li>
+<li>实际上,DMA也是一个IO模块</li>
+<li>Act as a maser on the bus</li>
+<li>Memory system acts like slave</li>
+<li>管理字节-字转换</li>
+<li>优先级：DMA &gt; CPU</li>
+</ul>
+</li>
+<li><p>CPU和DMA之间的三种数据传输模式：</p>
+<ul>
+<li>块传输模式（垄断模式）<ul>
+<li>整个数据块以一个连续的顺序传输</li>
+<li>如果DMA传输数据,CPU将被禁用一段时间,直到DMA释放总线</li>
+<li>用于将程序或数据文件加载到内存中</li>
+</ul>
+</li>
+<li>Cycle stealing mode<ul>
+<li>DMA仅在CPU不需要时才使用总线或强制CPU暂时暂停操作</li>
+<li>DMA传输一个数据字,然后释放总线</li>
+<li>DMA交错指令和数据传输</li>
+</ul>
+</li>
+<li>透明模式（备用模式）<ul>
+<li>DMA and CPU use bus by division time multiplexing</li>
+<li>需要大部分时间,但效率最高</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="\img\COA\期末总结\26.png" alt="DMA Structure"></p>
+<ul>
+<li><p>DMA操作</p>
+<ul>
+<li>预处理：CPU告诉DMA控制器<ul>
+<li>读/写</li>
+<li>设备地址</li>
+<li>数据存储块的起始地址</li>
+<li>要转移的数据量</li>
+<li>CPU继续进行其他工作</li>
+</ul>
+</li>
+<li>数据传输：DMA控制器处理传输（逐字）</li>
+<li>后处理：DMA控制器在完成后发送中断</li>
+</ul>
+</li>
+<li><p>DMA Transfer Cycle Stealing</p>
+<ul>
+<li>DMA控制器接管总线一个周期</li>
+<li>传输一个字的数据</li>
+<li>不是中断<ul>
+<li>因为CPU不切换上下文</li>
+</ul>
+</li>
+<li>CPU在访问总线之前就suspended<ul>
+<li>即在 取指 或 取操作数 或 数据写入 之前 (<a href="#p1">指令的流程</a>)</li>
+</ul>
+</li>
+<li>减慢CPU速度但不会像CPU那样进行传输</li>
+</ul>
+</li>
+</ul>
+<p><img src="\img\COA\期末总结\27.png" alt=""></p>
+<ul>
+<li><p>DMA Configurations</p>
+<ul>
+<li>单总线,独立DMA控制器<ul>
+<li>每次传输需要用到总线<strong>2次</strong>. IO-&gt;DMA DMA-memory</li>
+<li>CPU suspended <strong>2次</strong></li>
+<li><img src="\img\COA\期末总结\28.png" alt=""></li>
+</ul>
+</li>
+<li>单总线,集成DMA控制器<ul>
+<li>控制器支持&gt;1个设备</li>
+<li>每次传输需要用到总线<strong>1次</strong> DMA-&gt;memory</li>
+<li>CPU suspended <strong>1次</strong></li>
+<li><img src="\img\COA\期末总结\29.png" alt=""></li>
+</ul>
+</li>
+<li>单独的IO总线<ul>
+<li>每次传输需要用到总线<strong>1次</strong> DMA-&gt;memory</li>
+<li>CPU suspended <strong>1次</strong></li>
+<li><img src="\img\COA\期末总结\30.png" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>IO 通道</p>
+<ul>
+<li>IO通道是一个IO模块,具有自己的处理器,可以执行IO程序.IO程序位于主存中.实际上,IO通道代表了DMA概念的扩展.因此,IO通道具有执行IO指令和控制IO操作的能力.</li>
+<li><strong>功能:</strong></li>
+<li>从CPU接受命令(微指令)</li>
+<li>从内存加载IO程序,并给设备发送命令</li>
+<li>记录设备状态和中断</li>
+<li>Buffer, control and transfer data, provide path for transferring </li>
+<li><strong>流程:</strong></li>
+<li>CPU发送IO命令 并等待 IO通道和设备ready -&gt; CPU开启通道 返回主程序 -&gt; 通道执行IO程序以在存储器和设备之间传输数据<br>-&gt;数据传输完成后,中断CPU</li>
+</ul>
+</li>
+</ul>
+<h1 id="Computer-Arithmetic"><a href="#Computer-Arithmetic" class="headerlink" title="Computer Arithmetic"></a>Computer Arithmetic</h1><p><img src="\img\COA\期末总结\31.png" alt="ALU Inputs and Outputs"></p>
+<h1 id="Instruction-Sets-Characteristics-and-Functions"><a href="#Instruction-Sets-Characteristics-and-Functions" class="headerlink" title="Instruction Sets: Characteristics and Functions"></a>Instruction Sets: Characteristics and Functions</h1><h1 id="Instruction-Sets-Addressing-Modes-and-Formats"><a href="#Instruction-Sets-Addressing-Modes-and-Formats" class="headerlink" title="Instruction Sets: Addressing Modes and Formats"></a>Instruction Sets: Addressing Modes and Formats</h1><h1 id="CPU-Structure-and-Function"><a href="#CPU-Structure-and-Function" class="headerlink" title="CPU Structure and Function"></a>CPU Structure and Function</h1><h1 id="Reduced-Instruction-Set-Computers"><a href="#Reduced-Instruction-Set-Computers" class="headerlink" title="Reduced Instruction Set Computers"></a>Reduced Instruction Set Computers</h1><h1 id="InstructionLevel-Parallelism-and-Superscalar-Processors"><a href="#InstructionLevel-Parallelism-and-Superscalar-Processors" class="headerlink" title="InstructionLevel Parallelism and Superscalar Processors"></a>InstructionLevel Parallelism and Superscalar Processors</h1><h1 id="Control-Unit-Operation"><a href="#Control-Unit-Operation" class="headerlink" title="Control Unit Operation"></a>Control Unit Operation</h1>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/实训/DayOne/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Bootstap笔记1</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/Computer Organization & Architecture/MMX/">
+                <span class="level-item">MMX课内实验</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/cat1.jpg" alt="PickleXin">
+                    
+                    <p class="is-size-4 is-block">
+                        PickleXin
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>陕西 西安</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        33
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        10
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/TangGiGi">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Organization-amp-Architecture">
+        <span class="has-mr-6">1</span>
+        <span>Organization &amp; Architecture</span>
+        </a></li><li>
+        <a class="is-flex" href="#计算机顶级视图">
+        <span class="has-mr-6">2</span>
+        <span>计算机顶级视图</span>
+        </a></li><li>
+        <a class="is-flex" href="#Cache">
+        <span class="has-mr-6">3</span>
+        <span>Cache</span>
+        </a></li><li>
+        <a class="is-flex" href="#Internal-Memory">
+        <span class="has-mr-6">4</span>
+        <span>Internal Memory</span>
+        </a></li><li>
+        <a class="is-flex" href="#External-Memory">
+        <span class="has-mr-6">5</span>
+        <span>External Memory</span>
+        </a></li><li>
+        <a class="is-flex" href="#Input-Output">
+        <span class="has-mr-6">6</span>
+        <span>Input/Output</span>
+        </a></li><li>
+        <a class="is-flex" href="#Computer-Arithmetic">
+        <span class="has-mr-6">7</span>
+        <span>Computer Arithmetic</span>
+        </a></li><li>
+        <a class="is-flex" href="#Instruction-Sets-Characteristics-and-Functions">
+        <span class="has-mr-6">8</span>
+        <span>Instruction Sets: Characteristics and Functions</span>
+        </a></li><li>
+        <a class="is-flex" href="#Instruction-Sets-Addressing-Modes-and-Formats">
+        <span class="has-mr-6">9</span>
+        <span>Instruction Sets: Addressing Modes and Formats</span>
+        </a></li><li>
+        <a class="is-flex" href="#CPU-Structure-and-Function">
+        <span class="has-mr-6">10</span>
+        <span>CPU Structure and Function</span>
+        </a></li><li>
+        <a class="is-flex" href="#Reduced-Instruction-Set-Computers">
+        <span class="has-mr-6">11</span>
+        <span>Reduced Instruction Set Computers</span>
+        </a></li><li>
+        <a class="is-flex" href="#InstructionLevel-Parallelism-and-Superscalar-Processors">
+        <span class="has-mr-6">12</span>
+        <span>InstructionLevel Parallelism and Superscalar Processors</span>
+        </a></li><li>
+        <a class="is-flex" href="#Control-Unit-Operation">
+        <span class="has-mr-6">13</span>
+        <span>Control Unit Operation</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://www.google.com/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Google</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">https://www.google.com/</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Android/">
+            <span class="level-start">
+                <span class="level-item">Android</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Computer-Network/">
+            <span class="level-start">
+                <span class="level-item">Computer Network</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Computer-Organization-Architecture/">
+            <span class="level-start">
+                <span class="level-item">Computer Organization & Architecture</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Linux/">
+            <span class="level-start">
+                <span class="level-item">Linux</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Linux/Class-Notes/">
+            <span class="level-start">
+                <span class="level-item">Class Notes</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Python/">
+            <span class="level-start">
+                <span class="level-item">Python</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Software-Quality-Assurance/">
+            <span class="level-start">
+                <span class="level-item">Software Quality Assurance</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">17</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Software-Quality-Assurance/Class-Notes/">
+            <span class="level-start">
+                <span class="level-item">Class Notes</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Software-Quality-Assurance/Individual-techniques/">
+            <span class="level-start">
+                <span class="level-item">Individual techniques</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">11</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/实训/">
+            <span class="level-start">
+                <span class="level-item">实训</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/note4/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/note3/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:46:58.000Z">2019-04-01</time></div>
+                    <a href="/Python/note2/" class="has-link-black-ter is-size-6">cookie登录网页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:00:00.000Z">2019-04-01</time></div>
+                    <a href="/Python/note1/" class="has-link-black-ter is-size-6">文件逐行读入</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T00:00:01.000Z">2019-04-01</time></div>
+                    <a href="/Computer Network/classnote/" class="has-link-black-ter is-size-6">课堂笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Computer-Network/">Computer Network</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">25</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <ul class="menu-list">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/note4/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/note3/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:46:58.000Z">2019-04-01</time></div>
+                    <a href="/Python/note2/" class="has-link-black-ter is-size-6">cookie登录网页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:00:00.000Z">2019-04-01</time></div>
+                    <a href="/Python/note1/" class="has-link-black-ter is-size-6">文件逐行读入</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T00:00:01.000Z">2019-04-01</time></div>
+                    <a href="/Computer Network/classnote/" class="has-link-black-ter is-size-6">课堂笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Computer-Network/">Computer Network</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">25</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <ul class="menu-list">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="机组期末总结" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 肖鑫&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh_CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

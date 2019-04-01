@@ -135,6 +135,210 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-21T05:50:01.000Z">2019-02-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/实训/">实训</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 read (About 47 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/实训/笔记1/">Bootstap笔记2</a>
+            
+        </h1>
+        <div class="content">
+            <p>#模态框</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#模态框id"</span>&gt;</span>触发<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--模态框主体--&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal fade"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"模态框id"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span>  <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--tabindex的作用就是控制tab切换的顺序按照它的值来切换--&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--tabindex="-1"常用在弹框中，防止切换混乱--&gt;</span></span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-18T05:50:01.000Z">2019-02-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/实训/">实训</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 read (About 425 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/实训/DayOne/">Bootstap笔记1</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="容器-Container"><a href="#容器-Container" class="headerlink" title="容器 Container"></a>容器 Container</h1><p>默认情况下容器是不可嵌套的<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="Bootstrap-网格系统（Grid-System）的工作原理"><a href="#Bootstrap-网格系统（Grid-System）的工作原理" class="headerlink" title="Bootstrap 网格系统（Grid System）的工作原理"></a>Bootstrap 网格系统（Grid System）的工作原理</h1><p>网格系统通过一系列包含内容的行和列来创建页面布局<br>行必须放置在 .container class 内，以便获得适当的对齐（alignment）和内边距（padding）。</p>
+<h1 id="基本的网格结构"><a href="#基本的网格结构" class="headerlink" title="基本的网格结构"></a>基本的网格结构</h1><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-*-*"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-*-*"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>      </span><br><span class="line">   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>....</span><br></pre></td></tr></table></figure>
+<p>#偏移列<br>为了在大屏幕显示器上使用偏移，请使用 .col-md-offset-<em> 类。这些类会把一个列的左外边距（margin）增加 </em> 列，其中 * 范围是从 1 到 11。</p>
+<p>#列排序<br>Bootstrap 网格系统另一个完美的特性，就是您可以很容易地以一种顺序编写列，然后以另一种顺序显示列。</p>
+<p>您可以很轻易地改变带有 .col-md-push-<em> 和 .col-md-pull-</em> 类的内置网格列的顺序，其中 * 范围是从 1 到 11。</p>
+<p>#表格<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>	为表格添加基础样式。</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>	表格标题行的容器元素（<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>），用来标识表格列。</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>	表格主体中的表格行的容器元素（<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>）。</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>	一组出现在单行上的表格单元格的容器元素（<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span> 或 <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>）。</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>	默认的表格单元格。</span><br></pre></td></tr></table></figure></p>
+<p>#表单<br>垂直或基本表单<br>基本的表单结构是 Bootstrap 自带的，个别的表单控件自动接收一些全局样式。下面列出了创建基本表单的步骤：</p>
+<ul>
+<li>向父 <form> 元素添加 role=”form”。</form></li>
+<li>把标签和控件放在一个带有 class .form-group 的 <div> 中。这是获取最佳间距所必需的。</div></li>
+<li>向所有的文本元素 <input>、<textarea> 和 </textarea><select> 添加 class =”form-control” 。</select></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-23T18:22:01.000Z">2018-12-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Computer-Organization-Architecture/">Computer Organization & Architecture</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    20 分钟 read (About 2985 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/Computer Organization & Architecture/summary/">机组期末总结</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="Organization-amp-Architecture"><a href="#Organization-amp-Architecture" class="headerlink" title="Organization &amp; Architecture"></a>Organization &amp; Architecture</h1><ul>
+<li><p>Computer architecture</p>
+<ul>
+<li>允许我们使用制造技术<em>有效地</em>实现信息处理应用程序的 <strong>抽象层的设计</strong></li>
+<li>对程序员可见</li>
+<li>直接影响程序的逻辑执行</li>
+<li>概念结构和功能特征</li>
+</ul>
+</li>
+<li><p>Computer Organization</p>
+<ul>
+<li>体系结构中指定的 <em>实现</em> 和 <em>互连</em> 的操作单元（or 组件）</li>
+<li>系统设计者可见</li>
+<li>架构的的一种实现</li></ul></li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/Computer Organization & Architecture/summary/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-14T18:22:01.000Z">2018-12-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Computer-Organization-Architecture/">Computer Organization & Architecture</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 分钟 read (About 1460 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/Computer Organization & Architecture/MMX/">MMX课内实验</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a><strong>实验内容</strong></h1><p>使用普通和 MMX 技术实现淡入淡出效果，比较其时间花费。<br></p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/Computer Organization & Architecture/MMX/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2018-12-09T16:00:11.000Z">2018-12-10</time>
                 
                 <div class="level-item">
@@ -153,7 +357,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/12/10/Software Quality Assurance/Individual techniques/11-structual testing/">11-structual testing</a>
+                <a class="has-link-black-ter" href="/Software Quality Assurance/Individual techniques/11-structual testing/">11-structual testing</a>
             
         </h1>
         <div class="content">
@@ -193,222 +397,15 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-09T16:00:10.000Z">2018-12-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Individual-techniques/">Individual techniques</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 read (About 290 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/10/Software Quality Assurance/Individual techniques/10-Stochastic or Random Test/">10-Stochastic or Random Test</a>
-            
-        </h1>
-        <div class="content">
-            <ul>
-<li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul>
-<li>What</li>
-<li>Why</li>
-<li>特点</li></ul></li></ul>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/10/Software Quality Assurance/Individual techniques/10-Stochastic or Random Test/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-09T16:00:09.000Z">2018-12-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Individual-techniques/">Individual techniques</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 read (About 322 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/10/Software Quality Assurance/Individual techniques/9-Scenario testing/">9-Scenario testing</a>
-            
-        </h1>
-        <div class="content">
-            <ul>
-<li><h1 id="场景测试"><a href="#场景测试" class="headerlink" title="场景测试"></a><strong>场景测试</strong></h1><ul>
-<li>在软件开发过程的测试阶段中，由于实际系统过分庞大和复杂，很难测试其全部功能，而只能测试其与执行的任务有类似性的主要功能</li></ul></li></ul>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/10/Software Quality Assurance/Individual techniques/9-Scenario testing/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-09T16:00:08.000Z">2018-12-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Individual-techniques/">Individual techniques</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 read (About 165 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/10/Software Quality Assurance/Individual techniques/8-User Testing/">8-User Testing</a>
-            
-        </h1>
-        <div class="content">
-            <ul>
-<li><h1 id="用户测试"><a href="#用户测试" class="headerlink" title="用户测试"></a><strong>用户测试</strong></h1><ul>
-<li>定义：以用户为为参与主体的测试</li>
-<li>引入原因：用户作为软件最终使用的主体</li>
-<li>测试目标：测试软件的总体情况及用户体验</li>
-<li>测试者：用户</li>
-<li>覆盖面：很难度量</li>
-<li>测试启动时间：软件开发基本完成</li></ul></li></ul>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/10/Software Quality Assurance/Individual techniques/8-User Testing/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-09T16:00:07.000Z">2018-12-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Individual-techniques/">Individual techniques</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 read (About 582 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/10/Software Quality Assurance/Individual techniques/7-Exploratory Testing/">7-Exploratory Testing</a>
-            
-        </h1>
-        <div class="content">
-            <ul>
-<li><h1 id="探索性测试"><a href="#探索性测试" class="headerlink" title="探索性测试"></a><strong>探索性测试</strong></h1><ul>
-<li>探索性测试（ET）可以说是一种测试思维技术。它没有很多实际的测试方法、技术和工具，但是却是所有测试人员都应该掌握的一种测试思维方式。探索测试强调测试人员的主观能动性，避免繁杂的测试计划和测试用例设计的文档制作过程，强调在碰到问题时及时改变测试策略</li></ul></li></ul>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/10/Software Quality Assurance/Individual techniques/7-Exploratory Testing/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
 
     
 <div class="card card-transparent">
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
         <div class="pagination-previous">
-            <a class="is-flex-grow has-text-black-ter" href="/">Anterior</a>
+            <a class="is-flex-grow has-text-black-ter" href="/">Previous</a>
         </div>
         <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/page/3/">Siguiente</a>
+            <a class="is-flex-grow has-text-black-ter" href="/page/3/">Next</a>
         </div>
         <ul class="pagination-list is-hidden-mobile">
             
@@ -420,7 +417,7 @@
             
             <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
             
-            <li><a class="pagination-link has-text-black-ter" href="/page/6/">6</a></li>
+            <li><a class="pagination-link has-text-black-ter" href="/page/7/">7</a></li>
             
         </ul>
     </nav>
@@ -459,27 +456,27 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Entradas
+                        Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        29
+                        33
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categorias
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        9
+                        10
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Etiquetas
+                        Tags
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -489,7 +486,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
-                SEGUIR</a>
+                Follow</a>
         </div>
         
         
@@ -565,7 +562,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categorias
+                Categories
             </h3>
             <ul class="menu-list">
             <li>
@@ -609,6 +606,14 @@
                 <span class="level-item tag">6</span>
             </span>
         </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Python/">
+            <span class="level-start">
+                <span class="level-item">Python</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/Software-Quality-Assurance/">
             <span class="level-start">
                 <span class="level-item">Software Quality Assurance</span>
@@ -655,69 +660,69 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/note4/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/note3/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:46:58.000Z">2019-04-01</time></div>
+                    <a href="/Python/note2/" class="has-link-black-ter is-size-6">cookie登录网页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:00:00.000Z">2019-04-01</time></div>
+                    <a href="/Python/note1/" class="has-link-black-ter is-size-6">文件逐行读入</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T00:00:01.000Z">2019-04-01</time></div>
-                    <a href="/2019/04/01/Computer Network/classnote/" class="has-link-black-ter is-size-6">课堂笔记</a>
+                    <a href="/Computer Network/classnote/" class="has-link-black-ter is-size-6">课堂笔记</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Computer-Network/">Computer Network</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-21T05:50:01.000Z">2019-02-21</time></div>
-                    <a href="/2019/02/21/实训/笔记1/" class="has-link-black-ter is-size-6">Bootstap笔记2</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/实训/">实训</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-18T05:50:01.000Z">2019-02-18</time></div>
-                    <a href="/2019/02/18/实训/DayOne/" class="has-link-black-ter is-size-6">Bootstap笔记1</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/实训/">实训</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-23T18:22:01.000Z">2018-12-24</time></div>
-                    <a href="/2018/12/24/Computer Organization & Architecture/summary/" class="has-link-black-ter is-size-6">机组期末总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Computer-Organization-Architecture/">Computer Organization & Architecture</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-14T18:22:01.000Z">2018-12-15</time></div>
-                    <a href="/2018/12/15/Computer Organization & Architecture/MMX/" class="has-link-black-ter is-size-6">MMX课内实验</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Computer-Organization-Architecture/">Computer Organization & Architecture</a>
                     </p>
                 </div>
             </div>
@@ -731,7 +736,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -741,7 +746,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -788,7 +793,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -812,69 +817,69 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recientes
+            Recent
         </h3>
         
         <article class="media">
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/note4/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/note3/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:46:58.000Z">2019-04-01</time></div>
+                    <a href="/Python/note2/" class="has-link-black-ter is-size-6">cookie登录网页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:00:00.000Z">2019-04-01</time></div>
+                    <a href="/Python/note1/" class="has-link-black-ter is-size-6">文件逐行读入</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T00:00:01.000Z">2019-04-01</time></div>
-                    <a href="/2019/04/01/Computer Network/classnote/" class="has-link-black-ter is-size-6">课堂笔记</a>
+                    <a href="/Computer Network/classnote/" class="has-link-black-ter is-size-6">课堂笔记</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Computer-Network/">Computer Network</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-21T05:50:01.000Z">2019-02-21</time></div>
-                    <a href="/2019/02/21/实训/笔记1/" class="has-link-black-ter is-size-6">Bootstap笔记2</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/实训/">实训</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-18T05:50:01.000Z">2019-02-18</time></div>
-                    <a href="/2019/02/18/实训/DayOne/" class="has-link-black-ter is-size-6">Bootstap笔记1</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/实训/">实训</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-23T18:22:01.000Z">2018-12-24</time></div>
-                    <a href="/2018/12/24/Computer Organization & Architecture/summary/" class="has-link-black-ter is-size-6">机组期末总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Computer-Organization-Architecture/">Computer Organization & Architecture</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-14T18:22:01.000Z">2018-12-15</time></div>
-                    <a href="/2018/12/15/Computer Organization & Architecture/MMX/" class="has-link-black-ter is-size-6">MMX课内实验</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Computer-Organization-Architecture/">Computer Organization & Architecture</a>
                     </p>
                 </div>
             </div>
@@ -888,7 +893,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archivos
+            Archives
         </h3>
         <ul class="menu-list">
         
@@ -898,7 +903,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -945,7 +950,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Etiquetas
+                Tags
             </h3>
             <ul class="menu-list">
                 
@@ -1102,10 +1107,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Entradas',
+                POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categorias',
-                TAGS: 'Etiquetas',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
