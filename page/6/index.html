@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>XJTU SE XX</title>
+<title>Software Engineering Student XX</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,13 +10,13 @@
     <meta name="description" content="个人博客">
 <meta name="keywords" content="xjtusexx">
 <meta property="og:type" content="website">
-<meta property="og:title" content="XJTU SE XX">
+<meta property="og:title" content="Software Engineering Student XX">
 <meta property="og:url" content="http://www.studentxiaoxin.top/page/6/index.html">
-<meta property="og:site_name" content="XJTU SE XX">
+<meta property="og:site_name" content="Software Engineering Student XX">
 <meta property="og:description" content="个人博客">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="XJTU SE XX">
+<meta name="twitter:title" content="Software Engineering Student XX">
 <meta name="twitter:description" content="个人博客">
 
 
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="XJTU SE XX" height="28">
+                <img src="/images/logo.svg" alt="Software Engineering Student XX" height="28">
             
             </a>
         </div>
@@ -178,6 +178,248 @@
 
 
 
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-04-01T00:00:01.000Z">2018-04-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Computer-Network/">Computer Network</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 read (About 433 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/04/01/Computer Network/classnote/">课堂笔记</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a><strong>Chapter 1</strong></h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+<li>modem 调制解调器</li>
+<li>network of networks 网间网</li>
+<li>protocols={format,order,actions}</li>
+<li>msg 报文</li>
+<li>HFC hybrid fiber coax</li>
+<li>FTTH Fiber to the Home 光纤入户</li>
+<li>throughput :rate (bits/time unit) at which bits transferred between sender/receiver</li>
+</ul>
+<h2 id="Dial-up-Modem"><a href="#Dial-up-Modem" class="headerlink" title="Dial-up Modem"></a>Dial-up Modem</h2><p><img src="/img/CN/C1-1.png" alt=""></p>
+<ul>
+<li>使用现有的电话基础设施</li>
+<li>家与central office 直连</li>
+<li>无法同时上网 打电话呢 无法一直在线</li>
+</ul>
+<h2 id="Asymmetric-Digital-Subscriber-Line-ADSL"><a href="#Asymmetric-Digital-Subscriber-Line-ADSL" class="headerlink" title="Asymmetric Digital Subscriber Line (ADSL)"></a>Asymmetric Digital Subscriber Line (ADSL)</h2><p><img src="/img/CN/C1-2.png" alt="不对称的数字用户线ADSL"></p>
+<ul>
+<li>使用现有的电话基础设施</li>
+<li>使用专用的物理线路到电话central office</li>
+</ul>
+<h2 id="Circuit-Switching"><a href="#Circuit-Switching" class="headerlink" title="Circuit Switching"></a>Circuit Switching</h2><h2 id="Packet-Switching"><a href="#Packet-Switching" class="headerlink" title="Packet Switching"></a>Packet Switching</h2><h2 id="Internet-protocol-stack"><a href="#Internet-protocol-stack" class="headerlink" title="Internet protocol stack"></a>Internet protocol stack</h2><ul>
+<li><strong>application</strong>: supporting network applications<ul>
+<li>FTP, SMTP, HTTP</li>
+</ul>
+</li>
+<li><strong>transport</strong>: process-process data transfer<ul>
+<li>TCP, UDP</li>
+</ul>
+</li>
+<li><strong>network</strong>: routing of datagrams from source to destination<ul>
+<li>IP, routing protocols</li>
+</ul>
+</li>
+<li><strong>link</strong>: data transfer between neighboring  network elements<ul>
+<li>PPP, Ethernet</li>
+</ul>
+</li>
+<li><strong>physical</strong>: bits “on the wire”</li>
+</ul>
+<hr>
+<h1 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a><strong>Chapter 2</strong></h1><h2 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h2><ul>
+<li><strong>Process</strong>:program running within a host</li>
+<li><strong>Sockets</strong>:process send/receives msg to/from its socket</li>
+<li><strong>FTP</strong>:the file transfer protocol</li>
+</ul>
+<h2 id="Non-Persistent-HTTP"><a href="#Non-Persistent-HTTP" class="headerlink" title="Non-Persistent HTTP"></a>Non-Persistent HTTP</h2><ul>
+<li><strong>Response time</strong>=2RTT+ transmit time</li>
+</ul>
+<h2 id="Persistent-HTTP"><a href="#Persistent-HTTP" class="headerlink" title="Persistent  HTTP"></a>Persistent  HTTP</h2><ul>
+<li><strong>Response time</strong> 第一个对象2RTT 之后的都是1RTT</li>
+</ul>
+<h2 id="HTTP-request-message"><a href="#HTTP-request-message" class="headerlink" title="HTTP request message"></a>HTTP request message</h2><ul>
+<li>request line<ul>
+<li>GET</li>
+<li>POST</li>
+<li>HEAD 请求头信息 PUT 放 DELETED 删除</li>
+</ul>
+</li>
+<li>header lines</li>
+<li>Carriage return, linefeed indicatesend of message</li>
+</ul>
+<h2 id="HTTP-response-message"><a href="#HTTP-response-message" class="headerlink" title="HTTP response message"></a>HTTP response message</h2><ul>
+<li>status line</li>
+<li>header line</li>
+<li>(data)*</li>
+</ul>
+<h2 id="Web-Caches"><a href="#Web-Caches" class="headerlink" title="Web Caches"></a>Web Caches</h2><ul>
+<li>Proxy Cache<ul>
+<li>Goal:satisfy client request without involving origin server</li>
+</ul>
+</li>
+<li>Client Cache<ul>
+<li>Goal: don’t send object if cache has up-to-date cached version</li>
+</ul>
+</li>
+<li>Distributed Caches<ul>
+<li>Many caches are cooperative</li>
+<li>Difficult to operate</li>
+</ul>
+</li>
+<li>Server Caches:cluster<ul>
+<li>High parallelism reliability</li>
+<li>load balance needed</li>
+<li>object location algorithm needed</li>
+<li>广泛采用</li>
+</ul>
+</li>
+</ul>
+<h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><ul>
+<li>FTP客户端连接FTP服务器端口21,TCP是传输协议</li>
+<li>客户端被授权控制连接</li>
+<li>客户端通过控制连接发送命令来浏览远程目录。</li>
+<li>当服务器接收到文件传输命令时，服务器打开第二个TCP连接(用于文件)到客户端</li>
+<li>传输一个文件后，服务器关闭数据连接。</li>
+</ul>
+<h2 id="Electronic-Mail"><a href="#Electronic-Mail" class="headerlink" title="Electronic Mail"></a>Electronic Mail</h2><ul>
+<li>3 magor components<ul>
+<li>user agents</li>
+<li>mail servers</li>
+<li>SMTP(simple mail transfer protocol)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a><strong>Chapter 3</strong></h1><hr>
+<h1 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a><strong>Chapter 4</strong></h1><hr>
+<h1 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a><strong>Chapter 5</strong></h1><hr>
+<h1 id="Chapter-6"><a href="#Chapter-6" class="headerlink" title="Chapter 6"></a><strong>Chapter 6</strong></h1>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-02-21T05:50:01.000Z">2018-02-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/实训/">实训</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 read (About 47 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/02/21/实训/笔记1/">Bootstap笔记2</a>
+            
+        </h1>
+        <div class="content">
+            <p>#模态框</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#模态框id"</span>&gt;</span>触发<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--模态框主体--&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal fade"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"模态框id"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span>  <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--tabindex的作用就是控制tab切换的顺序按照它的值来切换--&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!--tabindex="-1"常用在弹框中，防止切换混乱--&gt;</span></span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-02-18T05:50:01.000Z">2018-02-18</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/实训/">实训</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 read (About 425 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2018/02/18/实训/DayOne/">Bootstap笔记1</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="容器-Container"><a href="#容器-Container" class="headerlink" title="容器 Container"></a>容器 Container</h1><p>默认情况下容器是不可嵌套的<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="Bootstrap-网格系统（Grid-System）的工作原理"><a href="#Bootstrap-网格系统（Grid-System）的工作原理" class="headerlink" title="Bootstrap 网格系统（Grid System）的工作原理"></a>Bootstrap 网格系统（Grid System）的工作原理</h1><p>网格系统通过一系列包含内容的行和列来创建页面布局<br>行必须放置在 .container class 内，以便获得适当的对齐（alignment）和内边距（padding）。</p>
+<h1 id="基本的网格结构"><a href="#基本的网格结构" class="headerlink" title="基本的网格结构"></a>基本的网格结构</h1><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-*-*"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-*-*"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>      </span><br><span class="line">   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>....</span><br></pre></td></tr></table></figure>
+<p>#偏移列<br>为了在大屏幕显示器上使用偏移，请使用 .col-md-offset-<em> 类。这些类会把一个列的左外边距（margin）增加 </em> 列，其中 * 范围是从 1 到 11。</p>
+<p>#列排序<br>Bootstrap 网格系统另一个完美的特性，就是您可以很容易地以一种顺序编写列，然后以另一种顺序显示列。</p>
+<p>您可以很轻易地改变带有 .col-md-push-<em> 和 .col-md-pull-</em> 类的内置网格列的顺序，其中 * 范围是从 1 到 11。</p>
+<p>#表格<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>	为表格添加基础样式。</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>	表格标题行的容器元素（<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>），用来标识表格列。</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>	表格主体中的表格行的容器元素（<span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>）。</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>	一组出现在单行上的表格单元格的容器元素（<span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span> 或 <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>）。</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>	默认的表格单元格。</span><br></pre></td></tr></table></figure></p>
+<p>#表单<br>垂直或基本表单<br>基本的表单结构是 Bootstrap 自带的，个别的表单控件自动接收一些全局样式。下面列出了创建基本表单的步骤：</p>
+<ul>
+<li>向父 <form> 元素添加 role=”form”。</form></li>
+<li>把标签和控件放在一个带有 class .form-group 的 <div> 中。这是获取最佳间距所必需的。</div></li>
+<li>向所有的文本元素 <input>、<textarea> 和 </textarea><select> 添加 class =”form-control” 。</select></li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
 
     
 <div class="card card-transparent">
@@ -238,7 +480,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        26
+                        29
                     </p>
                 </div>
             </div>
@@ -248,7 +490,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        9
                     </p>
                 </div>
             </div>
@@ -353,6 +595,14 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/Computer-Network/">
+            <span class="level-start">
+                <span class="level-item">Computer Network</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/Computer-Organization-Architecture/">
             <span class="level-start">
                 <span class="level-item">Computer Organization & Architecture</span>
@@ -400,7 +650,15 @@
             <span class="level-end">
                 <span class="level-item tag">11</span>
             </span>
-        </a></li></ul></li>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/实训/">
+            <span class="level-start">
+                <span class="level-item">实训</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
             </ul>
         </div>
     </div>
@@ -513,6 +771,28 @@
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -652,6 +932,28 @@
             </a>
         </li>
         
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
         </ul>
         </div>
     </div>
@@ -682,7 +984,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="XJTU SE XX" height="28">
+                    <img src="/images/logo.svg" alt="Software Engineering Student XX" height="28">
                 
                 </a>
                 <p class="is-size-7">
