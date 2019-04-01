@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>MMX课内实验 - Software Engineering Student XX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="实验内容使用普通和 MMX 技术实现淡入淡出效果，比较其时间花费。">
+<meta name="keywords" content="xjtusexx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MMX课内实验">
+<meta property="og:url" content="http://www.studentxiaoxin.top/计算机组成原理/MMX/index.html">
+<meta property="og:site_name" content="Software Engineering Student XX">
+<meta property="og:description" content="实验内容使用普通和 MMX 技术实现淡入淡出效果，比较其时间花费。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/MMX课内实验/1.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/MMX课内实验/2.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/MMX课内实验/3.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/MMX课内实验/4.png">
+<meta property="og:image" content="http://www.studentxiaoxin.top/img/COA/MMX课内实验/FPS.png">
+<meta property="og:updated_time" content="2019-04-01T04:40:47.574Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MMX课内实验">
+<meta name="twitter:description" content="实验内容使用普通和 MMX 技术实现淡入淡出效果，比较其时间花费。">
+<meta name="twitter:image" content="http://www.studentxiaoxin.top/img/COA/MMX课内实验/1.png">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="MMX课内实验" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/TangGiGi">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-14T18:22:01.000Z">2018-12-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Computer-Organization-Architecture/">Computer Organization & Architecture</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 分钟 read (About 1460 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                MMX课内实验
+            
+        </h1>
+        <div class="content">
+            <h1 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a><strong>实验内容</strong></h1><p>使用普通和 MMX 技术实现淡入淡出效果，比较其时间花费。<br><a id="more"></a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h1><p>1996 年，Intel 开始将 MMX 技术引入 Pentium 产品系列，MMX 十一组用于多媒体人物的优化指令，共有 57 条新指令。这些新指令以一种 SIMD(single-instruction-multiple-data,但指令多数据)方式来处理数据。于是，它能一次在多个数据元素上同时完成加、乘这样的运算。一般，每条指令执行只用一个时钟周期。对于何时的应用，与不适用 MMX 指令相比，这些快速地并行操作能产生 2-8 倍的加速效果。随着 x86 体系结构推出 64 位的处理器，Intel 也扩展了这些指令，使它们能处理双 quadword(128 位)操作数和浮点运算。在 MMX 指令中，引入了饱和(saturation)算术。在通常的无符号算术中，在运算出现上溢时(最高位向上进位)，则此额外位会被舍掉。这被称为环绕(wraparound)运算，因为从结果上看，舍掉进位使两个数加法之和小于被加的两个数。在饱和算术中，如果加法导致上溢，减法导致下溢，那么结果分别被设置成可表示的最大值和最小值。<br>下载地址:<a href="https://www.libsdl.org/download-2.0.php" target="_blank" rel="noopener">https://www.libsdl.org/download-2.0.php</a></p>
+<h1 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a><strong>实验环境</strong></h1><p>实验所使用的软件为 Visual Studio 2017 和 SDL 2.0<br>SDL（Simple DirectMedia Layer）是一套开放源代码的跨平台多媒体开发库，使用 C 语言写成。SDL 提供了数种控制图像、声音、输出入的函数，让开发者只要用相同或是相似的代码就可以开发出跨多个平台（Linux、Windows、Mac OS X 等）的应用软件。目前SDL 多用于开发游戏、模拟器、媒体播放器等多媒体应用领域。SDL 使用 GNU 宽通用公共许可证为授权方式，意指动态链接（dynamic link 其库并不需要开放本身的源代码。</p>
+<h1 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a><strong>实验过程</strong></h1><ol>
+<li>打开Visual Studio，创建一个新的空白C++工程。</li>
+<li>右键项目名-&gt;属性菜单-&gt;C/C++-&gt;常规-&gt;附加包含目录-&gt;选择SDL/include 文件夹</li>
+<li>属性菜单-&gt;C/C++-&gt;代码生成-&gt;运行库-&gt;改为”多线程 DLL (/MD)”</li>
+<li>属性菜单-&gt;Linker-&gt;常规-&gt;附加库目录-&gt;选择SDL/lib/X86</li>
+<li>属性菜单-&gt;Linker-&gt;输入-&gt;附加依赖项-&gt;填入<code>SDL2.lib; SDL2main.lib;</code></li>
+<li>属性菜单-&gt;Linker-&gt;系统-&gt;子系统-&gt;改为未设置</li>
+<li>如果出现<code>找不到SDL2.lib</code>的错误,可以尝试把<code>SDL2.lib</code>复制到项目的可执行文件的同一级目录下</li>
+</ol>
+<h1 id="SDL-准备工作"><a href="#SDL-准备工作" class="headerlink" title="SDL 准备工作"></a><strong>SDL 准备工作</strong></h1><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> SCREEN_WIDTH = <span class="hljs-number">1920</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> SCREEN_HEIGHT = <span class="hljs-number">1080</span>;</span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> len = SCREEN_WIDTH * SCREEN_HEIGHT * <span class="hljs-number">4</span>;</span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span>  T = <span class="hljs-number">2000</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>* tar, *pic1, *pic2;</span><br><span class="line">SDL_Window *gWindow = <span class="hljs-literal">nullptr</span>;</span><br><span class="line">SDL_Surface *gScreenSurface = <span class="hljs-literal">nullptr</span>, *gpic1 = <span class="hljs-literal">nullptr</span>, *gpic2 = <span class="hljs-literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//开始测试之前的准备工作</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">before</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line"><span class="hljs-comment">//初始化SDL视频子系统</span></span><br><span class="line"><span class="hljs-keyword">if</span> (SDL_Init(SDL_INIT_VIDEO) &lt; <span class="hljs-number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Window could not be created! SDL_Error: %s\n"</span>, SDL_GetError());</span><br><span class="line">    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//创建窗口</span></span><br><span class="line">gWindow = SDL_CreateWindow(<span class="hljs-string">"SHOW BMP"</span>,<span class="hljs-comment">//窗口标题</span></span><br><span class="line">    SDL_WINDOWPOS_CENTERED,<span class="hljs-comment">//窗口位置设置</span></span><br><span class="line">    SDL_WINDOWPOS_CENTERED,</span><br><span class="line">    SCREEN_WIDTH,<span class="hljs-comment">//窗口的宽度</span></span><br><span class="line">    SCREEN_HEIGHT,<span class="hljs-comment">//窗口的高度</span></span><br><span class="line">    SDL_WINDOW_SHOWN<span class="hljs-comment">//显示窗口</span></span><br><span class="line">);</span><br><span class="line"><span class="hljs-keyword">if</span> (gWindow == <span class="hljs-literal">nullptr</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Window could not be created! SDL_Error: %s\n"</span>, SDL_GetError());</span><br><span class="line">    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//将gWindow和gScreenSurface链接</span></span><br><span class="line">gScreenSurface = SDL_GetWindowSurface(gWindow);</span><br><span class="line"><span class="hljs-comment">//找到输出图像所在的位置</span></span><br><span class="line">tar = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>*)(gScreenSurface-&gt;pixels);</span><br><span class="line"><span class="hljs-comment">//获取图像文件的数据大小</span></span><br><span class="line">len = gScreenSurface-&gt;h * gScreenSurface-&gt;pitch;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">after</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">SDL_FreeSurface(gpic1);<span class="hljs-comment">//释放空间</span></span><br><span class="line">SDL_FreeSurface(gpic2);</span><br><span class="line">gpic1 = <span class="hljs-literal">nullptr</span>;</span><br><span class="line">gpic2 = <span class="hljs-literal">nullptr</span>;</span><br><span class="line">SDL_DestroyWindow(gWindow);<span class="hljs-comment">//销毁窗口</span></span><br><span class="line">gWindow = <span class="hljs-literal">nullptr</span>;</span><br><span class="line">SDL_Quit();<span class="hljs-comment">//退出SDL</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="普通方法"><a href="#普通方法" class="headerlink" title="普通方法"></a><strong>普通方法</strong></h1><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">brute_force</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line"><span class="hljs-keyword">int</span> time_st = SDL_GetTicks(), cnt = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">while</span> (SDL_GetTicks() - time_st &lt; T) &#123;</span><br><span class="line"><span class="hljs-keyword">double</span> shade = (<span class="hljs-keyword">double</span>)(SDL_GetTicks() - time_st) / T; <span class="hljs-comment">//获取当前渐变进度</span></span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    tar[i] = pic1[i] + (pic2[i] - pic1[i]) * shade;</span><br><span class="line">&#125;</span><br><span class="line">++cnt;</span><br><span class="line">SDL_UpdateWindowSurface(gWindow); <span class="hljs-comment">//完成计算后刷新图像</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"FPS = %d\n"</span>, cnt * <span class="hljs-number">1000</span>/ T);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="MMX方法"><a href="#MMX方法" class="headerlink" title="MMX方法"></a><strong>MMX方法</strong></h1><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mmx</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line"><span class="hljs-keyword">int</span> time_st = SDL_GetTicks();</span><br><span class="line"><span class="hljs-keyword">int</span> cnt = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">while</span> (SDL_GetTicks() - time_st &lt; T) &#123;</span><br><span class="line">    <span class="hljs-keyword">uint16_t</span> ff2 = (SDL_GetTicks() - time_st) * <span class="hljs-number">256</span> / T;</span><br><span class="line">    <span class="hljs-keyword">uint16_t</span> ff1 = <span class="hljs-number">256</span> - ff2;</span><br><span class="line">    <span class="hljs-comment">//将4个16位整数拼在一起，当读取的时候会被当做一个64位整数进行处理</span></span><br><span class="line">    <span class="hljs-keyword">uint16_t</span> f2[<span class="hljs-number">4</span>] = &#123; ff2,ff2,ff2,ff2 &#125;;</span><br><span class="line">    <span class="hljs-keyword">uint16_t</span> f1[<span class="hljs-number">4</span>] = &#123; ff1,ff1,ff1,ff1 &#125;;</span><br><span class="line">    <span class="hljs-keyword">uint32_t</span> p1, p2, *ptar;</span><br><span class="line">    <span class="hljs-comment">//4位的并行处理，因此循环次数位原先的四分之一</span></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len / <span class="hljs-number">4</span>; i++) &#123;</span><br><span class="line">        p1 = ((<span class="hljs-keyword">uint32_t</span>*)pic1)[i];</span><br><span class="line">        p2 = ((<span class="hljs-keyword">uint32_t</span>*)pic2)[i];</span><br><span class="line">        ptar = &amp;(((<span class="hljs-keyword">uint32_t</span>*)tar)[i]);</span><br><span class="line">	__asm &#123;</span><br><span class="line"><span class="hljs-comment">//将所需数据移入寄存器</span></span><br><span class="line">movd mm0, [p1]    <span class="hljs-comment">//load 4  pixel components from image A 把低 32位赋值给mm0</span></span><br><span class="line">movd mm1, [p2]	  <span class="hljs-comment">//load 4  pixel components from image B</span></span><br><span class="line">mov edi, ptar		</span><br><span class="line">pxor mm7, mm7	  <span class="hljs-comment">//zero out mm7</span></span><br><span class="line"><span class="hljs-comment">//load fade value replicated 4 times</span></span><br><span class="line">movq mm3, [f1]	  <span class="hljs-comment">//f1的64位赋值给mm3</span></span><br><span class="line">movq mm4, [f2]	  </span><br><span class="line"><span class="hljs-comment">//将mm0和mm1解开，构成 00XX 00XX 00XX 00XX形式</span></span><br><span class="line">punpcklbw mm0, mm7</span><br><span class="line">punpcklbw mm1, mm7</span><br><span class="line"></span><br><span class="line">pmullw mm1, mm4</span><br><span class="line">pmullw mm0, mm3</span><br><span class="line"><span class="hljs-comment">//将结果相加后右移8位，再从拆开后的形式转回</span></span><br><span class="line">paddw mm0, mm1</span><br><span class="line">psrlw mm0, <span class="hljs-number">8</span>	<span class="hljs-comment">//XXYY XXYY XXYY XXYY =&gt; 00XX 00XX 00XX 00XX</span></span><br><span class="line">packuswb mm0, mm7 <span class="hljs-comment">//00XX 00XX 00XX 00XX =&gt; XX XX XX XX</span></span><br><span class="line"><span class="hljs-comment">//将结果传回目标位置</span></span><br><span class="line">movd[edi], mm0</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cnt++;</span><br><span class="line">    SDL_UpdateWindowSurface(gWindow);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"FPS = %d\n"</span>, cnt * <span class="hljs-number">1000</span> / T);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a><strong>主函数</strong></h1><figure class="highlight c++ hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"SDL.h"</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="hljs-comment">//未设置时需要这一行</span></span><br><span class="line"><span class="hljs-comment">//系统改为 window子系统时需要注释掉</span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> main</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line">	before();</span><br><span class="line">	<span class="hljs-comment">//加载图片并获取地址</span></span><br><span class="line">	gpic1 = SDL_ConvertSurface(SDL_LoadBMP(<span class="hljs-string">"C:\\Users\\xiaoxin\\Desktop\\5.bmp"</span>), gScreenSurface-&gt;format, <span class="hljs-number">0</span>);</span><br><span class="line">	gpic2 = SDL_ConvertSurface(SDL_LoadBMP(<span class="hljs-string">"C:\\Users\\xiaoxin\\Desktop\\6.bmp"</span>), gScreenSurface-&gt;format, <span class="hljs-number">0</span>);</span><br><span class="line">	pic1 = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>*)(gpic1-&gt;pixels);</span><br><span class="line">	pic2 = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span>*)(gpic2-&gt;pixels);</span><br><span class="line"></span><br><span class="line">	<span class="hljs-comment">//surface的快速复制</span></span><br><span class="line">	SDL_BlitSurface(gpic1, <span class="hljs-literal">nullptr</span>, gScreenSurface, <span class="hljs-literal">nullptr</span>);</span><br><span class="line">	SDL_UpdateWindowSurface(gWindow);<span class="hljs-comment">//更新显示</span></span><br><span class="line">	SDL_Delay(<span class="hljs-number">1000</span>);</span><br><span class="line"></span><br><span class="line">	SDL_BlitSurface(gpic2, <span class="hljs-literal">nullptr</span>, gScreenSurface, <span class="hljs-literal">nullptr</span>);</span><br><span class="line">	SDL_UpdateWindowSurface(gWindow);<span class="hljs-comment">//更新显示</span></span><br><span class="line">	SDL_Delay(<span class="hljs-number">1000</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	brute_force();</span><br><span class="line">	mmx();</span><br><span class="line">	SDL_Delay(<span class="hljs-number">15000</span>);</span><br><span class="line"></span><br><span class="line">	after();</span><br><span class="line">	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a><strong>运行结果</strong></h1><ol>
+<li>图片1<br><img src="\img\COA\MMX课内实验\1.png" alt=""></li>
+<li>渐变<br><img src="\img\COA\MMX课内实验\2.png" alt=""></li>
+<li>渐变<br><img src="\img\COA\MMX课内实验\3.png" alt=""></li>
+<li>图片2<br><img src="\img\COA\MMX课内实验\4.png" alt=""></li>
+<li>FPS 比较<br><img src="\img\COA\MMX课内实验\FPS.png" alt=""></li>
+</ol>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/计算机组成原理/summary/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">机组期末总结</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/软件质量保证/Individual techniques/11-structual testing/">
+                <span class="level-item">11-structual testing</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/cat1.jpg" alt="PickleXin">
+                    
+                    <p class="is-size-4 is-block">
+                        PickleXin
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>陕西 西安</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        pos
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        35
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Kategori
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        10
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        tag
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
+                IKUTI</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/TangGiGi">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#实验内容">
+        <span class="has-mr-6">1</span>
+        <span>实验内容</span>
+        </a></li><li>
+        <a class="is-flex" href="#简介">
+        <span class="has-mr-6">2</span>
+        <span>简介</span>
+        </a></li><li>
+        <a class="is-flex" href="#实验环境">
+        <span class="has-mr-6">3</span>
+        <span>实验环境</span>
+        </a></li><li>
+        <a class="is-flex" href="#实验过程">
+        <span class="has-mr-6">4</span>
+        <span>实验过程</span>
+        </a></li><li>
+        <a class="is-flex" href="#SDL-准备工作">
+        <span class="has-mr-6">5</span>
+        <span>SDL 准备工作</span>
+        </a></li><li>
+        <a class="is-flex" href="#普通方法">
+        <span class="has-mr-6">6</span>
+        <span>普通方法</span>
+        </a></li><li>
+        <a class="is-flex" href="#MMX方法">
+        <span class="has-mr-6">7</span>
+        <span>MMX方法</span>
+        </a></li><li>
+        <a class="is-flex" href="#主函数">
+        <span class="has-mr-6">8</span>
+        <span>主函数</span>
+        </a></li><li>
+        <a class="is-flex" href="#运行结果">
+        <span class="has-mr-6">9</span>
+        <span>运行结果</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            tautan
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://www.google.com/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Google</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">https://www.google.com/</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Kategori
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Android/">
+            <span class="level-start">
+                <span class="level-item">Android</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Computer-Network/">
+            <span class="level-start">
+                <span class="level-item">Computer Network</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Computer-Organization-Architecture/">
+            <span class="level-start">
+                <span class="level-item">Computer Organization & Architecture</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Linux/">
+            <span class="level-start">
+                <span class="level-item">Linux</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Linux/Class-Notes/">
+            <span class="level-start">
+                <span class="level-item">Class Notes</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Python/">
+            <span class="level-start">
+                <span class="level-item">Python</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Software-Quality-Assurance/">
+            <span class="level-start">
+                <span class="level-item">Software Quality Assurance</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">17</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Software-Quality-Assurance/Class-Notes/">
+            <span class="level-start">
+                <span class="level-item">Class Notes</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Software-Quality-Assurance/Individual-techniques/">
+            <span class="level-start">
+                <span class="level-item">Individual techniques</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">11</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/实训/">
+            <span class="level-start">
+                <span class="level-item">实训</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Terbaru
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/note4/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/个人易错点/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/note3/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/循环中跳过异常/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:46:58.000Z">2019-04-01</time></div>
+                    <a href="/Python/cookie登录网页/" class="has-link-black-ter is-size-6">cookie登录网页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Arsip
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">25</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                tag
+            </h3>
+            <ul class="menu-list">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Terbaru
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/note4/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/个人易错点/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/note3/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/循环中跳过异常/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:46:58.000Z">2019-04-01</time></div>
+                    <a href="/Python/cookie登录网页/" class="has-link-black-ter is-size-6">cookie登录网页</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Arsip
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">25</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                tag
+            </h3>
+            <ul class="menu-list">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="MMX课内实验" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 肖鑫&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh_CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Tulis Sesuatu..">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Pos',
+                PAGES: 'Halaman',
+                CATEGORIES: 'Kategori',
+                TAGS: 'Tag',
+                UNTITLED: 'Tanpa Judul',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

@@ -135,6 +135,193 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-01T04:00:00.000Z">2019-04-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 read (About 22 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/Python/文件逐行读入/">文件逐行读入</a>
+            
+        </h1>
+        <div class="content">
+            <figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">with</span> open(<span class="hljs-string">'url.txt'</span>,<span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">    linestr=[]</span><br><span class="line">    line = f.readline().strip()</span><br><span class="line">    <span class="hljs-keyword">while</span> line:</span><br><span class="line">        linestr.append(line)</span><br><span class="line">        line = f.readline().strip()</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-01T00:00:01.000Z">2019-04-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Computer-Network/">Computer Network</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 read (About 433 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/计算机网络/课堂笔记/">课堂笔记</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a><strong>Chapter 1</strong></h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+<li>modem 调制解调器</li>
+<li>network of networks 网间网</li>
+<li>protocols={format,order,actions}</li>
+<li>msg 报文</li>
+<li>HFC hybrid fiber coax</li>
+<li>FTTH Fiber to the Home 光纤入户</li>
+<li>throughput :rate (bits/time unit) at which bits transferred between sender/receiver</li>
+</ul>
+<h2 id="Dial-up-Modem"><a href="#Dial-up-Modem" class="headerlink" title="Dial-up Modem"></a>Dial-up Modem</h2><p><img src="/img/CN/C1-1.png" alt=""></p>
+<ul>
+<li>使用现有的电话基础设施</li>
+<li>家与central office 直连</li>
+<li>无法同时上网 打电话呢 无法一直在线</li>
+</ul>
+<h2 id="Asymmetric-Digital-Subscriber-Line-ADSL"><a href="#Asymmetric-Digital-Subscriber-Line-ADSL" class="headerlink" title="Asymmetric Digital Subscriber Line (ADSL)"></a>Asymmetric Digital Subscriber Line (ADSL)</h2><p><img src="/img/CN/C1-2.png" alt="不对称的数字用户线ADSL"></p>
+<ul>
+<li>使用现有的电话基础设施</li>
+<li>使用专用的物理线路到电话central office</li>
+</ul>
+<h2 id="Circuit-Switching"><a href="#Circuit-Switching" class="headerlink" title="Circuit Switching"></a>Circuit Switching</h2><h2 id="Packet-Switching"><a href="#Packet-Switching" class="headerlink" title="Packet Switching"></a>Packet Switching</h2><h2 id="Internet-protocol-stack"><a href="#Internet-protocol-stack" class="headerlink" title="Internet protocol stack"></a>Internet protocol stack</h2><ul>
+<li><strong>application</strong>: supporting network applications<ul>
+<li>FTP, SMTP, HTTP</li>
+</ul>
+</li>
+<li><strong>transport</strong>: process-process data transfer<ul>
+<li>TCP, UDP</li>
+</ul>
+</li>
+<li><strong>network</strong>: routing of datagrams from source to destination<ul>
+<li>IP, routing protocols</li>
+</ul>
+</li>
+<li><strong>link</strong>: data transfer between neighboring  network elements<ul>
+<li>PPP, Ethernet</li>
+</ul>
+</li>
+<li><strong>physical</strong>: bits “on the wire”</li>
+</ul>
+<hr>
+<h1 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a><strong>Chapter 2</strong></h1><h2 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h2><ul>
+<li><strong>Process</strong>:program running within a host</li>
+<li><strong>Sockets</strong>:process send/receives msg to/from its socket</li>
+<li><strong>FTP</strong>:the file transfer protocol</li>
+</ul>
+<h2 id="Non-Persistent-HTTP"><a href="#Non-Persistent-HTTP" class="headerlink" title="Non-Persistent HTTP"></a>Non-Persistent HTTP</h2><ul>
+<li><strong>Response time</strong>=2RTT+ transmit time</li>
+</ul>
+<h2 id="Persistent-HTTP"><a href="#Persistent-HTTP" class="headerlink" title="Persistent  HTTP"></a>Persistent  HTTP</h2><ul>
+<li><strong>Response time</strong> 第一个对象2RTT 之后的都是1RTT</li>
+</ul>
+<h2 id="HTTP-request-message"><a href="#HTTP-request-message" class="headerlink" title="HTTP request message"></a>HTTP request message</h2><ul>
+<li>request line<ul>
+<li>GET</li>
+<li>POST</li>
+<li>HEAD 请求头信息 PUT 放 DELETED 删除</li>
+</ul>
+</li>
+<li>header lines</li>
+<li>Carriage return, linefeed indicatesend of message</li>
+</ul>
+<h2 id="HTTP-response-message"><a href="#HTTP-response-message" class="headerlink" title="HTTP response message"></a>HTTP response message</h2><ul>
+<li>status line</li>
+<li>header line</li>
+<li>(data)*</li>
+</ul>
+<h2 id="Web-Caches"><a href="#Web-Caches" class="headerlink" title="Web Caches"></a>Web Caches</h2><ul>
+<li>Proxy Cache<ul>
+<li>Goal:satisfy client request without involving origin server</li>
+</ul>
+</li>
+<li>Client Cache<ul>
+<li>Goal: don’t send object if cache has up-to-date cached version</li>
+</ul>
+</li>
+<li>Distributed Caches<ul>
+<li>Many caches are cooperative</li>
+<li>Difficult to operate</li>
+</ul>
+</li>
+<li>Server Caches:cluster<ul>
+<li>High parallelism reliability</li>
+<li>load balance needed</li>
+<li>object location algorithm needed</li>
+<li>广泛采用</li>
+</ul>
+</li>
+</ul>
+<h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><ul>
+<li>FTP客户端连接FTP服务器端口21,TCP是传输协议</li>
+<li>客户端被授权控制连接</li>
+<li>客户端通过控制连接发送命令来浏览远程目录。</li>
+<li>当服务器接收到文件传输命令时，服务器打开第二个TCP连接(用于文件)到客户端</li>
+<li>传输一个文件后，服务器关闭数据连接。</li>
+</ul>
+<h2 id="Electronic-Mail"><a href="#Electronic-Mail" class="headerlink" title="Electronic Mail"></a>Electronic Mail</h2><ul>
+<li>3 magor components<ul>
+<li>user agents</li>
+<li>mail servers</li>
+<li>SMTP(simple mail transfer protocol)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a><strong>Chapter 3</strong></h1><hr>
+<h1 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a><strong>Chapter 4</strong></h1><hr>
+<h1 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a><strong>Chapter 5</strong></h1><hr>
+<h1 id="Chapter-6"><a href="#Chapter-6" class="headerlink" title="Chapter 6"></a><strong>Chapter 6</strong></h1>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-02-21T05:50:01.000Z">2019-02-21</time>
                 
                 <div class="level-item">
@@ -195,7 +382,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/实训/DayOne/">Bootstap笔记1</a>
+                <a class="has-link-black-ter" href="/实训/笔记2/">Bootstap笔记1</a>
             
         </h1>
         <div class="content">
@@ -248,7 +435,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/Computer Organization & Architecture/summary/">机组期末总结</a>
+                <a class="has-link-black-ter" href="/计算机组成原理/summary/">机组期末总结</a>
             
         </h1>
         <div class="content">
@@ -272,122 +459,10 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/Computer Organization & Architecture/summary/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/计算机组成原理/summary/#more">Read More</a>
                 </div>
             </div>
         </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-14T18:22:01.000Z">2018-12-15</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Computer-Organization-Architecture/">Computer Organization & Architecture</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    10 分钟 read (About 1460 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/Computer Organization & Architecture/MMX/">MMX课内实验</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a><strong>实验内容</strong></h1><p>使用普通和 MMX 技术实现淡入淡出效果，比较其时间花费。<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/Computer Organization & Architecture/MMX/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-09T16:00:11.000Z">2018-12-10</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/">Software Quality Assurance</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Software-Quality-Assurance/Individual-techniques/">Individual techniques</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 read (About 404 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/Software Quality Assurance/Individual techniques/11-structual testing/">11-structual testing</a>
-            
-        </h1>
-        <div class="content">
-            <a id="more"></a>
-<p><br></p>
-<ul>
-<li><h1 id="DD-path覆盖"><a href="#DD-path覆盖" class="headerlink" title="DD-path覆盖"></a><strong>DD-path覆盖</strong></h1><ul>
-<li>给定程序的一组测试用例，如果在程序上执行时，遍历程序图中的每个DD路径，则它们构成DD路径覆盖。<br><br></li>
-</ul>
-</li>
-<li><h1 id="branch覆盖"><a href="#branch覆盖" class="headerlink" title="branch覆盖"></a><strong>branch覆盖</strong></h1><ul>
-<li>给定程序的一组测试用例，如果在程序上执行时，遍历程序图中的决策（predicate）的每个分支（输出），则它们构成分支覆盖。<br><br></li>
-</ul>
-</li>
-<li><h1 id="path-coverage"><a href="#path-coverage" class="headerlink" title="path coverage"></a><strong>path coverage</strong></h1><ul>
-<li>给定程序的一组测试用例，如果在程序上执行时，遍历程序图中从源节点到汇聚节点的每条路径，则它们构成路径覆盖。<br><br></li>
-</ul>
-</li>
-<li><h1 id="node-coverage"><a href="#node-coverage" class="headerlink" title="node coverage"></a><strong>node coverage</strong></h1><ul>
-<li>如果在程序上执行时，遍历程序图中的每个节点，则它们构成节点覆盖。<br><br></li>
-</ul>
-</li>
-<li><h1 id="edge-coverage"><a href="#edge-coverage" class="headerlink" title="edge coverage"></a><strong>edge coverage</strong></h1><ul>
-<li>遍历程序图中的每个边，则它们构成边缘覆盖。<br><br><br><strong>语句覆盖</strong><br>使所有的判断语句都能执行一次的条件案例，例如当判断语句事组合语句的时候，并且用or连接，只满足一个案例即可<br><strong>判定覆盖（分支覆盖）</strong><br>针对判断语句，在设定案例的时候，要设定True和False的两种案例；与语句覆盖不同的是增加了False的情况<br><strong>条件覆盖</strong><br>针对判断语句里面案例的取值都要去一次，不考虑条件的取值<br><strong>判定/条件覆盖</strong><br>判定覆盖各条件覆盖交叉，针对于判定中的条件取值<br><strong>组合覆盖</strong><br>判定-条件覆盖的加强版 </li>
-</ul>
-</li>
-</ul>
-
-        </div>
-        
         
         
     </div>
@@ -402,10 +477,10 @@
 <div class="card card-transparent">
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
         <div class="pagination-previous">
-            <a class="is-flex-grow has-text-black-ter" href="/">Previous</a>
+            <a class="is-flex-grow has-text-black-ter" href="/">Sebelumnya</a>
         </div>
         <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/page/3/">Next</a>
+            <a class="is-flex-grow has-text-black-ter" href="/page/3/">Berikutnya</a>
         </div>
         <ul class="pagination-list is-hidden-mobile">
             
@@ -456,17 +531,17 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        pos
                     </p>
                     <p class="title has-text-weight-normal">
-                        33
+                        35
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        Kategori
                     </p>
                     <p class="title has-text-weight-normal">
                         10
@@ -476,7 +551,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        tag
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -486,7 +561,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
-                Follow</a>
+                IKUTI</a>
         </div>
         
         
@@ -535,7 +610,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Links
+            tautan
         </h3>
         <ul class="menu-list">
         
@@ -562,7 +637,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Kategori
             </h3>
             <ul class="menu-list">
             <li>
@@ -611,7 +686,7 @@
                 <span class="level-item">Python</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Software-Quality-Assurance/">
@@ -660,7 +735,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Terbaru
         </h3>
         
         <article class="media">
@@ -669,6 +744,19 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
                     <a href="/Python/note4/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/个人易错点/" class="has-link-black-ter is-size-6">个人易错点</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Python/">Python</a>
                     </p>
@@ -693,36 +781,23 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/循环中跳过异常/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:46:58.000Z">2019-04-01</time></div>
-                    <a href="/Python/note2/" class="has-link-black-ter is-size-6">cookie登录网页</a>
+                    <a href="/Python/cookie登录网页/" class="has-link-black-ter is-size-6">cookie登录网页</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Python/">Python</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:00:00.000Z">2019-04-01</time></div>
-                    <a href="/Python/note1/" class="has-link-black-ter is-size-6">文件逐行读入</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T00:00:01.000Z">2019-04-01</time></div>
-                    <a href="/Computer Network/classnote/" class="has-link-black-ter is-size-6">课堂笔记</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Computer-Network/">Computer Network</a>
                     </p>
                 </div>
             </div>
@@ -736,7 +811,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Arsip
         </h3>
         <ul class="menu-list">
         
@@ -746,7 +821,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -793,7 +868,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                tag
             </h3>
             <ul class="menu-list">
                 
@@ -817,7 +892,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Terbaru
         </h3>
         
         <article class="media">
@@ -826,6 +901,19 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
                     <a href="/Python/note4/" class="has-link-black-ter is-size-6">个人易错点</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
+                    <a href="/Python/个人易错点/" class="has-link-black-ter is-size-6">个人易错点</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Python/">Python</a>
                     </p>
@@ -850,36 +938,23 @@
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:53:46.000Z">2019-04-01</time></div>
+                    <a href="/Python/循环中跳过异常/" class="has-link-black-ter is-size-6">循环中跳过异常</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:46:58.000Z">2019-04-01</time></div>
-                    <a href="/Python/note2/" class="has-link-black-ter is-size-6">cookie登录网页</a>
+                    <a href="/Python/cookie登录网页/" class="has-link-black-ter is-size-6">cookie登录网页</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Python/">Python</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:00:00.000Z">2019-04-01</time></div>
-                    <a href="/Python/note1/" class="has-link-black-ter is-size-6">文件逐行读入</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T00:00:01.000Z">2019-04-01</time></div>
-                    <a href="/Computer Network/classnote/" class="has-link-black-ter is-size-6">课堂笔记</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Computer-Network/">Computer Network</a>
                     </p>
                 </div>
             </div>
@@ -893,7 +968,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Arsip
         </h3>
         <ul class="menu-list">
         
@@ -903,7 +978,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">7</span>
                 </span>
             </a>
         </li>
@@ -950,7 +1025,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                tag
             </h3>
             <ul class="menu-list">
                 
@@ -1095,7 +1170,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Tulis Sesuatu..">
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -1107,11 +1182,11 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: 'Pos',
+                PAGES: 'Halaman',
+                CATEGORIES: 'Kategori',
+                TAGS: 'Tag',
+                UNTITLED: 'Tanpa Judul',
             },
             CONTENT_URL: '/content.json',
         };
