@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>正规表达式与有限自动机 - Software Engineering Student XX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="预备知识字母表是一个非空有穷集合，通常用 ∑ 表示。字母表中的 ∑ 元素称为该字母表的 字符 character字符具有 整体性 monolith 和 可辨认性 distinguishable 字母表的运算 乘积 ∑1∑2 ＝{ab|a ∈ ∑1, b ∈ ∑2 }     幂 ∑0={ε},   ∑n= ∑n-1∑, n≥ 1。   ∑的正闭包(positive closure) ∑+=∑∪ ∑">
+<meta name="keywords" content="xjtusexx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正规表达式与有限自动机">
+<meta property="og:url" content="http://www.studentxiaoxin.top/编译原理/正规表达式与有限自动机/index.html">
+<meta property="og:site_name" content="Software Engineering Student XX">
+<meta property="og:description" content="预备知识字母表是一个非空有穷集合，通常用 ∑ 表示。字母表中的 ∑ 元素称为该字母表的 字符 character字符具有 整体性 monolith 和 可辨认性 distinguishable 字母表的运算 乘积 ∑1∑2 ＝{ab|a ∈ ∑1, b ∈ ∑2 }     幂 ∑0={ε},   ∑n= ∑n-1∑, n≥ 1。   ∑的正闭包(positive closure) ∑+=∑∪ ∑">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2019-04-05T07:42:06.298Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="正规表达式与有限自动机">
+<meta name="twitter:description" content="预备知识字母表是一个非空有穷集合，通常用 ∑ 表示。字母表中的 ∑ 元素称为该字母表的 字符 character字符具有 整体性 monolith 和 可辨认性 distinguishable 字母表的运算 乘积 ∑1∑2 ＝{ab|a ∈ ∑1, b ∈ ∑2 }     幂 ∑0={ε},   ∑n= ∑n-1∑, n≥ 1。   ∑的正闭包(positive closure) ∑+=∑∪ ∑">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="正规表达式与有限自动机" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/TangGiGi">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-01T11:53:33.000Z">2019-04-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 read (About 941 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                正规表达式与有限自动机
+            
+        </h1>
+        <div class="content">
+            <h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p>字母表是一个非空有穷集合，通常用 ∑ 表示。<br>字母表中的 ∑ 元素称为该字母表的 <strong>字符 character</strong><br>字符具有 <strong>整体性 monolith</strong> 和 <strong>可辨认性 distinguishable</strong></p>
+<h1 id="字母表的运算"><a href="#字母表的运算" class="headerlink" title="字母表的运算"></a>字母表的运算</h1><ul>
+<li>乘积<ul>
+<li>∑<sub>1</sub>∑<sub>2</sub> ＝{ab|a ∈ ∑<sub>1</sub>, b ∈ ∑<sub>2</sub> }  </li>
+</ul>
+</li>
+<li>幂<ul>
+<li>∑<sup>0</sup>={ε},   ∑<sup>n</sup>= ∑<sup>n-1</sup>∑, n≥ 1。</li>
+</ul>
+</li>
+<li>∑的正闭包(positive closure)<ul>
+<li>∑<sup>+</sup>=∑∪ ∑<sup>2</sup>∪ ∑<sup>3</sup>∪ ∑<sup>4</sup>∪…</li>
+</ul>
+</li>
+<li>∑的克林闭包(Kleene closure)<ul>
+<li>∑<sup>*</sup>= ∑<sup>0</sup>∪ ∑∪ ∑<sup>2</sup>∪ ∑<sup>3</sup>∪… = ∑<sup>0</sup> ∪ ∑<sup>+</sup>= {ε} ∪ ∑<sup>+</sup></li>
+</ul>
+</li>
+<li>句子<ul>
+<li>对于任何x∈∑*，x即∑上的一个句子(sentence)</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h1 id="确定有限自动机-DFA"><a href="#确定有限自动机-DFA" class="headerlink" title="确定有限自动机 DFA"></a>确定有限自动机 DFA</h1><ul>
+<li>一个确定有限自动机(DFA)M是一个五元式:M ＝ (S,∑,δ,s<sub>0</sub> ,F) ，其中</li>
+<li>S是一个有限集，它的每个元素称为一个状态。</li>
+<li>∑是一个有穷字母表，它的每个元素称为一个输入字符。</li>
+<li><strong>δ是一个从S×∑至S的单值部分映射。 δ(s,a)=s´意味着：当现行状态为s、输入字符为a时，将转换到下一状态s´。我们称s´为s的一个后继状态。</strong></li>
+<li><strong>s<sub>0</sub>∈S是唯一的初态。</strong></li>
+<li>F属于S是一个终态集（可空）。</li>
+</ul>
+<h1 id="非确定有限自动机-NFA"><a href="#非确定有限自动机-NFA" class="headerlink" title="非确定有限自动机 NFA"></a>非确定有限自动机 NFA</h1><ul>
+<li>一个非确定有限自动机（NFA） M是一个五元式：M ＝ (S,∑,δ,S<sub>0</sub> ,F) ，其中：</li>
+<li>S是一个有限集，它的每个元素称为一个状态。</li>
+<li>∑是一个有穷字母表，它的每个元素称为一个输入字符。</li>
+<li><strong>δ是一个从S×∑<sup>*</sup>至S的子集的映射，即δ:S×∑<sup>*</sup> → 2<sup>s</sup></strong></li>
+<li><strong>S<sub>0</sub>属于S是一个非空初态集</strong></li>
+<li>F属于S是一个终态集（可空）</li>
+</ul>
+<h1 id="NFA确定化"><a href="#NFA确定化" class="headerlink" title="NFA确定化"></a>NFA确定化</h1><p><strong>DFA是NFA的特例</strong>，可以采用<strong>子集法</strong>将NFA确定化</p>
+<h2 id="ε-CLOSURE-I-的定义"><a href="#ε-CLOSURE-I-的定义" class="headerlink" title="ε_CLOSURE(I)的定义"></a>ε_CLOSURE(I)的定义</h2><ul>
+<li>假定I是NFA M的状态集的一个子集，  我们定义ε_CLOSURE(I)为：<ul>
+<li>若s∈I，则s∈ ε_CLOSURE(I)</li>
+<li>若s∈I，那么从s出发经过任意条ε弧而能到达的任何状态s’都属于ε_CLOSURE(I)</li>
+</ul>
+</li>
+<li>状态集ε_CLOSURE(I)称为I的ε_闭包。</li>
+</ul>
+<h2 id="Ia定义"><a href="#Ia定义" class="headerlink" title="Ia定义"></a>Ia定义</h2><ul>
+<li>假定 I 是NFA M的状态集的子集，a ∈ ∑ ,定义 Ia=ε_CLOSURE(J)</li>
+<li>其中，J是那些可从I中的某一状态结点出发经过一条a弧而到达的状态结点的全体。</li>
+</ul>
+<h2 id="子集算法"><a href="#子集算法" class="headerlink" title="子集算法"></a>子集算法</h2><ol>
+<li>表的初始化构造<ul>
+<li>∑={ a1,a2,…,ak }。先构造一张表，该表每一行含有k+1列。置该表的首行首列为ε_CLOSURE(X)</li>
+</ul>
+</li>
+<li>处理表的一行<ul>
+<li>如果某一行的第一列的状态子集已经确定，例如记为I,那么，求出这一行的第二个和第三个子集Ia和Ib看它们是否已 在表的第一列出现，将未出现的填入到后面空行的第一列。</li>
+</ul>
+</li>
+<li>重复处理<ul>
+<li>重复上述过程，直至所有<strong>第二列</strong>和<strong>第三列</strong>的<strong>子集</strong>均已在<strong>第一列</strong>上出现了为止。</li>
+</ul>
+</li>
+</ol>
+<h1 id="DFA的化简"><a href="#DFA的化简" class="headerlink" title="DFA的化简"></a>DFA的化简</h1><p>一个确定有限自动机M的化简是指：寻找一个状态数比M少的DFA M’，使得L(M)=L(M’)。一个DFA M的<strong>状态最少化</strong>过程旨在将M的状态集分割成一些<strong>不相交的子集</strong>，使得任何不同的两个子集中的状态都是可区别的，而同一子集中的任何两个状态都是等价的。最后，在每个子集中选出一个代表，同时<strong>消去</strong>其它等价状态。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/编译原理/课堂笔记-3上下文无关文法/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">课堂笔记-3上下文无关文法</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/编译原理/代码实现-词法分析/">
+                <span class="level-item">代码实现-词法分析</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/cat1.jpg" alt="PickleXin">
+                    
+                    <p class="is-size-4 is-block">
+                        PickleXin
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>陕西 西安</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Entradas
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        39
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categorias
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        11
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Etiquetas
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
+                SEGUIR</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/TangGiGi">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://www.google.com/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Google</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">https://www.google.com/</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categorias
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Android/">
+            <span class="level-start">
+                <span class="level-item">Android</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Linux/">
+            <span class="level-start">
+                <span class="level-item">Linux</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Linux/课堂笔记/">
+            <span class="level-start">
+                <span class="level-item">课堂笔记</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Python/">
+            <span class="level-start">
+                <span class="level-item">Python</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/实训/">
+            <span class="level-start">
+                <span class="level-item">实训</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/编译原理/">
+            <span class="level-start">
+                <span class="level-item">编译原理</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/计算机组成原理/">
+            <span class="level-start">
+                <span class="level-item">计算机组成原理</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/计算机网络/">
+            <span class="level-start">
+                <span class="level-item">计算机网络</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/软件质量保证/">
+            <span class="level-start">
+                <span class="level-item">软件质量保证</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">17</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/软件质量保证/Individual-techniques/">
+            <span class="level-start">
+                <span class="level-item">Individual techniques</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">11</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/软件质量保证/课堂笔记/">
+            <span class="level-start">
+                <span class="level-item">课堂笔记</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recientes
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T00:10:51.000Z">2019-04-04</time></div>
+                    <a href="/编译原理/课堂笔记-4语法分析/" class="has-link-black-ter is-size-6">课堂笔记-4语法分析</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-02T02:24:57.000Z">2019-04-02</time></div>
+                    <a href="/编译原理/课堂笔记-3上下文无关文法/" class="has-link-black-ter is-size-6">课堂笔记-3上下文无关文法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:53:33.000Z">2019-04-01</time></div>
+                    <a href="/编译原理/正规表达式与有限自动机/" class="has-link-black-ter is-size-6">正规表达式与有限自动机</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:49:32.000Z">2019-04-01</time></div>
+                    <a href="/编译原理/代码实现-词法分析/" class="has-link-black-ter is-size-6">代码实现-词法分析</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:23:41.000Z">2019-04-01</time></div>
+                    <a href="/编译原理/课堂笔记-2词法分析/" class="has-link-black-ter is-size-6">课堂笔记-2词法分析</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archivos
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">11</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">25</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Etiquetas
+            </h3>
+            <ul class="menu-list">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recientes
+        </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T00:10:51.000Z">2019-04-04</time></div>
+                    <a href="/编译原理/课堂笔记-4语法分析/" class="has-link-black-ter is-size-6">课堂笔记-4语法分析</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-02T02:24:57.000Z">2019-04-02</time></div>
+                    <a href="/编译原理/课堂笔记-3上下文无关文法/" class="has-link-black-ter is-size-6">课堂笔记-3上下文无关文法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:53:33.000Z">2019-04-01</time></div>
+                    <a href="/编译原理/正规表达式与有限自动机/" class="has-link-black-ter is-size-6">正规表达式与有限自动机</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:49:32.000Z">2019-04-01</time></div>
+                    <a href="/编译原理/代码实现-词法分析/" class="has-link-black-ter is-size-6">代码实现-词法分析</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:23:41.000Z">2019-04-01</time></div>
+                    <a href="/编译原理/课堂笔记-2词法分析/" class="has-link-black-ter is-size-6">课堂笔记-2词法分析</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archivos
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">11</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">25</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Etiquetas
+            </h3>
+            <ul class="menu-list">
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="正规表达式与有限自动机" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 肖鑫&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh_CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Entradas',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

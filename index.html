@@ -135,6 +135,105 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-04T00:10:51.000Z">2019-04-04</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 read (About 394 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/编译原理/课堂笔记-4语法分析/">课堂笔记-4语法分析</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="本章内容"><a href="#本章内容" class="headerlink" title="本章内容"></a>本章内容</h1><p>语法分析的任务与分类<br>自上而下分析面临的问题<br>递归下降分析程序构造<br>预测分析程序<br>LL(1)文法</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/编译原理/课堂笔记-4语法分析/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-02T02:24:57.000Z">2019-04-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 read (About 279 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/编译原理/课堂笔记-3上下文无关文法/">课堂笔记-3上下文无关文法</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><ul>
+<li>对语言的语法结构进行形式描述</li>
+<li>从形式描述中,研究语法分析其的构造.(算符优先分析法,递归子程序分析法)</li>
+</ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/编译原理/课堂笔记-3上下文无关文法/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-04-01T11:53:33.000Z">2019-04-01</time>
                 
                 <div class="level-item">
@@ -145,7 +244,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 read (About 1 words)
+                    6 分钟 read (About 941 words)
                 </span>
                 
             </div>
@@ -153,13 +252,43 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/编译原理/正规表达式与有限自动机预备知识/">正规表达式与有限自动机预备知识</a>
+                <a class="has-link-black-ter" href="/编译原理/正规表达式与有限自动机/">正规表达式与有限自动机</a>
             
         </h1>
         <div class="content">
-            <a id="more"></a>
+            <h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p>字母表是一个非空有穷集合，通常用 ∑ 表示。<br>字母表中的 ∑ 元素称为该字母表的 <strong>字符 character</strong><br>字符具有 <strong>整体性 monolith</strong> 和 <strong>可辨认性 distinguishable</strong></p>
+<h1 id="字母表的运算"><a href="#字母表的运算" class="headerlink" title="字母表的运算"></a>字母表的运算</h1><ul>
+<li>乘积<ul>
+<li>∑<sub>1</sub>∑<sub>2</sub> ＝{ab|a ∈ ∑<sub>1</sub>, b ∈ ∑<sub>2</sub> }  </li>
+</ul>
+</li>
+<li>幂<ul>
+<li>∑<sup>0</sup>={ε},   ∑<sup>n</sup>= ∑<sup>n-1</sup>∑, n≥ 1。</li>
+</ul>
+</li>
+<li>∑的正闭包(positive closure)<ul>
+<li>∑<sup>+</sup>=∑∪ ∑<sup>2</sup>∪ ∑<sup>3</sup>∪ ∑<sup>4</sup>∪…</li>
+</ul>
+</li>
+<li>∑的克林闭包(Kleene closure)<ul>
+<li>∑<sup>*</sup>= ∑<sup>0</sup>∪ ∑∪ ∑<sup>2</sup>∪ ∑<sup>3</sup>∪… = ∑<sup>0</sup> ∪ ∑<sup>+</sup>= {ε} ∪ ∑<sup>+</sup></li>
+</ul>
+</li>
+<li>句子<ul>
+<li>对于任何x∈∑*，x即∑上的一个句子(sentence)</li>
+</ul>
+</li>
+</ul>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/编译原理/正规表达式与有限自动机/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -233,7 +362,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/编译原理/课堂笔记-词法分析/">课堂笔记-词法分析</a>
+                <a class="has-link-black-ter" href="/编译原理/课堂笔记-2词法分析/">课堂笔记-2词法分析</a>
             
         </h1>
         <div class="content">
@@ -248,99 +377,10 @@
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/编译原理/课堂笔记-词法分析/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/编译原理/课堂笔记-2词法分析/#more">Read More</a>
                 </div>
             </div>
         </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-01T10:59:32.000Z">2019-04-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 read (About 649 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/编译原理/课堂笔记-引论/">课堂笔记-引论</a>
-            
-        </h1>
-        <div class="content">
-            <h1 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h1><h2 id="编译理论应用"><a href="#编译理论应用" class="headerlink" title="编译理论应用"></a>编译理论应用</h2><p><img src="/img/编译原理/1.png" alt=""><br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/编译原理/课堂笔记-引论/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Python/">Python</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 read (About 18 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/Python/个人易错点/">个人易错点</a>
-            
-        </h1>
-        <div class="content">
-            <p>#判断是否为None<br><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span>(flag <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>):</span><br><span class="line">  doSomething()</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span>(<span class="hljs-keyword">not</span>(flag <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>)):</span><br><span class="line">  doSomething()</span><br></pre></td></tr></table></figure></p>
-
-        </div>
-        
         
         
     </div>
@@ -355,10 +395,10 @@
 <div class="card card-transparent">
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
         <div class="pagination-previous is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/page/0/">Previous</a>
+            <a class="is-flex-grow has-text-black-ter" href="/page/0/">Anterior</a>
         </div>
         <div class="pagination-next">
-            <a class="is-flex-grow has-text-black-ter" href="/page/2/">Next</a>
+            <a class="is-flex-grow has-text-black-ter" href="/page/2/">Siguiente</a>
         </div>
         <ul class="pagination-list is-hidden-mobile">
             
@@ -407,17 +447,17 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        Entradas
                     </p>
                     <p class="title has-text-weight-normal">
-                        37
+                        39
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        Categorias
                     </p>
                     <p class="title has-text-weight-normal">
                         11
@@ -427,7 +467,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Etiquetas
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -437,7 +477,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://github.com/TangGiGi">
-                Follow</a>
+                SEGUIR</a>
         </div>
         
         
@@ -513,7 +553,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Categorias
             </h3>
             <ul class="menu-list">
             <li>
@@ -562,7 +602,7 @@
                 <span class="level-item">编译原理</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/计算机组成原理/">
@@ -619,15 +659,41 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T00:10:51.000Z">2019-04-04</time></div>
+                    <a href="/编译原理/课堂笔记-4语法分析/" class="has-link-black-ter is-size-6">课堂笔记-4语法分析</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-02T02:24:57.000Z">2019-04-02</time></div>
+                    <a href="/编译原理/课堂笔记-3上下文无关文法/" class="has-link-black-ter is-size-6">课堂笔记-3上下文无关文法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:53:33.000Z">2019-04-01</time></div>
-                    <a href="/编译原理/正规表达式与有限自动机预备知识/" class="has-link-black-ter is-size-6">正规表达式与有限自动机预备知识</a>
+                    <a href="/编译原理/正规表达式与有限自动机/" class="has-link-black-ter is-size-6">正规表达式与有限自动机</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
                     </p>
@@ -653,35 +719,9 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:23:41.000Z">2019-04-01</time></div>
-                    <a href="/编译原理/课堂笔记-词法分析/" class="has-link-black-ter is-size-6">课堂笔记-词法分析</a>
+                    <a href="/编译原理/课堂笔记-2词法分析/" class="has-link-black-ter is-size-6">课堂笔记-2词法分析</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T10:59:32.000Z">2019-04-01</time></div>
-                    <a href="/编译原理/课堂笔记-引论/" class="has-link-black-ter is-size-6">课堂笔记-引论</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
-                    <a href="/Python/个人易错点/" class="has-link-black-ter is-size-6">个人易错点</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
                     </p>
                 </div>
             </div>
@@ -695,7 +735,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -705,7 +745,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">9</span>
+                    <span class="level-item tag">11</span>
                 </span>
             </a>
         </li>
@@ -752,7 +792,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
                 
@@ -776,15 +816,41 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
             <div class="media-content">
                 <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-04T00:10:51.000Z">2019-04-04</time></div>
+                    <a href="/编译原理/课堂笔记-4语法分析/" class="has-link-black-ter is-size-6">课堂笔记-4语法分析</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-02T02:24:57.000Z">2019-04-02</time></div>
+                    <a href="/编译原理/课堂笔记-3上下文无关文法/" class="has-link-black-ter is-size-6">课堂笔记-3上下文无关文法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:53:33.000Z">2019-04-01</time></div>
-                    <a href="/编译原理/正规表达式与有限自动机预备知识/" class="has-link-black-ter is-size-6">正规表达式与有限自动机预备知识</a>
+                    <a href="/编译原理/正规表达式与有限自动机/" class="has-link-black-ter is-size-6">正规表达式与有限自动机</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
                     </p>
@@ -810,35 +876,9 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T11:23:41.000Z">2019-04-01</time></div>
-                    <a href="/编译原理/课堂笔记-词法分析/" class="has-link-black-ter is-size-6">课堂笔记-词法分析</a>
+                    <a href="/编译原理/课堂笔记-2词法分析/" class="has-link-black-ter is-size-6">课堂笔记-2词法分析</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T10:59:32.000Z">2019-04-01</time></div>
-                    <a href="/编译原理/课堂笔记-引论/" class="has-link-black-ter is-size-6">课堂笔记-引论</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/编译原理/">编译原理</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-01T04:57:57.000Z">2019-04-01</time></div>
-                    <a href="/Python/个人易错点/" class="has-link-black-ter is-size-6">个人易错点</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
                     </p>
                 </div>
             </div>
@@ -852,7 +892,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -862,7 +902,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">9</span>
+                    <span class="level-item tag">11</span>
                 </span>
             </a>
         </li>
@@ -909,7 +949,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
                 
@@ -1066,10 +1106,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Entradas',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',

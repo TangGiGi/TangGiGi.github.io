@@ -3,11 +3,45 @@
   
     
     <entry>
-      <title>正规表达式与有限自动机预备知识</title>
-      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E6%AD%A3%E8%A7%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E6%9C%89%E9%99%90%E8%87%AA%E5%8A%A8%E6%9C%BA%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/"/>
-      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E6%AD%A3%E8%A7%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E6%9C%89%E9%99%90%E8%87%AA%E5%8A%A8%E6%9C%BA%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
+      <title>课堂笔记-4语法分析</title>
+      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-4%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/"/>
+      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-4%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/</url>
       
-        <content type="html"><![CDATA[<a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h1 id="本章内容"><a href="#本章内容" class="headerlink" title="本章内容"></a>本章内容</h1><p>语法分析的任务与分类<br>自上而下分析面临的问题<br>递归下降分析程序构造<br>预测分析程序<br>LL(1)文法</p><a id="more"></a><h1 id="语法分析的任务与分类"><a href="#语法分析的任务与分类" class="headerlink" title="语法分析的任务与分类"></a>语法分析的任务与分类</h1><ul><li>任务</li><li><p>对任一给定 w ∈ V<sub>T</sub><sup>*</sup>，判断 w ∈ L（G）</p></li><li><p>分类</p></li><li>自下而上     自上而下</li></ul><h1 id="自上而下分析面临的问题"><a href="#自上而下分析面临的问题" class="headerlink" title="自上而下分析面临的问题"></a>自上而下分析面临的问题</h1><ul><li>文法的左递归</li><li>回溯</li><li>使用候选式的顺序会影响所接受的语言<ul><li>如：A —＞ ab|a 改为 A —＞ a|ab </li></ul></li><li>难以报告出错的确切位置</li><li>穷举试探法——低效的分析方法</li></ul><h1 id="自上而下分析的问题如何解决"><a href="#自上而下分析的问题如何解决" class="headerlink" title="自上而下分析的问题如何解决"></a>自上而下分析的问题如何解决</h1><h2 id="消除文法的左递归"><a href="#消除文法的左递归" class="headerlink" title="消除文法的左递归"></a>消除文法的左递归</h2><ul><li>三种类型的左递归</li><li>直接左递归<ul><li>N -&gt; Nα</li></ul></li><li>间接递归<ul><li>N-&gt;Aα    A-&gt;Bβ    B-&gt;Nγ</li></ul></li><li>潜在左递归<ul><li>N-&gt;αNβ    α经过1次或多次推导ε</li></ul></li><li>直接左递归消除方法</li><li>若：A —＞ Aα|β ，其中β不以A开头,则修改规则为：A —＞ βA′ A′—＞ αA′|ε</li><li>间接和潜在左递归消除方法</li><li>代入法</li><li>消除一个文法一切左递归的算法<ul><li>对文法G的所有非终结符进行排序；</li><li>按上述顺序对每一个非终结符Pi依次执行:</li><li>for( j=1； j&lt; i-1；j++)</li><li>将Pj代入Pi的产生式（若可代入的话）；</li><li>消除关于Pi的直接左递归；    </li><li>化简上述所得文法。</li></ul></li></ul><h2 id="克服回溯问题"><a href="#克服回溯问题" class="headerlink" title="克服回溯问题"></a>克服回溯问题</h2><ul><li>回溯原因</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译原理 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>课堂笔记-3上下文无关文法</title>
+      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-3%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E6%96%87%E6%B3%95/"/>
+      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-3%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E6%96%87%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><ul><li>对语言的语法结构进行形式描述</li><li>从形式描述中,研究语法分析其的构造.(算符优先分析法,递归子程序分析法)</li></ul><a id="more"></a><h1 id="文法-grammar"><a href="#文法-grammar" class="headerlink" title="文法 grammar"></a>文法 grammar</h1><p><strong>文法</strong>是描述语言的语法结构的形式规则<br>文法的描述要求 : 形式上严格、准确;易于理解;具有较强的描述能力;有利于句子的分析和翻译，构造语法分析器。</p><ul><li>文化分类:</li><li>0型文法 短语文法</li><li>1型文法 上下文有关文法</li><li><strong>2型文法 上下文无关文法</strong></li><li>3型文法 正规文法</li></ul><h1 id="上下文无关文法的形式化描述"><a href="#上下文无关文法的形式化描述" class="headerlink" title="上下文无关文法的形式化描述"></a>上下文无关文法的形式化描述</h1><ul><li>一个上下文无关文法G是一个四元式(VT,VN,S,P)</li><li>VN：是非空有限集，它的每个元素是非终结符号</li><li>VT：是非空有限集，它的每个元素是终结符号;</li><li>S：S∈VN，称为开始符号;</li><li>P ：产生式集合（有限），每个产生式形式是 { P-&gt;α| P∈VN， α∈(VT∪VN)*，S至少一次为P };</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译原理 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>正规表达式与有限自动机</title>
+      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E6%AD%A3%E8%A7%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E6%9C%89%E9%99%90%E8%87%AA%E5%8A%A8%E6%9C%BA/"/>
+      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E6%AD%A3%E8%A7%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E6%9C%89%E9%99%90%E8%87%AA%E5%8A%A8%E6%9C%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p>字母表是一个非空有穷集合，通常用 ∑ 表示。<br>字母表中的 ∑ 元素称为该字母表的 <strong>字符 character</strong><br>字符具有 <strong>整体性 monolith</strong> 和 <strong>可辨认性 distinguishable</strong></p><h1 id="字母表的运算"><a href="#字母表的运算" class="headerlink" title="字母表的运算"></a>字母表的运算</h1><ul><li>乘积<ul><li>∑<sub>1</sub>∑<sub>2</sub> ＝{ab|a ∈ ∑<sub>1</sub>, b ∈ ∑<sub>2</sub> }  </li></ul></li><li>幂<ul><li>∑<sup>0</sup>={ε},   ∑<sup>n</sup>= ∑<sup>n-1</sup>∑, n≥ 1。</li></ul></li><li>∑的正闭包(positive closure)<ul><li>∑<sup>+</sup>=∑∪ ∑<sup>2</sup>∪ ∑<sup>3</sup>∪ ∑<sup>4</sup>∪…</li></ul></li><li>∑的克林闭包(Kleene closure)<ul><li>∑<sup>*</sup>= ∑<sup>0</sup>∪ ∑∪ ∑<sup>2</sup>∪ ∑<sup>3</sup>∪… = ∑<sup>0</sup> ∪ ∑<sup>+</sup>= {ε} ∪ ∑<sup>+</sup></li></ul></li><li>句子<ul><li>对于任何x∈∑*，x即∑上的一个句子(sentence)</li></ul></li></ul><a id="more"></a><h1 id="确定有限自动机-DFA"><a href="#确定有限自动机-DFA" class="headerlink" title="确定有限自动机 DFA"></a>确定有限自动机 DFA</h1><ul><li>一个确定有限自动机(DFA)M是一个五元式:M ＝ (S,∑,δ,s<sub>0</sub> ,F) ，其中</li><li>S是一个有限集，它的每个元素称为一个状态。</li><li>∑是一个有穷字母表，它的每个元素称为一个输入字符。</li><li><strong>δ是一个从S×∑至S的单值部分映射。 δ(s,a)=s´意味着：当现行状态为s、输入字符为a时，将转换到下一状态s´。我们称s´为s的一个后继状态。</strong></li><li><strong>s<sub>0</sub>∈S是唯一的初态。</strong></li><li>F属于S是一个终态集（可空）。</li></ul><h1 id="非确定有限自动机-NFA"><a href="#非确定有限自动机-NFA" class="headerlink" title="非确定有限自动机 NFA"></a>非确定有限自动机 NFA</h1><ul><li>一个非确定有限自动机（NFA） M是一个五元式：M ＝ (S,∑,δ,S<sub>0</sub> ,F) ，其中：</li><li>S是一个有限集，它的每个元素称为一个状态。</li><li>∑是一个有穷字母表，它的每个元素称为一个输入字符。</li><li><strong>δ是一个从S×∑<sup>*</sup>至S的子集的映射，即δ:S×∑<sup>*</sup> → 2<sup>s</sup></strong></li><li><strong>S<sub>0</sub>属于S是一个非空初态集</strong></li><li>F属于S是一个终态集（可空）</li></ul><h1 id="NFA确定化"><a href="#NFA确定化" class="headerlink" title="NFA确定化"></a>NFA确定化</h1><p><strong>DFA是NFA的特例</strong>，可以采用<strong>子集法</strong>将NFA确定化</p><h2 id="ε-CLOSURE-I-的定义"><a href="#ε-CLOSURE-I-的定义" class="headerlink" title="ε_CLOSURE(I)的定义"></a>ε_CLOSURE(I)的定义</h2><ul><li>假定I是NFA M的状态集的一个子集，  我们定义ε_CLOSURE(I)为：<ul><li>若s∈I，则s∈ ε_CLOSURE(I)</li><li>若s∈I，那么从s出发经过任意条ε弧而能到达的任何状态s’都属于ε_CLOSURE(I)</li></ul></li><li>状态集ε_CLOSURE(I)称为I的ε_闭包。</li></ul><h2 id="Ia定义"><a href="#Ia定义" class="headerlink" title="Ia定义"></a>Ia定义</h2><ul><li>假定 I 是NFA M的状态集的子集，a ∈ ∑ ,定义 Ia=ε_CLOSURE(J)</li><li>其中，J是那些可从I中的某一状态结点出发经过一条a弧而到达的状态结点的全体。</li></ul><h2 id="子集算法"><a href="#子集算法" class="headerlink" title="子集算法"></a>子集算法</h2><ol><li>表的初始化构造<ul><li>∑={ a1,a2,…,ak }。先构造一张表，该表每一行含有k+1列。置该表的首行首列为ε_CLOSURE(X)</li></ul></li><li>处理表的一行<ul><li>如果某一行的第一列的状态子集已经确定，例如记为I,那么，求出这一行的第二个和第三个子集Ia和Ib看它们是否已 在表的第一列出现，将未出现的填入到后面空行的第一列。</li></ul></li><li>重复处理<ul><li>重复上述过程，直至所有<strong>第二列</strong>和<strong>第三列</strong>的<strong>子集</strong>均已在<strong>第一列</strong>上出现了为止。</li></ul></li></ol><h1 id="DFA的化简"><a href="#DFA的化简" class="headerlink" title="DFA的化简"></a>DFA的化简</h1><p>一个确定有限自动机M的化简是指：寻找一个状态数比M少的DFA M’，使得L(M)=L(M’)。一个DFA M的<strong>状态最少化</strong>过程旨在将M的状态集分割成一些<strong>不相交的子集</strong>，使得任何不同的两个子集中的状态都是可区别的，而同一子集中的任何两个状态都是等价的。最后，在每个子集中选出一个代表，同时<strong>消去</strong>其它等价状态。</p>]]></content>
       
       
       <categories>
@@ -37,9 +71,9 @@
     </entry>
     
     <entry>
-      <title>课堂笔记-词法分析</title>
-      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/"/>
-      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/</url>
+      <title>课堂笔记-2词法分析</title>
+      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-2%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/"/>
+      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-2%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90/</url>
       
         <content type="html"><![CDATA[<h1 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h1><ul><li><strong>任务</strong> : 从左至右逐个字符地扫描源程序，产生一个个的<strong>单词符号</strong>，把作为字符串的源程序改造成为单词符号串的<strong>中间程序</strong>。 </li><li><strong>输入</strong> : 源程序</li><li><strong>输出</strong> : 单词符号={ 关键字 , 标识符 , 常数 , 运算符 , 界符 }</li></ul><a id="more"></a><h2 id="把词法分析从语法分析中脱离出来的优点"><a href="#把词法分析从语法分析中脱离出来的优点" class="headerlink" title="把词法分析从语法分析中脱离出来的优点"></a>把词法分析从语法分析中脱离出来的<strong>优点</strong></h2><ul><li>使编译程序的结构更加<strong>简洁</strong>、<strong>清晰</strong>和<strong>条理化</strong>。</li><li>词法分析和语法<strong>分析方法不同</strong>，词法分析可以使用正则文法自动构造scanner</li><li>有利于提高语法分析的<strong>效率</strong></li><li>可以改善词法分析的细节，甚至于一个语法分析配几个scanner，把不同的输入变成一种内部表示。</li></ul><h2 id="词法分析器的设计"><a href="#词法分析器的设计" class="headerlink" title="词法分析器的设计"></a>词法分析器的设计</h2><p>1.预处理 2.单词符号的识别(超前搜索) 3.状态转换图 4.状态转换图的实现 </p><h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><ul><li><strong>必要性</strong> : 编辑性字符如空白符、回车符等，除了出现在文字常数中以外，在别处出现都没有意义</li><li><strong>功能</strong> : 剔出无用字符</li><li><strong>实现</strong> : 预处理子程序</li></ul><h2 id="超前搜索"><a href="#超前搜索" class="headerlink" title="超前搜索"></a>超前搜索</h2><ul><li>标识符的识别</li><li>常数的识别</li><li>算符和界符的识别</li></ul><h2 id="状态转换图"><a href="#状态转换图" class="headerlink" title="状态转换图"></a>状态转换图</h2><ul><li><strong>功能</strong> : 用于识别一定的字符串</li><li><strong>初态</strong> : 圆圈表示</li><li><strong>终态</strong> : 双圈表示</li><li>* : 表示多读进了一个字符</li></ul><h2 id="状态转换图的实现"><a href="#状态转换图的实现" class="headerlink" title="状态转换图的实现"></a>状态转换图的实现</h2><p>详见代码实现</p>]]></content>
       
@@ -54,9 +88,9 @@
     </entry>
     
     <entry>
-      <title>课堂笔记-引论</title>
-      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%BC%95%E8%AE%BA/"/>
-      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E5%BC%95%E8%AE%BA/</url>
+      <title>课堂笔记-1引论</title>
+      <link href="/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-1%E5%BC%95%E8%AE%BA/"/>
+      <url>/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-1%E5%BC%95%E8%AE%BA/</url>
       
         <content type="html"><![CDATA[<h1 id="引论"><a href="#引论" class="headerlink" title="引论"></a>引论</h1><h2 id="编译理论应用"><a href="#编译理论应用" class="headerlink" title="编译理论应用"></a>编译理论应用</h2><p><img src="/img/编译原理/1.png" alt=""><br><a id="more"></a></p><h2 id="翻译程序"><a href="#翻译程序" class="headerlink" title="翻译程序"></a>翻译程序</h2><ul><li><strong>翻译程序</strong>={<strong>输入</strong>:某语言,<strong>输出</strong>:另外一种语言}</li></ul><h2 id="编译程序"><a href="#编译程序" class="headerlink" title="编译程序"></a>编译程序</h2><ul><li><strong>编译程序</strong>={<strong>输入</strong>:高级语言源程序,<strong>输出</strong>:面向机器的代码}</li><li><strong>面向机器的代码</strong>还可能要由<strong>汇编程序</strong>或<strong>装配程序</strong>作进一步加工，得出目标程序，交给计算机执行。</li></ul><h2 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h2><p>1.词法分析 2.语法分析 3.中间代码生成 4.代码优化 5.目标代码生成</p><h2 id="1-词法分析"><a href="#1-词法分析" class="headerlink" title="1.词法分析"></a>1.词法分析</h2><ul><li>任务 : 输入源程序、扫描、分解字符串，识别出一个个单词（定义符、标识符、运算符、界符、常数）。</li><li><strong>输入</strong> : 源程序字符串</li><li><strong>输出</strong> : 单词符号</li><li>依据 : 构词规则</li><li>主要理论基础 : 自动机理论</li></ul><h2 id="2-语法分析"><a href="#2-语法分析" class="headerlink" title="2.语法分析"></a>2.语法分析</h2><ul><li>任务 : 在词法分析基础上，将单词符号串转化为语法单位（语法范畴）（短语、子句、句子、程序段、程序），并确定整个输入串是否构成语法上正确的程序。</li><li><strong>输入</strong> : 单词符号</li><li><strong>输出</strong> : 语法单位</li><li>依据 : 语法规则</li><li>主要理论基础 : 上下文无关文法</li></ul><h2 id="3-中间代码生成"><a href="#3-中间代码生成" class="headerlink" title="3.中间代码生成"></a>3.中间代码生成</h2><ul><li>任务 : 对语法分析所识别出的各类语法范畴，分析其含义，并进行初步翻译（产生中间代码）</li><li><strong>输入</strong> : 语法单位</li><li><strong>输出</strong> : 中间代码</li><li>依据 : 语义规则</li><li>主要理论基础 : 属性文法</li></ul><h2 id="4-代码优化"><a href="#4-代码优化" class="headerlink" title="4.代码优化"></a>4.代码优化</h2><ul><li>任务 : 对于代码（主要是中间代码）进行加工变换，以期能够产生更为高效（省时间和空间）的目标代码　</li><li><strong>输入</strong> : 中间代码</li><li><strong>输出</strong> : 优化后的中间代码</li><li>依据 : 程序等价变换规则</li><li>主要理论基础 : 数据流方程</li></ul><h2 id="5-目标代码生成"><a href="#5-目标代码生成" class="headerlink" title="5.目标代码生成"></a>5.目标代码生成</h2><ul><li>任务 : 将中间代码变换成特定机器上的低级语言代码</li><li><strong>输入</strong> : 中间代码</li><li><strong>输出</strong> : 目标代码</li><li>依据 : 硬件体系结构、指令系统</li></ul><h2 id="表格与表格管理"><a href="#表格与表格管理" class="headerlink" title="表格与表格管理"></a>表格与表格管理</h2><ul><li>编译各阶段均须维持表格并进行表格管理。</li><li>建表的技术支持是数据结构。</li><li>表格的分类、结构、处理方法决定于语言及机器，还有优化措施。</li></ul><h1 id="遍"><a href="#遍" class="headerlink" title="遍"></a>遍</h1><ul><li>是对源程序或源程序的中间结果<strong>从头到尾扫描一次</strong>，并作有关的<strong>加工处理</strong>，生成新的<strong>中间结果</strong>或<strong>目标程序</strong></li></ul><h1 id="T型图"><a href="#T型图" class="headerlink" title="T型图"></a>T型图</h1>]]></content>
       
@@ -139,9 +173,9 @@
     </entry>
     
     <entry>
-      <title>课堂笔记</title>
-      <link href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
-      <url>/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/</url>
+      <title>课堂笔记-计网</title>
+      <link href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E8%AE%A1%E7%BD%91/"/>
+      <url>/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0-%E8%AE%A1%E7%BD%91/</url>
       
         <content type="html"><![CDATA[<h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a><strong>Chapter 1</strong></h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul><li>modem 调制解调器</li><li>network of networks 网间网</li><li>protocols={format,order,actions}</li><li>msg 报文</li><li>HFC hybrid fiber coax</li><li>FTTH Fiber to the Home 光纤入户</li><li>throughput :rate (bits/time unit) at which bits transferred between sender/receiver</li></ul><h2 id="Dial-up-Modem"><a href="#Dial-up-Modem" class="headerlink" title="Dial-up Modem"></a>Dial-up Modem</h2><p><img src="/img/CN/C1-1.png" alt=""></p><ul><li>使用现有的电话基础设施</li><li>家与central office 直连</li><li>无法同时上网 打电话呢 无法一直在线</li></ul><h2 id="Asymmetric-Digital-Subscriber-Line-ADSL"><a href="#Asymmetric-Digital-Subscriber-Line-ADSL" class="headerlink" title="Asymmetric Digital Subscriber Line (ADSL)"></a>Asymmetric Digital Subscriber Line (ADSL)</h2><p><img src="/img/CN/C1-2.png" alt="不对称的数字用户线ADSL"></p><ul><li>使用现有的电话基础设施</li><li>使用专用的物理线路到电话central office</li></ul><h2 id="Circuit-Switching"><a href="#Circuit-Switching" class="headerlink" title="Circuit Switching"></a>Circuit Switching</h2><h2 id="Packet-Switching"><a href="#Packet-Switching" class="headerlink" title="Packet Switching"></a>Packet Switching</h2><h2 id="Internet-protocol-stack"><a href="#Internet-protocol-stack" class="headerlink" title="Internet protocol stack"></a>Internet protocol stack</h2><ul><li><strong>application</strong>: supporting network applications<ul><li>FTP, SMTP, HTTP</li></ul></li><li><strong>transport</strong>: process-process data transfer<ul><li>TCP, UDP</li></ul></li><li><strong>network</strong>: routing of datagrams from source to destination<ul><li>IP, routing protocols</li></ul></li><li><strong>link</strong>: data transfer between neighboring  network elements<ul><li>PPP, Ethernet</li></ul></li><li><strong>physical</strong>: bits “on the wire”</li></ul><hr><h1 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a><strong>Chapter 2</strong></h1><h2 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h2><ul><li><strong>Process</strong>:program running within a host</li><li><strong>Sockets</strong>:process send/receives msg to/from its socket</li><li><strong>FTP</strong>:the file transfer protocol</li></ul><h2 id="Non-Persistent-HTTP"><a href="#Non-Persistent-HTTP" class="headerlink" title="Non-Persistent HTTP"></a>Non-Persistent HTTP</h2><ul><li><strong>Response time</strong>=2RTT+ transmit time</li></ul><h2 id="Persistent-HTTP"><a href="#Persistent-HTTP" class="headerlink" title="Persistent  HTTP"></a>Persistent  HTTP</h2><ul><li><strong>Response time</strong> 第一个对象2RTT 之后的都是1RTT</li></ul><h2 id="HTTP-request-message"><a href="#HTTP-request-message" class="headerlink" title="HTTP request message"></a>HTTP request message</h2><ul><li>request line<ul><li>GET</li><li>POST</li><li>HEAD 请求头信息 PUT 放 DELETED 删除</li></ul></li><li>header lines</li><li>Carriage return, linefeed indicatesend of message</li></ul><h2 id="HTTP-response-message"><a href="#HTTP-response-message" class="headerlink" title="HTTP response message"></a>HTTP response message</h2><ul><li>status line</li><li>header line</li><li>(data)*</li></ul><h2 id="Web-Caches"><a href="#Web-Caches" class="headerlink" title="Web Caches"></a>Web Caches</h2><ul><li>Proxy Cache<ul><li>Goal:satisfy client request without involving origin server</li></ul></li><li>Client Cache<ul><li>Goal: don’t send object if cache has up-to-date cached version</li></ul></li><li>Distributed Caches<ul><li>Many caches are cooperative</li><li>Difficult to operate</li></ul></li><li>Server Caches:cluster<ul><li>High parallelism reliability</li><li>load balance needed</li><li>object location algorithm needed</li><li>广泛采用</li></ul></li></ul><h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><ul><li>FTP客户端连接FTP服务器端口21,TCP是传输协议</li><li>客户端被授权控制连接</li><li>客户端通过控制连接发送命令来浏览远程目录。</li><li>当服务器接收到文件传输命令时，服务器打开第二个TCP连接(用于文件)到客户端</li><li>传输一个文件后，服务器关闭数据连接。</li></ul><h2 id="Electronic-Mail"><a href="#Electronic-Mail" class="headerlink" title="Electronic Mail"></a>Electronic Mail</h2><ul><li>3 magor components<ul><li>user agents</li><li>mail servers</li><li>SMTP(simple mail transfer protocol)</li></ul></li></ul><hr><h1 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a><strong>Chapter 3</strong></h1><hr><h1 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a><strong>Chapter 4</strong></h1><hr><h1 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a><strong>Chapter 5</strong></h1><hr><h1 id="Chapter-6"><a href="#Chapter-6" class="headerlink" title="Chapter 6"></a><strong>Chapter 6</strong></h1>]]></content>
       
@@ -585,25 +619,6 @@
     </entry>
     
     <entry>
-      <title>Vi常见命令</title>
-      <link href="/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/"/>
-      <url>/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/img/vi/vi.png" alt="常用命令"><br><a id="more"></a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-          <category> 课堂笔记 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    <entry>
       <title>Linux网络服务</title>
       <link href="/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/"/>
       <url>/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</url>
@@ -628,6 +643,25 @@
       <url>/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Linux%20%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1-%20Internet%E6%9C%8D%E5%8A%A1/</url>
       
         <content type="html"><![CDATA[<ul><li><h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a><strong>Content</strong></h1><ul><li>Xinetd</li><li>Ftp</li><li>Http</li><li>SSH<a id="more"></a><br></li></ul></li><li><h1 id="Xinetd-Extended-Internet-Daemon"><a href="#Xinetd-Extended-Internet-Daemon" class="headerlink" title="Xinetd (Extended Internet Daemon)"></a><strong>Xinetd (Extended Internet Daemon)</strong></h1><ul><li>守护进程Daemon</li><li>运行在后台的一种特殊程序，独立于控制终端执行某种任务或者等待处理某些发生的事件，如smbd，named等</li><li>Linux的大多数服务是用守护程序实现的，守护程序打开一个端口并且监听该端口，等待客户机的连接。一旦客户机提交了连接请求，守护程序就创建一个子进程来响应，而父进程继续监听更多的服务请求。因此每个守护程序可以处理多个客户服务的请求。</li><li>服务器上的许多服务都是通过超级守护程序包 inetd 或 xinetd 来管理和启动的。</li><li>超级守护程序充当一组服务发出连接请求时的中介者。它直接接受连接请求、启动所需的服务并将请求传递到新启动的服务器。如果客户机和服务器之间的连接终止，则由  xinetd 启动的服务器将从内存中删除。</li><li>通过 inetd 启动服务既有优点也有缺点。最大的优点就是节省资源（尤其是内存），因为服务器仅在需要时才启动。但是，缺点是在装载、启动和连接所需服务时将发生延迟。</li><li>守护程序的运行方式<ul><li>独立运行的守护程序</li><li>由init脚本管理</li><li>其脚本存放在/etc/rc.d/init.d/目录下</li></ul></li><li>由Xinetd运行的守护程序<ul><li>由xinetd管理启动</li><li>服务的配置文件存放在/etc/xinetd.d/目录下</li></ul></li><li>可用pstree查看当前进程树<br><br></li></ul></li><li><h1 id="Xinetd特点"><a href="#Xinetd特点" class="headerlink" title="Xinetd特点"></a><strong>Xinetd特点</strong></h1><ul><li>强大的访问控制功能：提供对用户的审查和权限控制、限制连接数目、设定特定的连接时间</li><li>强大的日志功能：可以为每一个服务设置日志等级：为每个服务设置日志文件；记录起止时间；记录非法访问请求</li><li>专项功能：可以将客户端的请求交到另外的主机去处理</li><li>与客户端的交互功能<br><br></li></ul></li><li><h1 id="配置Xinetd"><a href="#配置Xinetd" class="headerlink" title="配置Xinetd"></a><strong>配置Xinetd</strong></h1><ul><li><strong>配置文件 /etc/xinetd.conf</strong><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">默认配置参数</span><br><span class="line"> defaults    为所有的服务指定缺省值</span><br><span class="line"> &#123;</span><br><span class="line">     key operator parameter parameter. . .</span><br><span class="line">     instances ＝ 60</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></li></ul></li></ul><p>includedir /etc/xinetd.d  //指明配置文件目录<br>将提示 xinetd 解释目录/etc/xinetd.d/ 中的所有文件以配置服务</p><ul><li><p><strong>配置其网络服务</strong></p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  service service_name</span><br><span class="line">  &#123;</span><br><span class="line">    key operator parameter parameter. . .</span><br><span class="line">   &#125;</span><br><span class="line">运算符有 =、-= 和 +=</span><br><span class="line">  可在目录 /etc/xinetd.d/ 中为每个服务创建一个单独的配置文件</span><br></pre></td></tr></table></figure></li><li><p><strong>例子</strong></p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">service telnet&#123;</span><br><span class="line">  socket_type = stream</span><br><span class="line">  wait = no</span><br><span class="line">  user = root</span><br><span class="line">  server = /usr/sbin/in.telnetd</span><br><span class="line">  disable = no</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+          <category> 课堂笔记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Vi常见命令</title>
+      <link href="/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/"/>
+      <url>/Linux/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/Vi%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/img/vi/vi.png" alt="常用命令"><br><a id="more"></a></p>]]></content>
       
       
       <categories>
